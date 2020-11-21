@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- External strylesheet -->
-	<link rel="stylesheet" type="text/css" href="http://localhost:800/myevent/resources/css/main-page.css">
+	<link rel="stylesheet" type="text/css" href="/myevent/public/css/main-page.css">
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,24 +15,34 @@
 
         <div class="my-content">
 		    <nav id="my-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-				  <a class="navbar-brand d-flex align-items-center" href="#">
-				  	<img id="VES_logo" src="http://localhost:800/myevent/resources/images/VES_logo.png">
+				  <a class="navbar-brand d-flex align-items-center" href={{url('/')}}>
+				  	<img id="VES_logo" src={{url("images/VES_logo.png")}}>
 				  	<span id="vesit-logo">VESIT EVENTS</span>
 				  </a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
 				  </button>
 
-			      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-					    <ul class="navbar-nav ml-auto">
-					      <li id="login-li" class="nav-item">
-					        <a class="nav-link btn btn-md btn-primary my-login-button" href="http://localhost:800/myevent/public/login">Login</a>
-					      </li>
-					      <li class="nav-item">
-					        <a class="nav-link btn btn-md btn-primary my-login-button" href="#">Sign Up</a>
-					      </li>
-					    </ul>
-			      </div>
+                @if(!session('email'))
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li id="login-li" class="nav-item">
+                                <a class="nav-link btn btn-md btn-primary my-login-button" href="{{url('login')}}">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-md btn-primary my-login-button" href="{{url('register')}}">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                @else
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li id="login-li" class="nav-item">
+                                <a class="nav-link btn btn-md btn-primary my-login-button" href="{{url('logout')}}">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                @endif
 		    </nav>
 	    </div>
 
@@ -41,10 +51,10 @@
 	    		<div class="col-md-8">
 	    			<div class="society-intro-main-div d-flex flex-column">
 	    				<div class="society-background-img">
-	    					<img src="http://localhost:800/myevent/resources/images/society-background.png">
+	    					<img src="{{url('images/society-background.png')}}">
 	    				</div>
 	    				<div class="socirty-logo-session">
-	    					<img src="http://localhost:800/myevent/resources/images/isa_logo.gif">
+	    					<img src="{{url('images/isa_logo.jpg')}}">
 	    				</div>
 	    				<div class="socirty-description-session">
 	    					<h4>ISA SOCIETY</h4>
@@ -69,7 +79,7 @@
             	<div class="col-12 col-md-6">
             		<div class="Each-event d-flex justify-content-start">
             			<div class="Each-event-society-img d-flex align-items-center">
-            				<img src="http://localhost:800/myevent/resources/images/isa_logo.gif">
+            				<img src="{{url('images/isa_logo.jpg')}}">
             			</div>
             			<div class="Each-event-content d-flex flex-column">
             				<p class="main-event-title">Android Workshop</p>
@@ -82,14 +92,14 @@
 							<p class="main-event-date-time"><span>Date & Time : </span> 24 sept 2020 4:30pm</p>
             			</div>
             			<div class="Each-event-img d-flex align-items-center">
-            				<img src="http://localhost:800/myevent/resources/images/event_img.jpg">
+            				<img src="{{url('images/event_img.jpg')}}">
             			</div>
             		</div>
             	</div>
             	<div class="col-12 col-md-6">
             		<div class="Each-event d-flex justify-content-start">
             			<div class="Each-event-society-img d-flex align-items-center">
-            				<img src="http://localhost:800/myevent/resources/images/isa_logo.gif">
+                            <img src="{{url('images/isa_logo.jpg')}}">
             			</div>
             			<div class="Each-event-content d-flex flex-column">
             				<p class="main-event-title">Android Workshop</p>
@@ -102,14 +112,14 @@
 							<p class="main-event-date-time"><span>Date & Time : </span> 24 sept 2020 4:30pm</p>
             			</div>
             			<div class="Each-event-img d-flex align-items-center">
-            				<img src="http://localhost:800/myevent/resources/images/event_img.jpg">
+                            <img src="{{url('images/event_img.jpg')}}">
             			</div>
             		</div>
             	</div>
             	<div class="col-12 col-md-6">
             		<div class="Each-event d-flex justify-content-start">
             			<div class="Each-event-society-img d-flex align-items-center">
-            				<img src="http://localhost:800/myevent/resources/images/isa_logo.gif">
+                            <img src="{{url('images/isa_logo.jpg')}}">
             			</div>
             			<div class="Each-event-content d-flex flex-column">
             				<p class="main-event-title">Android Workshop</p>
@@ -122,14 +132,14 @@
 							<p class="main-event-date-time"><span>Date & Time : </span> 24 sept 2020 4:30pm</p>
             			</div>
             			<div class="Each-event-img d-flex align-items-center">
-            				<img src="http://localhost:800/myevent/resources/images/event_img.jpg">
+                            <img src="{{url('images/event_img.jpg')}}">
             			</div>
             		</div>
             	</div>
             	<div class="col-12 col-md-6">
             		<div class="Each-event d-flex justify-content-start">
             			<div class="Each-event-society-img d-flex align-items-center">
-            				<img src="http://localhost:800/myevent/resources/images/isa_logo.gif">
+                            <img src="{{url('images/isa_logo.jpg')}}">
             			</div>
             			<div class="Each-event-content d-flex flex-column">
             				<p class="main-event-title">Android Workshop</p>
@@ -142,7 +152,7 @@
 							<p class="main-event-date-time"><span>Date & Time : </span> 24 sept 2020 4:30pm</p>
             			</div>
             			<div class="Each-event-img d-flex align-items-center">
-            				<img src="http://localhost:800/myevent/resources/images/event_img.jpg">
+                            <img src="{{url('images/event_img.jpg')}}">
             			</div>
             		</div>
             	</div>

@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- External strylesheet -->
-	<link rel="stylesheet" type="text/css" href="http://localhost:800/myevent/resources/css/main-page.css">
+	<link rel="stylesheet" type="text/css" href="{{url('css/main-page.css')}}">
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
 
 	    <div class="my-content">
 		    <nav id="my-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-				  <a class="navbar-brand" href="#">
-				  	<img id="VES_logo" src="http://localhost:800/myevent/resources/images/VES_logo.png">
+				  <a class="navbar-brand" href="">
+				  	<img id="VES_logo" src="{{url('images/VES_logo.png')}}">
 				  	<span id="vesit-logo">VESIT EVENTS</span>
 				  </a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
 			      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					    <ul class="navbar-nav ml-auto">
 					      <li class="nav-item">
-					        <a class="nav-link btn btn-md btn-primary my-login-button" href="http://localhost:800/myevent/public/register">Sign Up</a>
+					        <a class="nav-link btn btn-md btn-primary my-login-button" href="{{url('register')}}">Sign Up</a>
 					      </li>
 					    </ul>
 			      </div>
@@ -36,7 +36,7 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
-					<form class="submit-forms" action="http://localhost:800/myevent/public/login/check" method="POST">
+					<form class="submit-forms" action={{route('login_check')}} method="POST">
                         @csrf
                         <center><h1 class="new-h1">Log in</h1></center>
 						<div class="form-group">
@@ -54,15 +54,16 @@
 						<button type="submit" class="btn btn-primary btn-md btn-block">Login</button>
 						<div class="d-flex justify-content-between" id="forgotpassword">
 							<div>
-								<a href="http://localhost:800/myevent/public/">Go back</a>
+								<a href="">Go back</a>
 							</div>
 							<div>
-								<a id="forgotbuttonlink" href="http://localhost:800/myevent/public/#">Forgot Password</a>
+								<a id="forgotbuttonlink" href="{{url('reset')}}">Forgot Password</a>
 							</div>
 						</div>
 
 					</form>
 				</div>
+                <p style="text-align: center; color: red">{{session('status')}}</p>
 			</div>
         </div>
 

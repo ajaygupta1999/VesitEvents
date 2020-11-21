@@ -2,9 +2,8 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,25 +16,42 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('main-page');
-});
 
-Route::get("/login", function (){
-    return view("login");
-});
-Route::get("/society",function (){
-   return view("society-page");
-});
+//Route for main pages and user
+Route::get('', [UserController::class,'mainPage']);
 
-Route::post("/login/check",[LoginController::class ,"authenticate"]);
+Route::get('society',[UserController::class,'societyPage'])->middleware('auth');
 
-Route::get("/register",function (){
-    return view("register");
-});
+Route::get('reset', [UserController::class,'passwordResetPage'])->middleware('auth');
 
-Route::post("/register/check",[RegisterController::class,"store"]);
+Route::post('reset/check', [UserController::class ,'passwordReset'])->middleware('auth');
+
+Route::get('newpassword',[UserController::class,'newPasswordPage'])->middleware('auth')->name('new_password');
+
+Route::post('newpassword/check/{id}',[UserController::class,'newPassword'])->middleware('auth')->name('new_password_check');
 
 
-Auth::routes(['verify' => true]);
+//Register
+
+Route::get('register',[RegisterController::class,'registerPage'])->name('register');
+
+Route::post('register',[RegisterController::class,'register'])->name('register_check');
+
+Route::get('verify/{token}',[RegisterController::class,'verifyUser']);
+
+
+//Login
+Route::get('login', [LoginController::class,'loginPage'])->name('login');
+
+Route::post("login",[LoginController::class ,"authenticate"])->name('login_check');
+
+Route::get('login/google', [LoginController::class, 'redirectToProvider']);
+
+Route::get("login/google/done",[LoginController::class,'handleProviderCallback']);
+
+Route::get('logout',[LoginController::class,'logout']);
+
+
+
+
 

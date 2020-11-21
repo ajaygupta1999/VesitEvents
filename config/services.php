@@ -30,4 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google' => [
+        'client_id' => '798152669618-mg1hp6sovff4ppgt2oq6863r8n4diim4.apps.googleusercontent.com',
+        'client_secret' => 'up_kwKEz3ItHYUuGEBtkBAbp',
+        'redirect' => '/login/google/done',
+    ],
+
 ];
