@@ -13,15 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/" , function() {
-    return view('welcome');
-});
+Route::get("/" ,'App\Http\Controllers\Home@index');
 
 Route::get('/home', 'App\Http\Controllers\Home@index');
 
 Route::get("/login" , 'App\Http\Controllers\Login@index');
 
+Route::get("/signup" , 'App\Http\Controllers\Signup@index');
+
 Route::get("/society" , 'App\Http\Controllers\Society@index');
 
+Route::get('/register/personalDetails' , 'App\Http\Controllers\Register@personalDetails');
 
+Route::get('/register/classAndSocietyDetails' , 'App\Http\Controllers\Register@classAndSocietyDetails');
 
+Route::get('/addevent/aboutevent' , 'App\Http\Controllers\AddEvent@aboutEvent');
+
+Route::get('/addevent/aboutguest' , 'App\Http\Controllers\AddEvent@aboutGuest');

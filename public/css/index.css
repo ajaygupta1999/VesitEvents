@@ -29,11 +29,57 @@ body{
     font-weight: 600;
 }
 
+#addevent-button-home-page{
+	text-decoration: none;
+}
+
+#addevent-button-home-page span{
+    font-weight: 700;
+    font-size: 18px;
+    color: #526287;
+}
+
+.home-page-all-society h4{
+	font-weight : 700;
+	color : black;
+	margin : 0;
+}
+
+.home-main-header{
+	margin-top : 80px;
+	margin-bottom : 100px;
+}
+
+.home-main-header .row .home-img-session{
+	margin-top : 30px;
+	margin-left: 120px;
+}
+
+.my-all-socierty-div a {
+	text-decoration: none;
+	color : black;
+}
+
+.home-main-header .row .home-img-session .home-ad-event-pic img , .home-main-header .row .home-img-session .home-ad-left-right-arrow img , .home-main-header .row .home-img-session .home-ad-ves_logo img{
+   width : 150px;
+}
+
+.home-main-header .row .home-img-session .home-ad-left-right-arrow img {
+	margin-left : 30px;
+}
+
+.home-main-header .row .home-content .home-main-title{
+	font-weight: 600;
+	font-size: 42px;
+} 
+
+
 #vesit-logo{
 	margin-left : 3px;
 	font-family: 'Sriracha', cursive;
 	font-size : 20px;
 }
+
 
 .my-society-content{
 	margin : 20px 25% 40px;
@@ -63,69 +109,92 @@ body{
 
 
 .my-ongoing-title{
-	margin-left: 4%;
-	margin-right : 4%;
+	margin-top : 5%;
+	margin-left: 10.9%;
 	font-size: 18px;
 	font-weight: 600;
-	margin-bottom: -15px;
+	margin-bottom: -20px;
 }
 
 .MY-on-going-evenets{
-	padding :10px 4%;
+	padding :15px 10%;
 }
 
 .MY-on-going-evenets .row .col-12{
-   padding: 15px;
+   padding: 28px;
 }
 
-.MY-on-going-evenets .Each-event{
+.MY-on-going-evenets .each-event-container{
 	border : 1px solid black;
-	padding : 10px;
+	padding : 0px;
 }
 
-.Each-event .Each-event-society-img img{
-	width : 100px;
-	height : 100px;
+.MY-on-going-evenets .each-event-container .img-session img{
+	width : 100%;
 }
 
-.Each-event .Each-event-img{
-	margin-left : 10px;
+.MY-on-going-evenets .each-event-container .content-session .upper-content{
+	margin : 10px 15px;
 }
 
-.Each-event .Each-event-img img{
-	width : 150px;
-	height : 100px;
+.MY-on-going-evenets .each-event-container .content-session .upper-content .main-title{
+	font-weight : 700;
+	margin-bottom : 5px;
+	color : black;
+	font-size : 18px;
 }
 
-.Each-event .Each-event-content .main-event-title{
-	margin : 0px;
+.MY-on-going-evenets .each-event-container .content-session .upper-content .short-desc{
+	margin-bottom : 3px;
+	color : black;
+	font-size : 14px;
+}
+
+.MY-on-going-evenets .each-event-container .content-session .upper-content .guest-text{
 	font-weight : 600;
-	color : blue;
-	font-size :18px;
+	font-size: 14px;
+	margin-bottom : 5px;
 }
 
-.Each-event .Each-event-content .main-event-desc{
+.MY-on-going-evenets .each-event-container .content-session .upper-content .guest-text span{
+	font-weight : 700;
+	font-size: 14px;
+	color :blue;
+}
+
+.MY-on-going-evenets .each-event-container .content-session .upper-content .time-text{
+	font-weight : 600;
+	font-size: 14px;
+	margin-bottom : 5px;
+}
+
+.MY-on-going-evenets .each-event-container .content-session .upper-content .time-text span{
+	font-weight : 700;
+	font-size: 14px;
+	color :blue;
+}
+
+.MY-on-going-evenets .each-event-container .content-session .lower-content{
+    margin: 10px 15px;
+}
+
+.MY-on-going-evenets .each-event-container .content-session .lower-content #each-event-register-button{ 
+	padding: 0px 22px !important;
+	font-size: 12px;
+	height : 34px;
+    font-weight: 700;
+    color: white !important;
+    border-radius: 33px;
+    border: none;
+    box-shadow: 0 4px 10px 8px rgba(0, 0, 0, 0.05), 0 6px 20px 2px rgba(0, 0, 0, 0.04);
+}
+
+.MY-on-going-evenets .each-event-container .content-session .lower-content p{
+	font-weight : 600;
 	margin : 0px;
-	font-size :14px;
-	font-weight : 500;
+	margin-right : 10px;
 }
 
-.Each-event .Each-event-content .main-event-guests span{
-	  font-weight : 600;
-	  color : blue;
-}
-
-.Each-event .Each-event-content .main-event-guests{
-	 font-size : 14px;
-	 font-weight : 500;
-	 margin : 0;
-}
-
-.Each-event .Each-event-content .main-event-date-time{
-	 font-size : 15px;
-	 font-weight : 600;
-	 margin : 0;
-}
 
 @media (max-width: 991.98px) { 
    .my-society-content{

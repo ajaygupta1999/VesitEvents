@@ -30,15 +30,16 @@ login page css
     margin-bottom: 22px;
 }
 
-.label {
-    margin-bottom: 1px;
-    font-weight: 500;
-    color: #2190c3;
-}
-
 .form-group input {
     font-size: 14px;
     font-weight: 500;
+}
+
+.label {
+    margin-bottom: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2190c3;
 }
 
 #forgotbuttonlink {

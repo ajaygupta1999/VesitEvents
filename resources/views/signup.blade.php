@@ -26,7 +26,7 @@
 			      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					    <ul class="navbar-nav ml-auto">
 					      <li class="nav-item">
-					        <a class="nav-link btn btn-md btn-primary my-login-button" href="{{ url('/signup') }}">Sign Up</a>
+					        <a class="nav-link btn btn-md btn-primary my-login-button" href="{{ url('/login') }}">Login</a>
 					      </li>
 					    </ul>
 			      </div>
@@ -37,27 +37,36 @@
 			<div id="login-container">
 				<div class="login-page-contant">
 					<form class="submit-forms" action="/login" method="POST">
-						<center><h1 class="new-h1">Log in</h1></center>
+						<center><h1 class="new-h1">Sign Up</h1></center>
 						<div class="form-group">
 						  <label for="username"  class="label">Email</label>
 						  <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Your email address"  
-								 name="username">
+								 name="username" required>
 						</div>
 						<div class="form-group">
 						 <label for="login-login"  class="label">Password</label>
 							<div class="password">
 							<input type="password" class="form-control" id="login-login" aria-describedby="emailHelp"  placeholder="Enter Your Password"  
-								   name="password">
+								   name="password" required>
 							</div>
-						 </div>
-						 <a href="{{ url('/home') }}" class="btn btn-primary btn-md btn-block"> Login </a>
-						{{-- <button type="submit" class="btn btn-primary btn-md btn-block">Login</button> --}}
+                         </div>
+                         <div class="form-group">
+                            <label for="login-login"  class="label">Confirm Password</label>
+                               <div class="password">
+                               <input type="password" class="form-control" id="login-login" aria-describedby="emailHelp"  placeholder="Enter Your Password"  
+                                      name="confirm-password" required>
+                               </div>
+							</div>
+						<a class="nav-link btn btn-md btn-primary btn-block my-login-button" href="{{ url('/register/personalDetails') }}">
+							Sign Up
+						</a>
+						{{-- <button type="submit" class="btn btn-primary btn-md btn-block">Sign Up</button> --}}
 						<div class="d-flex justify-content-between" id="forgotpassword">
 							<div>
 								<a href="{{ url('/home') }}">Go back</a> 
 							</div>
 							<div>
-								<a id="forgotbuttonlink" href="{{ url('/forgotpassword') }}">Forgot Password</a>
+								<a id="forgotbuttonlink" href="{{ url('/login') }}">Already have an account? Login</a>
 							</div>
 						</div>
 

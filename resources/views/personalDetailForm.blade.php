@@ -7,6 +7,7 @@
     <!-- External strylesheet -->
 	<link rel="stylesheet" type="text/css" href="{{ url('css/login.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('css/index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/signup.css') }}">
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
@@ -37,27 +38,34 @@
 			<div id="login-container">
 				<div class="login-page-contant">
 					<form class="submit-forms" action="/login" method="POST">
-						<center><h1 class="new-h1">Log in</h1></center>
+						<center><h1 class="new-h1">Personal Details</h1></center>
 						<div class="form-group">
-						  <label for="username"  class="label">Email</label>
-						  <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Your email address"  
-								 name="username">
+						  <label for="username"  class="label">First Name</label>
+						  <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Your First Name"  
+								 name="firstname">
 						</div>
 						<div class="form-group">
-						 <label for="login-login"  class="label">Password</label>
+						 <label for="login-login"  class="label">Last Name</label>
 							<div class="password">
-							<input type="password" class="form-control" id="login-login" aria-describedby="emailHelp"  placeholder="Enter Your Password"  
-								   name="password">
+							<input type="text" class="form-control" id="login-login" aria-describedby="emailHelp"  placeholder="Enter Your Last Name"  
+								   name="lastname">
 							</div>
-						 </div>
-						 <a href="{{ url('/home') }}" class="btn btn-primary btn-md btn-block"> Login </a>
-						{{-- <button type="submit" class="btn btn-primary btn-md btn-block">Login</button> --}}
-						<div class="d-flex justify-content-between" id="forgotpassword">
+                         </div>
+                         <div class="form-group">
+                            <label for="username"  class="label">Profile Image</label>
+                            <input type="file" class="form-control" aria-describedby="emailHelp" accept="image/*" name="image">
+                          </div>
+                          <div class="form-group">
+                            <label for="username"  class="label">Phone Number</label>
+                            <input type="number" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Phone Number"  
+                                   name="phonenumber">
+                          </div>
+						  <div class="d-flex justify-content-between" id="forgotpassword">
 							<div>
-								<a href="{{ url('/home') }}">Go back</a> 
+								<a id="our-back-button" class="btn btn-md btn-light" href="{{ url('/signup') }}">Back</a> 
 							</div>
 							<div>
-								<a id="forgotbuttonlink" href="{{ url('/forgotpassword') }}">Forgot Password</a>
+								<a id="our-next-button" class="btn btn-md btn-primary" href="{{ url('/register/classAndSocietyDetails') }}">Next</a>
 							</div>
 						</div>
 
