@@ -30,3 +30,5 @@ Route::get('/register/classAndSocietyDetails' , 'App\Http\Controllers\Register@c
 Route::get('/addevent/aboutevent' , 'App\Http\Controllers\AddEvent@aboutEvent');
 
 Route::get('/addevent/aboutguest' , 'App\Http\Controllers\AddEvent@aboutGuest');
+
+Route::get('/event/{id}' , 'App\Http\Controllers\Eachevent@index');

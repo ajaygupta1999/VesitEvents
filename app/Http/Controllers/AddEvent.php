@@ -10,7 +10,7 @@ class AddEvent extends Controller
         return view('AddEvent');
     }
 
-    public function aboutGuest() {
+    public function aboutGuest(){
         return view('Aboutguest');
     }
 }

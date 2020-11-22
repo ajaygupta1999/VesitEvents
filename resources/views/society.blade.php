@@ -7,7 +7,9 @@
     <!-- External strylesheet -->
     <link rel="stylesheet" type="text/css" href="{{ url('/css/society.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('/css/index.css') }}">
-
+	
+	{{-- Font-awesome --}}
+	<script src="https://kit.fontawesome.com/7fe6b58c32.js"></script>
     
 
 	<!-- Google font -->
@@ -65,92 +67,153 @@
 	    	</div>
 	    </div>
       
-        <h4 class="my-ongoing-title">All Events</h4>
-
+        <div class="d-flex justify-content-center align-items-center">
+			<h4 class="my-ongoing-title-society">All On-going Events</h4>
+		</div>
         <div class="MY-on-going-evenets">
             <div class="row">
-            	<div class="col-12 col-md-6">
-            		<div class="Each-event d-flex justify-content-start">
-            			<div class="Each-event-society-img d-flex align-items-center">
-            				<img src="{{ url('/asserts/isa_logo.gif') }}">
-            			</div>
-            			<div class="Each-event-content d-flex flex-column">
-            				<p class="main-event-title">Android Workshop</p>
-            				<p class="main-event-desc">Lorem Ipsum is simply dummy text of the printing and 
-								typesetting industry. Lorem Ipsum has been the industry
-							</p>
-							<p class="main-event-guests">
-								<span>Guest:</span> Ajay Gupta, Hritwik ekade, Neel Bhagat
-							</p>
-							<p class="main-event-date-time"><span>Date & Time : </span> 24 sept 2020 4:30pm</p>
-            			</div>
-            			<div class="Each-event-img d-flex align-items-center">
-            				<img src="{{ url('/asserts/event_img.jpg') }}">
-            			</div>
-            		</div>
+            	<div class="col-12 col-md-4">
+					<div class="each-event-container">
+						<div class="img-session">
+							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
+						</div>
+						<div class="content-session">
+							<div class="upper-content d-flex flex-column">
+								<p class="main-title">Android Development</p>
+								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
+								<div class="date-time-div d-flex justify-content-start align-items-center">
+									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
+									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
+								</div>
+								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
+								<div class="register-button-div">
+									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+								</div>
+							</div>
+						</div>
+					</div>
             	</div>
-            	<div class="col-12 col-md-6">
-            		<div class="Each-event d-flex justify-content-start">
-            			<div class="Each-event-society-img d-flex align-items-center">
-            				<img src="{{ url('/asserts/isa_logo.gif') }}">
-            			</div>
-            			<div class="Each-event-content d-flex flex-column">
-            				<p class="main-event-title">Android Workshop</p>
-            				<p class="main-event-desc">Lorem Ipsum is simply dummy text of the printing and 
-								typesetting industry. Lorem Ipsum has been the industry
-							</p>
-							<p class="main-event-guests">
-								<span>Guest:</span> Ajay Gupta, Hritwik ekade, Neel Bhagat
-							</p>
-							<p class="main-event-date-time"><span>Date & Time : </span> 24 sept 2020 4:30pm</p>
-            			</div>
-            			<div class="Each-event-img d-flex align-items-center">
-            				<img src="{{ url('/asserts/event_img.jpg') }}">
-            			</div>
-            		</div>
+            	<div class="col-12 col-md-4">
+					<div class="each-event-container">
+						<div class="img-session">
+							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
+						</div>
+						<div class="content-session">
+							<div class="upper-content d-flex flex-column">
+								<p class="main-title">Android Development</p>
+								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
+								<div class="date-time-div d-flex justify-content-start align-items-center">
+									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
+									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
+								</div>
+								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
+								<div class="register-button-div">
+									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-4">
+					<div class="each-event-container">
+						<div class="img-session">
+							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
+						</div>
+						<div class="content-session">
+							<div class="upper-content d-flex flex-column">
+								<p class="main-title">Android Development</p>
+								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
+								<div class="date-time-div d-flex justify-content-start align-items-center">
+									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
+									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
+								</div>
+								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
+								<div class="register-button-div">
+									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+								</div>
+							</div>
+						</div>
+					</div>
             	</div>
-            	<div class="col-12 col-md-6">
-            		<div class="Each-event d-flex justify-content-start">
-            			<div class="Each-event-society-img d-flex align-items-center">
-            				<img src="{{ url('/asserts/isa_logo.gif') }}">
-            			</div>
-            			<div class="Each-event-content d-flex flex-column">
-            				<p class="main-event-title">Android Workshop</p>
-            				<p class="main-event-desc">Lorem Ipsum is simply dummy text of the printing and 
-								typesetting industry. Lorem Ipsum has been the industry
-							</p>
-							<p class="main-event-guests">
-								<span>Guest:</span> Ajay Gupta, Hritwik ekade, Neel Bhagat
-							</p>
-							<p class="main-event-date-time"><span>Date & Time : </span> 24 sept 2020 4:30pm</p>
-            			</div>
-            			<div class="Each-event-img d-flex align-items-center">
-            				<img src="{{ url('/asserts/event_img.jpg') }}">
-            			</div>
-            		</div>
+			</div>
+		</div>
+
+		<div class="d-flex justify-content-center align-items-center">
+			<h4 class="my-ongoing-title-society">All Upcoming-going Events</h4>
+		</div>
+        <div class="MY-on-going-evenets">
+            <div class="row">
+            	<div class="col-12 col-md-4">
+					<div class="each-event-container">
+						<div class="img-session">
+							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
+						</div>
+						<div class="content-session">
+							<div class="upper-content d-flex flex-column">
+								<p class="main-title">Android Development</p>
+								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
+								<div class="date-time-div d-flex justify-content-start align-items-center">
+									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
+									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
+								</div>
+								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
+								<div class="register-button-div">
+									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+								</div>
+							</div>
+						</div>
+					</div>
             	</div>
-            	<div class="col-12 col-md-6">
-            		<div class="Each-event d-flex justify-content-start">
-            			<div class="Each-event-society-img d-flex align-items-center">
-            				<img src="{{ url('/asserts/isa_logo.gif') }}">
-            			</div>
-            			<div class="Each-event-content d-flex flex-column">
-            				<p class="main-event-title">Android Workshop</p>
-            				<p class="main-event-desc">Lorem Ipsum is simply dummy text of the printing and 
-								typesetting industry. Lorem Ipsum has been the industry
-							</p>
-							<p class="main-event-guests">
-								<span>Guest:</span> Ajay Gupta, Hritwik ekade, Neel Bhagat
-							</p>
-							<p class="main-event-date-time"><span>Date & Time : </span> 24 sept 2020 4:30pm</p>
-            			</div>
-            			<div class="Each-event-img d-flex align-items-center">
-            				<img src="{{ url('/asserts/event_img.jpg') }}">
-            			</div>
-            		</div>
+            	<div class="col-12 col-md-4">
+					<div class="each-event-container">
+						<div class="img-session">
+							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
+						</div>
+						<div class="content-session">
+							<div class="upper-content d-flex flex-column">
+								<p class="main-title">Android Development</p>
+								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
+								<div class="date-time-div d-flex justify-content-start align-items-center">
+									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
+									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
+								</div>
+								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
+								<div class="register-button-div">
+									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-4">
+					<div class="each-event-container">
+						<div class="img-session">
+							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
+						</div>
+						<div class="content-session">
+							<div class="upper-content d-flex flex-column">
+								<p class="main-title">Android Development</p>
+								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
+								<div class="date-time-div d-flex justify-content-start align-items-center">
+									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
+									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
+								</div>
+								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
+								<div class="register-button-div">
+									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+								</div>
+							</div>
+						</div>
+					</div>
             	</div>
-            </div>
-        </div>
+			</div>
+		</div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

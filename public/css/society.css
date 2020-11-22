@@ -53,3 +53,10 @@ specific-society-page
 	font-weight : 500;
 	font-size : 16px;
 }
+
+.my-ongoing-title-society{
+	margin-top : 10px;
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: -20px;
+}
