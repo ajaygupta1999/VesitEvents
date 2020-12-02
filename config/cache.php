@@ -13,9 +13,12 @@ return [
     | using this caching library. This connection is used when another is
     | not explicitly specified when executing a given caching function.
     |
+<<<<<<< HEAD
     | Supported: "apc", "array", "database", "file",
     |            "memcached", "redis", "dynamodb"
     |
+=======
+>>>>>>> 31795848a82ab12746e6619f93b2d389747d8963
     */
 
     'default' => env('CACHE_DRIVER', 'file'),
@@ -29,6 +32,12 @@ return [
     | well as their drivers. You may even define multiple stores for the
     | same cache driver to group types of items stored in your caches.
     |
+<<<<<<< HEAD
+=======
+    | Supported drivers: "apc", "array", "database", "file",
+    |            "memcached", "redis", "dynamodb"
+    |
+>>>>>>> 31795848a82ab12746e6619f93b2d389747d8963
     */
 
     'stores' => [

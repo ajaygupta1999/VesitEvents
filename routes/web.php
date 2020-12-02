@@ -1,5 +1,7 @@
 <?php
 
+//<<<<<<< HEAD
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
@@ -16,19 +18,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//<<<<<<< HEAD
 
 //Route for main pages and user
 Route::get('', [UserController::class,'mainPage']);
 
-Route::get('society',[UserController::class,'societyPage'])->middleware('auth');
+Route::get('society/{name}',[UserController::class,'societyPage'])->middleware('auth');
 
-Route::get('reset', [UserController::class,'passwordResetPage'])->middleware('auth');
+Route::get('reset', [UserController::class,'passwordResetPage']);
 
-Route::post('reset/check', [UserController::class ,'passwordReset'])->middleware('auth');
+Route::post('reset/check', [UserController::class ,'passwordReset']);
 
-Route::get('newpassword',[UserController::class,'newPasswordPage'])->middleware('auth')->name('new_password');
+Route::get('newpassword/{email}',[UserController::class,'newPasswordPage'])->name('new_password');
 
-Route::post('newpassword/check/{id}',[UserController::class,'newPassword'])->middleware('auth')->name('new_password_check');
+Route::post('newpassword/check/{id}',[UserController::class,'newPassword'])->name('new_password_check');
 
 
 //Register
@@ -52,6 +55,53 @@ Route::get("login/google/done",[LoginController::class,'handleProviderCallback']
 Route::get('logout',[LoginController::class,'logout']);
 
 
+//Events
+
+Route::get('addevent/aboutevent',[EventController::class,'aboutEvent'])->middleware('auth');
+
+Route::post('addevent/aboutevent/add', [EventController::class,'aboutEventAdd'])->middleware('auth');
+
+Route::get('addevent/aboutguest',[EventController::class,'aboutGuest'])->middleware('auth');
+
+Route::post('addevent/aboutguest/add',[EventController::class, 'aboutGuestAdd'])->middleware('auth');
+
+Route::get('addevent/aboutguest/add/{event_id}/{guest_id}',[EventController::class, 'aboutGuestAddExisting'])->middleware('auth');
+
+Route::get('addevent/add',[EventController::class,'addEventComplete']);
+
+
+//=======
+//Route::get("/" ,'App\Http\Controllers\Home@index');
+//
+//Route::get('/home', 'App\Http\Controllers\Home@index');
+//
+//Route::get("/login" , 'App\Http\Controllers\Login@index');
+//
+//Route::get("/signup" , 'App\Http\Controllers\Signup@index');
+//
+//Route::get("/society" , 'App\Http\Controllers\Society@index');
+//
+//Route::get('/register/personalDetails' , 'App\Http\Controllers\Register@personalDetails');
+//
+//Route::get('/register/classAndSocietyDetails' , 'App\Http\Controllers\Register@classAndSocietyDetails');
+//
+//Route::get('/addevent/aboutevent' , 'App\Http\Controllers\AddEvent@aboutEvent');
+//
+//Route::get('/addevent/aboutguest' , 'App\Http\Controllers\AddEvent@aboutGuest');
+//
+//Route::get('/event/{id}' , 'App\Http\Controllers\Eachevent@index');
+//>>>>>>> 31795848a82ab12746e6619f93b2d389747d8963
 
 
 
+
+
+
+
+
+
+
+/*Ignore this route*/
+Route::get('/insertsociety',[\App\Http\Controllers\SocietyInserter::class,'insert']);
+
+Route::get('msg',[EventController::class,'aboutGuestAddExisting']);

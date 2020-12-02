@@ -16,7 +16,7 @@ class LoginController extends Controller
 {
     //Login page view
     function loginPage(){
-        return view('login');
+        return view('LoginAndRegister/login');
     }
 
     public function authenticate(Request $request)
@@ -66,7 +66,7 @@ class LoginController extends Controller
         else{
             $user = new User();
             $user->email = $email;
-            $user->password = null;
+            $user->password = "";
             $user->save();
             Session::put('email',$user->email);
             return redirect('/');

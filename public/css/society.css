@@ -1,0 +1,62 @@
+/*********************
+specific-society-page
+**********************/
+
+.socirty-intro-div{
+	padding : 25px 4%;
+}
+
+.socirty-intro-div .society-intro-main-div{
+	position : relative;
+	border: 1px solid #b6b6b6;
+}
+
+.socirty-intro-div .society-intro-main-div .society-background-img{
+	width : 100%;
+	height : 160px;
+}
+
+.socirty-intro-div .society-intro-main-div .society-background-img img{
+	width : 100%;
+	height : 100%;
+	object-fit: cover;
+}
+
+.socirty-intro-div .society-intro-main-div .socirty-logo-session{
+	position : absolute;
+	width : 200px;
+	top : 115px;
+	left : 20px;
+}
+
+.socirty-intro-div .society-intro-main-div .socirty-logo-session img{
+	width : 100px;
+}
+
+.socirty-description-session{
+	margin : 58px 20px 20px;
+}
+
+.socirty-description-session h4{
+	font-weight : 600;
+	font-size :22px;
+}
+
+.socirty-description-session .society-page-description{
+	font-size : 15px;
+	margin : 0px;
+}
+
+.socirty-description-session .socirty-total-employees{
+	margin-top :5px;
+	margin-bottom : 5px;
+	font-weight : 500;
+	font-size : 16px;
+}
+
+.my-ongoing-title-society{
+	margin-top : 10px;
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: -20px;
+}

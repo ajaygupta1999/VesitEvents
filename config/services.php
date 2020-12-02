@@ -31,8 +31,8 @@ return [
     ],
 
     'google' => [
-        'client_id' => '798152669618-mg1hp6sovff4ppgt2oq6863r8n4diim4.apps.googleusercontent.com',
-        'client_secret' => 'up_kwKEz3ItHYUuGEBtkBAbp',
+        'client_id' => '878476685235-rubcpt9de8uo2g1ing0iqnanfkmpb4h5.apps.googleusercontent.com',
+        'client_secret' => 'glqtax81AjnZmFQT93b1cy0Y',
         'redirect' => '/login/google/done',
     ],
 

@@ -123,7 +123,11 @@
                     </div>
 
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+<<<<<<< HEAD
                         Build v{{ Illuminate\Foundation\Application::VERSION }}
+=======
+                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+>>>>>>> 31795848a82ab12746e6619f93b2d389747d8963
                     </div>
                 </div>
             </div>

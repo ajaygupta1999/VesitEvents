@@ -14,7 +14,7 @@ class RegisterController extends Controller
 {
 
     function registerPage(){
-        return view('register');
+        return view('LoginAndRegister/signup');
     }
 
 
@@ -22,11 +22,14 @@ class RegisterController extends Controller
     {
         $has_user = User::where('email',$request->email)
             ->first();
-        if($has_user) {
-            $user = $has_user;
+        if($has_user != null) {
             $status = "User already exits. Please Login";
         //    Mail::to($user->email)->send(new MailController($user));
-            return redirect('/login')->with('status' , $status);
+            return redirect('/register')->with('status' , $status);
+        }
+        elseif ($request->password != $request->confirm_password){
+            $status = "Password not matching";
+            return redirect('/register')->with('status' , $status);
         }
         else{
             $user = new User();
@@ -37,7 +40,7 @@ class RegisterController extends Controller
             $verify_user->user_id = $user->id;
             $verify_user->token = sha1(time());
             $verify_user->save();
-            Mail::to($user->email)->send(new MailController($user,'verify_mail'));
+            Mail::to($user->email)->send(new MailController($user,'MailTemplates/verify_mail'));
             $status = "Verification Email Send";
             return redirect('/login')->with('status',$status);
         }

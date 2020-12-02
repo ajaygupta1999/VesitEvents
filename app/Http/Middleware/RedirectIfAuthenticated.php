@@ -16,6 +16,7 @@ class RedirectIfAuthenticated
      * @param  string|null  ...$guards
      * @return mixed
      */
+
     public function handle($request, Closure $next, ...$guards)
     {
         $guards = empty($guards) ? [null] : $guards;
