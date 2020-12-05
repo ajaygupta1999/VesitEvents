@@ -3,7 +3,7 @@
 <head>
 	<title>VESIT EVENTS</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
+
     <!-- External strylesheet -->
 	<link rel="stylesheet" type="text/css" href="{{ url('css/login.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('css/index.css') }}">
@@ -16,19 +16,22 @@
 
 	    <div class="my-content">
 		    <nav id="my-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-				  <a class="navbar-brand" href="{{ url('/home') }}">
+				  <a class="navbar-brand" href="{{ url('/') }}">
 				  	<img id="VES_logo" src="{{ url('/asserts/VES_logo.png') }}">
 				  	<span id="vesit-logo">VESIT EVENTS</span>
 				  </a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
 				  </button>
-	            
+
 			      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					    <ul class="navbar-nav ml-auto">
-					      <li class="nav-item">
-					        <a class="nav-link btn btn-md btn-primary my-login-button" href="{{ url('/signup') }}">Sign Up</a>
-					      </li>
+                            <li id="login-li" class="nav-item">
+                                {{$user->email}}
+                            </li>
+                            <li id="login-li" class="nav-item">
+                                <a class="nav-link btn btn-md btn-primary my-login-button" href="{{url('logout')}}">Logout</a>
+                            </li>
 					    </ul>
 			      </div>
 		    </nav>
@@ -37,19 +40,18 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
-					<form class="submit-forms" action="/login" method="POST">
+					<form class="submit-forms" action="personaldetails/add" method="POST"  enctype="multipart/form-data">
+                        @csrf
 						<center><h1 class="new-h1">Personal Details</h1></center>
 						<div class="form-group">
 						  <label for="username"  class="label">First Name</label>
-						  <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Your First Name"  
-								 name="firstname">
+						  <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Your First Name"
+								 name="firstname" >
 						</div>
 						<div class="form-group">
 						 <label for="login-login"  class="label">Last Name</label>
-							<div class="password">
-							<input type="text" class="form-control" id="login-login" aria-describedby="emailHelp"  placeholder="Enter Your Last Name"  
-								   name="lastname">
-							</div>
+							<input type="text" class="form-control" id="login-login" aria-describedby="emailHelp"  placeholder="Enter Your Last Name"
+								   name="lastname" >
                          </div>
                          <div class="form-group">
                             <label for="username"  class="label">Profile Image</label>
@@ -57,18 +59,17 @@
                           </div>
                           <div class="form-group">
                             <label for="username"  class="label">Phone Number</label>
-                            <input type="number" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Phone Number"  
+                            <input type="number" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Phone Number"
                                    name="phonenumber">
                           </div>
 						  <div class="d-flex justify-content-between" id="forgotpassword">
 							<div>
-								<a id="our-back-button" class="btn btn-md btn-light" href="{{ url('/signup') }}">Back</a> 
+								<a id="our-back-button" class="btn btn-md btn-light" href="{{ url('/') }}">Back</a>
 							</div>
-							<div>
-								<a id="our-next-button" class="btn btn-md btn-primary" href="{{ url('/register/classAndSocietyDetails') }}">Next</a>
-							</div>
+                              <div>
+                                  <button type="submit" class="btn btn-primary btn-md btn-block">Next</button>
+                              </div>
 						</div>
-
 					</form>
 				</div>
 			</div>

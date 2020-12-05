@@ -9,4 +9,9 @@ class Society extends Model
 {
     public $timestamps  = true;
     use HasFactory;
+    public function user()
+    {
+        return $this->belongsToMany(User::class, 'members');
+    }
+
 }

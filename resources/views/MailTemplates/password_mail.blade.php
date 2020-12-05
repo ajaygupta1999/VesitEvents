@@ -8,6 +8,6 @@
 <br/>
 Your registered email-id is {{$user->email}} , Please click on the below link to reset your password
 <br/>
-<a href="{{url('/newpassword', )}}">Reset</a>
+<a href="{{url('/newpassword', $user->email)}}">Reset</a>
 </body>
 </html>

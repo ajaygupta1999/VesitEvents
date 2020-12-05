@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 class EventController extends Controller
 {
     function aboutEvent(){
+        DB::beginTransaction();
         return view('Events/AddEvent');
     }
 
@@ -22,7 +23,7 @@ class EventController extends Controller
         $event->time = $request->time;
         $event->date = $request->date;
         $event->save();
-        session()->put('event_id',$event->id);
+        session()->put('event',$event);
         return redirect('addevent/aboutguest');
     }
 
@@ -45,24 +46,29 @@ class EventController extends Controller
         return redirect('addevent/aboutguest');
     }
 
-//    function aboutGuestAddExisting($event_id,$guest_id){
-//        $event = Event::find($event_id);
-//        $guest = Guest::find($guest_id);
-////      $event->guests()->attach($guest->id);
-//        $guest->events()->attach($event->id);
-//        return redirect('addevent/aboutguest');
-//    }
 
     function aboutGuestAddExisting(Request $request){
-        $event = Event::find($request->event_id);
+        $event = session()->get('event');
+        $event = Event::find($event->id);
         $guest = Guest::find($request->guest_id);
 //      $event->guests()->attach($guest->id);
         $guest->events()->attach($event->id);
         return response()->json(['success'=>'Done']);
     }
 
-    function addEventComplete(){
-        session()->forget('event_id');
+    function removeEvent(){
+        DB::rollBack();
+        session()->forget('event');
         return redirect('/');
+    }
+
+    function addEventComplete(){
+        session()->forget('event');
+        DB::commit();
+        return redirect('/');
+    }
+
+    function eventPage($id){
+        return view('Events/Eachevent');
     }
 }

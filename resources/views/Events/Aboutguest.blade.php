@@ -39,6 +39,10 @@
 		    </nav>
 	    </div>
 
+
+        @php
+        $event = session()->get('event')
+            @endphp
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
@@ -88,7 +92,7 @@
                             <label for="exampleFormControlTextarea1" class="label">About the Guest</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="short_desc" placeholder="Something about the Guest"></textarea>
 						</div>
-                        <input type="hidden" name="event_id" value="{{session('event_id')}}">
+                        <input type="hidden" name="event_id" value="{{$event->id}}">
                         <div class="d-flex justify-content-between" id="forgotpassword">
 							<div>
 								<a id="our-back-button" class="btn btn-md btn-light" href="{{ url('addevent/aboutevent') }}">Back</a>
@@ -108,7 +112,6 @@
 				</div>
 			</div>
         </div>
-
 		<!-- Modal -->
 		<div class="modal fade" id="guest-select-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered" role="document">
@@ -123,13 +126,13 @@
 				     <div class="our-guest-list d-flex flex-column">
                          @foreach($guests as $guest)
                              @php
-                             $istaken = \App\Models\Takenby::where('event_id',session('event_id'))
+                             $istaken = \App\Models\Takenby::where('event_id',$event->id)
                              ->where('guest_id',$guest->id)
                              ->first();
                              @endphp
                          @if(!$istaken)
 {{--						 <a class="model-each-guest-link" href="{{url('addevent/aboutguest/add',[session('event_id'),$guest->id])}}">--}}
-                                 <a class="model-each-guest-link">
+                                 <a class="model-each-guest-link" data-id="{{$guest->id}}">
 
                                  <div class="each-guest d-flex justify-content-between align-items-center">
 								<div class="name-and-img-session d-flex justify-content-start align-items-center">
@@ -162,10 +165,9 @@
             $(this).hide();
             $.ajax({
                 type:'get',
-                url:'http://localhost:800/myevent/public/msg',
+                url:'http://localhost:800/myevent/public/addevent/aboutguest/addexisting',
                 data: {
-                    event_id : {{session('event_id')}},
-                    guest_id : {{$guest->id}}
+                    guest_id : $(this).attr('data-id')
                 },
                 // success:function(data) {
                 //     alert(JSON.stringify(data));

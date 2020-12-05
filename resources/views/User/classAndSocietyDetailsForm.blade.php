@@ -3,7 +3,7 @@
 <head>
 	<title>VESIT EVENTS</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
+
     <!-- External strylesheet -->
 	<link rel="stylesheet" type="text/css" href="{{ url('css/login.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('css/index.css') }}">
@@ -23,7 +23,7 @@
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
 				  </button>
-	            
+
 			      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					    <ul class="navbar-nav ml-auto">
 					      <li class="nav-item">
@@ -37,11 +37,12 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
-					<form class="submit-forms" action="/login" method="POST">
+					<form class="submit-forms" action="classdetails/add" method="POST"  enctype="multipart/form-data">
+                        @csrf
                         <center><h1 class="new-h1">Class & Society Details</h1></center>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1" class="label">College Department</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control" id="exampleFormControlSelect1" name="department">
                               <option>CMPN</option>
                               <option>IT</option>
                               <option>EXTC</option>
@@ -49,7 +50,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1" class="label">Current Year of Study</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control" id="exampleFormControlSelect1" name="current_year">
                               <option>1</option>
                               <option>2</option>
                               <option>3</option>
@@ -58,7 +59,7 @@
                         </div>
                         <div class="form-group">
                             <label class="label" for="exampleFormControlSelect1">Class</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control" id="exampleFormControlSelect1" name="class">
                               <option>1</option>
                               <option>2</option>
                               <option>3</option>
@@ -68,13 +69,13 @@
                         </div>
 						<div class="form-group">
 						  <label for="username"  class="label">Roll No</label>
-						  <input type="number" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your Roll No"  
-								 name="class">
+						  <input type="number" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your Roll No"
+								 name="roll_no">
 						</div>
 						<div class="form-group">
 						 <label for="login-login"  class="label">Semester</label>
 							<div class="password">
-							<input type="number" class="form-control" id="login-login" aria-describedby="emailHelp"  placeholder="Enter Your Current Semester"  
+							<input type="number" class="form-control" id="login-login" aria-describedby="emailHelp"  placeholder="Enter Your Current Semester"
 								   name="semester">
 							</div>
                          </div>
@@ -84,29 +85,28 @@
                          </div>
                          <div class="form-group">
                             <label for="exampleFormControlSelect1" class="label">Society Name(From Which you belong)</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>ISTE</option>
-                              <option>IEE</option>
-                              <option>CSI</option>
-                              <option>ISA</option>
-                              <option>CODECELL</option>
+                            <select class="form-control" id="exampleFormControlSelect1" name="society">
+                                <option>None</option>
+                              <option>Isa</option>
+                              <option>Ieee</option>
+                              <option>Csi</option>
+                              <option>Isa</option>
+{{--                              <option>CODECELL</option>--}}
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1" class="label">Role(What is your role in that society)</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control" id="exampleFormControlSelect1" name="role">
                               <option>Normal-member</option>
                               <option>council-member</option>
                               <option>council-head</option>
                             </select>
                         </div>
                         <div class="d-flex justify-content-between" id="forgotpassword">
-							<div>
-								<a id="our-back-button" class="btn btn-md btn-light" href="{{ url('/register/personalDetails') }}">Back</a> 
-							</div>
-							<div>
-								<a id="our-next-button" class="btn btn-md btn-primary" href="{{ url('/home') }}">Next</a>
-							</div>
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-md btn-block">Next</button>
+                            </div>
+
 						</div>
 
 					</form>

@@ -34,7 +34,7 @@ class LoginController extends Controller
     }
 
     /**
-     * Redirect the user to the GitHub authentication page.
+     * Redirect the user to the Google authentication page.
      *
      * @return \Illuminate\Http\Response
      */
@@ -50,11 +50,14 @@ class LoginController extends Controller
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('google')->stateless()->user();
-        $email = $user->getemail();
+        $google = Socialite::driver('google')->stateless()->user();
+        $email = $google->getemail();
+
         if(User::where('email',$email)->first())
         {
-            Session::put('email',$user->email);
+            Session::put('email',$email);
+            $user= User::where('email',$email)->first();
+            Auth::login($user);
             return redirect('/');
         }
 //        if(!(preg_match("/^([\d]{4})\.([a-z]+)\.([a-z]+)@(ves)\.(ac)\.(in)$/",$email)))
@@ -67,9 +70,16 @@ class LoginController extends Controller
             $user = new User();
             $user->email = $email;
             $user->password = "";
+//            $user->first_name =  $google->offsetGet('given_name');
+//            $user->last_name =  $google->offsetGet('family_name');
+            $user->isVerified = 1;
             $user->save();
             Session::put('email',$user->email);
-            return redirect('/');
+            Session::put('temp_email',$user->email);
+            Auth::login($user);
+            Mail::to($user->email)->send(new MailController($user,'MailTemplates/welcome_mail'));
+//            return redirect('/');
+            return redirect('/personaldetails');
         }
     }
 

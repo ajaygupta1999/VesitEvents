@@ -13,7 +13,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
 </head>
 <body>
-
 	    <div class="my-content">
 		    <nav id="my-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
 				  <a class="navbar-brand" href="{{ url('/') }}">

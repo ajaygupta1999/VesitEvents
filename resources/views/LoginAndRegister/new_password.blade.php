@@ -57,7 +57,7 @@
                     <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Your email address"
                            name="password" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-md btn-block">Send Mail</button>
+                <button type="submit" class="btn btn-primary btn-md btn-block">Change Password</button>
             </form>
         </div>
     </div>

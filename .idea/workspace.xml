@@ -20,90 +20,149 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e416d775-8180-45fa-9ac3-88aa236a2f24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/View/Components/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/Eventscards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/Untitled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/User-register.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/VES_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/bell-icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/csi_logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/download-free-png-stockvader-predicted-adig-user-profile-icon-user-profile-png-880_880.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/download.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/event-pic2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/event.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/event_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/eventpic3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/gihub.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/ieee_logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/images.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/isa_logo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/iste_logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/left-right-arrow.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/prof-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/prof-2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/prof-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/society-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/use-img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/useradd2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/useraddicon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asserts/w1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/addevent.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/eachevent.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/signup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/society.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Events/Aboutguest.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Events/AddEvent.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/LoginAndRegister/signup.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Society/society.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/User/classAndSocietyDetailsForm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/User/personalDetailForm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myevent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myevent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_11_2020_4_52_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_11_2020_4_52_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VesitEvents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/.styleci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Console/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Exceptions/Handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Controllers/Home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Controllers/Login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Controllers/Society.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Middleware/Authenticate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Middleware/TrustHosts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Providers/AuthServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Providers/EventServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/app/View/Components/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/artisan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/bootstrap/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/broadcasting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/cors.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/filesystems.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/hashing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/logging.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/queue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/config/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/database/factories/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/database/seeders/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/Eventscards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/Untitled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/User-register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/VES_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/bell-icon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/csi_logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/download-free-png-stockvader-predicted-adig-user-profile-icon-user-profile-png-880_880.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/download.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/event-pic2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/event.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/event_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/eventpic3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/gihub.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/ieee_logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/images.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/images.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/isa_logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/iste_logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/left-right-arrow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/p1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/p2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/p3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/prof-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/prof-2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/prof-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/society-background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/use-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/useradd2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/useraddicon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/asserts/w1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/css/society.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/public/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/lang/en/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/lang/en/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/lang/en/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/lang/en/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/views/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/views/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/views/society.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/routes/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/routes/channels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/routes/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/routes/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/server.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/storage/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/storage/framework/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/storage/framework/cache/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/storage/framework/sessions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/storage/logs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/tests/CreatesApplication.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/tests/TestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VesitEvents/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SocietyInserter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SocietyInserter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Society.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Society.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/LoginAndRegister/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main-page.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/new_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/LoginAndRegister/new_password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/password_mail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/MailTemplates/password_mail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/register.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reset_pass.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/LoginAndRegister/reset_pass.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/society-page.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/verify_mail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/MailTemplates/verify_mail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Events/Aboutguest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Events/Aboutguest.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Events/AddEvent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Events/AddEvent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/LoginAndRegister/new_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/LoginAndRegister/new_password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/MailTemplates/password_mail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/MailTemplates/password_mail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/User/classAndSocietyDetailsForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/User/classAndSocietyDetailsForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/User/personalDetailForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/User/personalDetailForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -311,6 +370,9 @@
       <workItem from="1606864764915" duration="1127000" />
       <workItem from="1606865954134" duration="1874000" />
       <workItem from="1606886088752" duration="4526000" />
+      <workItem from="1607020072432" duration="4616000" />
+      <workItem from="1607034600961" duration="614000" />
+      <workItem from="1607059788077" duration="22357000" />
     </task>
     <servers />
   </component>
@@ -330,10 +392,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="386" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605641616498">
+    <state x="386" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607108483906">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="386" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1605641616498" />
+    <state x="386" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1607108483906" />
     <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605644315456">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -350,9 +412,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1606866904180" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606866382308">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1607021778660">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606866382308" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1607021778660" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 <?php
 
-//<<<<<<< HEAD
+
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//<<<<<<< HEAD
+
 
 //Route for main pages and user
 Route::get('', [UserController::class,'mainPage']);
@@ -32,6 +32,14 @@ Route::post('reset/check', [UserController::class ,'passwordReset']);
 Route::get('newpassword/{email}',[UserController::class,'newPasswordPage'])->name('new_password');
 
 Route::post('newpassword/check/{id}',[UserController::class,'newPassword'])->name('new_password_check');
+
+Route::get('personaldetails',[UserController::class,'personalDetailPage']);
+
+Route::post('personaldetails/add',[UserController::class,'personalDetailAdd']);
+
+Route::get('classdetails',[UserController::class,'classDetailPage']);
+
+Route::post('classdetails/add',[UserController::class,'classDetailAdd']);
 
 
 //Register
@@ -47,6 +55,9 @@ Route::get('verify/{token}',[RegisterController::class,'verifyUser']);
 Route::get('login', [LoginController::class,'loginPage'])->name('login');
 
 Route::post("login",[LoginController::class ,"authenticate"])->name('login_check');
+
+////Google Login
+//Route::get('login',  [LoginController::class, 'redirectToProvider']);
 
 Route::get('login/google', [LoginController::class, 'redirectToProvider']);
 
@@ -65,9 +76,11 @@ Route::get('addevent/aboutguest',[EventController::class,'aboutGuest'])->middlew
 
 Route::post('addevent/aboutguest/add',[EventController::class, 'aboutGuestAdd'])->middleware('auth');
 
-Route::get('addevent/aboutguest/add/{event_id}/{guest_id}',[EventController::class, 'aboutGuestAddExisting'])->middleware('auth');
+Route::get('addevent/aboutguest/addexisting',[EventController::class, 'aboutGuestAddExisting'])->middleware('auth');
 
-Route::get('addevent/add',[EventController::class,'addEventComplete']);
+Route::get('addevent/add',[EventController::class,'addEventComplete'])->middleware('auth');
+
+Route::get('event/{id}',[EventController::class, 'eventPage'])->middleware('auth');
 
 
 //=======

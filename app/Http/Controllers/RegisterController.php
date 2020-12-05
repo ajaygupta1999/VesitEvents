@@ -64,6 +64,9 @@ class RegisterController extends Controller
         else {
             return redirect('/login')->with('warning', "Sorry your email cannot be identified.");
         }
+        $user = User::where('email',$user->email)->first();
+        session()->put('temp_email',$user->email);
+        return redirect('/personaldetails');
         return redirect('/login')->with('status', $status);
     }
 
