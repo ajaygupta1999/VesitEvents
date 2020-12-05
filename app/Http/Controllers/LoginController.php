@@ -85,6 +85,7 @@ class LoginController extends Controller
 
     function logout(){
         session()->forget('email');
+        session()->forget('temp_email');
         Auth::logout();
         return redirect('/');
     }

@@ -85,6 +85,7 @@ class UserController extends Controller
 
     function classDetailPage(){
         $user = User::where('email',session()->get('temp_email'))->first();
+
         return view('User/classAndSocietyDetailsForm', compact(['user']));
     }
 

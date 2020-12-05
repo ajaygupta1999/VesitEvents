@@ -42,6 +42,7 @@ class RegisterController extends Controller
             $verify_user->save();
             Mail::to($user->email)->send(new MailController($user,'MailTemplates/verify_mail'));
             $status = "Verification Email Send";
+            session()->put('temp_email',$user->email);
             return redirect('/login')->with('status',$status);
         }
     }
@@ -65,7 +66,7 @@ class RegisterController extends Controller
             return redirect('/login')->with('warning', "Sorry your email cannot be identified.");
         }
         $user = User::where('email',$user->email)->first();
-        session()->put('temp_email',$user->email);
+//        session()->put('temp_email',$user->email);
         return redirect('/personaldetails');
         return redirect('/login')->with('status', $status);
     }
