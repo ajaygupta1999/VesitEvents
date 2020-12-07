@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ url('/css/userprofile.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url('/css/addevent.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url('/css/eachevent.css') }}">
-    
+
 
 	<!-- <link rel="stylesheet" type="text/css" href="../css/main-page.css"> -->
 

@@ -21,7 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e416d775-8180-45fa-9ac3-88aa236a2f24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Society/society.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Society/society.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,16 +188,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\myevent\resources\images" />
+      <recent name="C:\xampp\htdocs\myevent\resources\views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\myevent\public\asserts\Society" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\MailTemplates" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\User" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\Society" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\LoginAndRegister" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\myevent\resources\images" />
-      <recent name="C:\xampp\htdocs\myevent\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -249,7 +253,8 @@
       <workItem from="1607181092667" duration="3053000" />
       <workItem from="1607318325243" duration="5651000" />
       <workItem from="1607324720806" duration="16757000" />
-      <workItem from="1607349703783" duration="980000" />
+      <workItem from="1607349703783" duration="1578000" />
+      <workItem from="1607352903817" duration="4267000" />
     </task>
     <servers />
   </component>

@@ -31,13 +31,17 @@ class UserController extends Controller
     {
         $society = Society::where('name', $request->name)->first();
         $user = User::where('email', session()->get('email'))->first();
+        $past_events = Event::where('society', $society->name)
+            ->whereDate('date', '<', date('Y-m-d'))
+            ->get();
         $ongoing_events = Event::where('society', $society->name)
             ->whereDate('date', '=', date('Y-m-d'))
             ->get();
         $upcoming_events = Event::where('society', $society->name)
             ->whereDate('date', '>', date('Y-m-d'))
             ->get();
-        return view('Society/society', compact(['society', 'user', 'ongoing_events', 'upcoming_events']));
+        $society_members = CouncilMember::where('society_name', $request->name)->get();
+        return view('Society/society', compact(['society', 'user', 'ongoing_events', 'upcoming_events','past_events']));
     }
 
     //Password Reset

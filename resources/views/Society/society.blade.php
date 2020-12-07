@@ -29,19 +29,19 @@
         <div class="each-society-information d-flex justify-content-center">
             <div class="society-details-society-page d-flex flex-column">
                 <div class="society-img-session">
-                    <img src="{{ url('/asserts',$society->image) }}">
+                    <img width="150px" src="{{ url('/asserts',$society->image) }}">
                 </div>
                 <h4>{{$society->name}} Society</h4>
                 <p> {{$society->description}} </p>
                 <div class="button-session">
                     <button class="btn btn-sm btn-light"><i class="fas fa-users"></i> {{$society->total_members}} Employees </button>
                 </div>
-                
+
             </div>
         </div>
- 
-         
-         
+
+
+
         <ul class="nav nav-pills mb-3 society-nav-session" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
               <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Events</a>
@@ -71,66 +71,23 @@
                                 <hr/>
                                 <div class="all-event-cards">
                                     <div class="row">
+                                        @foreach($ongoing_events as $ongoing_event)
                                         <div class="col-3">
                                             <div class="each-event-card d-flex flex-column">
                                                 <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
+                                                    <img width="150px" src="{{ url('/event_images/'.$ongoing_event->profile_image) }}" alt="">
                                                 </div>
                                                 <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
+                                                    <p class="event-title">{{$ongoing_event->name}}</p>
                                                     <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
+                                                        <span><i class="far fa-calendar-alt"></i>{{$ongoing_event->date}}</span>
+                                                        <span><i class="far fa-clock"></i> {{$ongoing_event->time}}</span>
                                                     </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
+                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$ongoing_event->id)}}">View Details</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
-                                                </div>
-                                            </div>
-                                        </div>  
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -141,66 +98,23 @@
                                 <hr/>
                                 <div class="all-event-cards">
                                     <div class="row">
+                                        @foreach($upcoming_events as $upcoming_event)
                                         <div class="col-3">
                                             <div class="each-event-card d-flex flex-column">
                                                 <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
+                                                    <img  width="150px" src="{{ url('/event_images/'.$upcoming_event->profile_image) }}" alt="">
                                                 </div>
                                                 <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
+                                                    <p class="event-title">{{$upcoming_event->name}}</p>
                                                     <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
+                                                        <span><i class="far fa-calendar-alt"></i> {{$upcoming_event->date}}</span>
+                                                        <span><i class="far fa-clock"></i> {{$upcoming_event->time}}</span>
                                                     </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
+                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$ongoing_event->id)}}">View Details</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
-                                                </div>
-                                            </div>
-                                        </div>  
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -212,64 +126,21 @@
                                 <div class="all-event-cards">
                                     <div class="row">
                                         <div class="col-3">
+                                            @foreach($past_events as $past_event)
                                             <div class="each-event-card d-flex flex-column">
                                                 <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
+                                                    <img width="150px" src="{{ url('/event_images/'.$past_event->profile_image) }}" alt="">
                                                 </div>
                                                 <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
+                                                    <p class="event-title">{{$past_event->name}}</p>
                                                     <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
+                                                        <span><i class="far fa-calendar-alt"></i> {{$past_event->date}}</span>
+                                                        <span><i class="far fa-clock"></i> {{$past_event->time}}</span>
                                                     </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
+                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$past_event->id)}}">View Details</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
-                                                </div>
-                                            </div>
-                                        </div>  
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img src="{{ url('/asserts/download.jpg') }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">Android Workshop</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> 16/10/2020</span>
-                                                        <span><i class="far fa-clock"></i> 5:40pm </span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="/event/1">View Details</a>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -286,23 +157,23 @@
 
             </div>
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
-          </div> 
-         
-         
-         
-         
-         
-          
+          </div>
 
-         
-         
-         
-         
-          
-         
-         
-         
-         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         {{-- <div class="d-flex justify-content-center align-items-center">
             <h4 class="my-ongoing-title-index-page">On Going Events</h4>

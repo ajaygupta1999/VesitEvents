@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li id="login-li" class="nav-item" >
-                      <a href="/user/profile">
+                      <a href="{{url('/user/profile')}}">
                           <div class="user-details-navbar">
                               <div class="d-flex justify-content-start align-items-center">
                                 <div class="user-profile-image">

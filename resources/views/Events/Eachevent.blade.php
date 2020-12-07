@@ -39,7 +39,9 @@
                                             @endphp
                                         @endif
                                     @endfor
-                                    {{$guest_data}}
+                                    @if(sizeof($guests_ids)>0)
+                                        {{$guest_data}}
+                                    @endif
                                 </p>
 								<p class="event-date-time"><span><i class="far fa-calendar-alt"></i>{{$event->date}}</span> <span><i class="far fa-clock"></i>{{$event->time}}</span></p>
 								<p class="event-orgnizor">From: <span>{{$event->society}}</span></p>
