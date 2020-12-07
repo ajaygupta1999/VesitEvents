@@ -67,7 +67,7 @@
                                 @endphp
 								<p class="guest-text"><span>Guest:</span>
                                         @for($j=0 ; $j < sizeof($guests_ids) ; $j++)
-                                            @php 
+                                            @php
                                                $guest = \App\Models\Guest::find($guests_ids[$j])->first();
                                                if(sizeof($guests_ids) == 1){
                                                    $guest_data = $guest->name.".";
@@ -78,7 +78,7 @@
                                                    continue;
                                                }
                                             @endphp
-                                    
+
                                             @if($j < sizeof($guests_ids) - 1)
                                                 @php
                                                     $guest_data = $guest_data.", ".$guest->name;
@@ -127,7 +127,7 @@
 										@endphp
 										<p class="guest-text"><span>Guest:</span>
 											@for($j=0 ; $j < sizeof($guests_ids) ; $j++)
-												@php 
+												@php
 													$guest = \App\Models\Guest::find($guests_ids[$j])->first();
 													if(sizeof($guests_ids) == 1){
 														$guest_data = $guest->name.".";
@@ -138,7 +138,7 @@
 														continue;
 													}
 												@endphp
-										
+
 												@if($j < sizeof($guests_ids) - 1)
 													@php
 														$guest_data = $guest_data.", ".$guest->name;
@@ -157,7 +157,7 @@
 											<p><span><i class="far fa-clock"></i></span> {{$upcoming_events[$i]->time}}</p>
 										</div>
 										<div class="register-button-div">
-											<a id="each-event-register-button" class="btn btn-md btn-primary" href="/event/{{ $upcoming_events[$i]->id }}">Register</a>
+											<a id="each-event-register-button" class="btn btn-md btn-primary" href="event/{{ $upcoming_events[$i]->id }}">Register</a>
 										</div>
 									</div>
 								</div>

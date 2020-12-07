@@ -82,7 +82,7 @@ Route::get('addevent/aboutguest/addexisting',[EventController::class, 'aboutGues
 
 Route::get('addevent/add',[EventController::class,'addEventComplete'])->middleware('auth','admin');
 
-Route::get('event/{id}',[EventController::class, 'eventPage'])->middleware('auth');
+Route::get('event/{id}',[EventController::class, 'eventPage'])->middleware('auth')->name('event_page');
 
 
 Route::get('event/register/{id}',[EventController::class,'registerAdd'])->middleware('auth');
@@ -92,11 +92,11 @@ Route::get('event/register/{id}',[EventController::class,'registerAdd'])->middle
 
 Route::get("user/profile" , [UserController::class , 'userProfilePage'])->middleware('auth');
 
-Route::get('user/personaldetails', [UserController::class , 'userPersonalPage'])->middleware('auth');
+Route::post('user/profile/personaldetails', [UserController::class , 'userPersonalEdit'])->middleware('auth');
 
-Route::get("user/classdetails" , [UserController::class , 'userClassPage'])->middleware('auth');
+Route::post("user/profile/classdetails" , [UserController::class , 'userClassEdit'])->middleware('auth');
 
-Route::get("user/societydetails" , [UserController::class , 'userSocietyPage'])->middleware('auth');
+Route::post("user/profile/societydetails" , [UserController::class , 'userSocietyEdit'])->middleware('auth');
 
 
 
