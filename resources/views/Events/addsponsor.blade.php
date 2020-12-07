@@ -4,7 +4,7 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
-					<form class="submit-forms" action={{route('login_check')}} method="POST">
+					<form class="submit-forms" action="{{url('/addevent/addsponsor/add')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <center><h1 class="new-h1">Sponsors Details</h1></center>
                         <div class="doeshavesponsor">
@@ -20,11 +20,11 @@
                         </div>
                         <div class="form-group our-add-sponsor-form">
                             <label for="exampleFormControlFile1">Sponsor Image</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+                            <input type="file" class="form-control" aria-describedby="emailHelp" accept="image/*" name="image">
                         </div>
                         <div class="form-group our-add-sponsor-form">
                             <label for="exampleFormControlTextarea1">Sponsors Details</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="detail"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="details"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-md btn-block">Submit</button>
 					</form>

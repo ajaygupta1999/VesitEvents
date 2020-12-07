@@ -80,6 +80,10 @@ Route::post('addevent/aboutguest/add',[EventController::class, 'aboutGuestAdd'])
 
 Route::get('addevent/aboutguest/addexisting',[EventController::class, 'aboutGuestAddExisting'])->middleware('auth','admin');
 
+Route::get("/addevent/aboutsponsor" , [EventController::class , 'aboutSponsor']);
+
+Route::post("/addevent/addsponsor/add" , [EventController::class , 'aboutSponsorAdd']);
+
 Route::get('addevent/add',[EventController::class,'addEventComplete'])->middleware('auth','admin');
 
 Route::get('event/{id}',[EventController::class, 'eventPage'])->middleware('auth')->name('event_page');
@@ -107,7 +111,7 @@ Route::post("user/profile/societydetails" , [UserController::class , 'userSociet
 // /user/{email}/profile/classdetails
 // /user/{email}/profile/societydetails
 
-Route::get("/addevent/addsponsor" , [UserController::class , 'addSponsor']);
+
 
 /*Ignore this route*/
 Route::get('/insertsociety',[\App\Http\Controllers\SocietyInserter::class,'insert']);

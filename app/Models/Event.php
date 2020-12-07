@@ -18,4 +18,9 @@ class Event extends Model
     {
         return $this->belongsToMany(User::class, 'registers');
     }
+
+    public function company()
+    {
+        return $this->belongsToMany(Company::class, 'sponser_bies');
+    }
 }

@@ -21,10 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e416d775-8180-45fa-9ac3-88aa236a2f24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/society.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/society.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Events/Aboutguest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Events/Aboutguest.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Society/society.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Society/society.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Events/addsponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Events/addsponsor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +254,7 @@
       <workItem from="1607318325243" duration="5651000" />
       <workItem from="1607324720806" duration="16757000" />
       <workItem from="1607349703783" duration="1578000" />
-      <workItem from="1607352903817" duration="5245000" />
+      <workItem from="1607352903817" duration="7988000" />
     </task>
     <servers />
   </component>

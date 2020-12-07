@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
 use App\Models\CouncilMember;
 use App\Models\Event;
 use App\Models\Guest;
+use App\Models\SponserBy;
 use App\Models\Takenby;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -66,6 +68,25 @@ class EventController extends Controller
         return response()->json(['success'=>'Done']);
     }
 
+    function aboutSponsor(){
+        $user = User::where('email', session()->get('email'))->first();
+        return view('Events/addsponsor',compact(['user']));
+    }
+
+    function aboutSponsorAdd(Request $request){
+        $event = session()->get('event');
+        $company = new Company();
+        $imageName = time() . '' . $request->image->getClientOriginalName();;
+        $request->image->move(public_path('company_images'), $imageName);
+        $company->profile_image = $imageName;
+        $company->details =  $request->details;
+        $company->save();
+        $event->company()->attach($company->id);
+        session()->forget('event');
+        DB::commit();
+        return redirect('/');
+    }
+
     function removeEvent(){
         DB::rollBack();
         session()->forget('event');
@@ -82,7 +103,9 @@ class EventController extends Controller
         $user = User::where('email',session()->get('email'))->first();
         $event = Event::find($id);
         $guests = Takenby::where('event_id',$id)->get();
-        return view('Events/Eachevent' , compact(['user','event']));
+        $sponsers = SponserBy::where('event_id',$id)->first();
+        $company = Company::find($sponsers->company_id);
+        return view('Events/Eachevent' , compact(['user','event','company']));
     }
 
     function registerAdd($id){
