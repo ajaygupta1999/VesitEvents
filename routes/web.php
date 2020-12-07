@@ -68,7 +68,7 @@ Route::get('logout',[LoginController::class,'logout']);
 
 //Events
 
-Route::get('addevent/aboutevent',[EventController::class,'aboutEvent'])->middleware('auth');
+Route::get('addevent/aboutevent',[EventController::class,'aboutEvent'])->middleware('auth','admin');
 
 Route::post('addevent/aboutevent/add', [EventController::class,'aboutEventAdd'])->middleware('auth');
 
