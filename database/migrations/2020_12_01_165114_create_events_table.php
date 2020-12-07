@@ -19,6 +19,7 @@ class CreateEventsTable extends Migration
             $table->string('short_description');
             $table->string('long_description');
             $table->string('category');
+            $table->string('profile_image');
             $table->date('date');
             $table->time('time');
             $table->timestamps();

@@ -20,6 +20,9 @@ class EventController extends Controller
         $event->short_description = $request->short_desc;
         $event->long_description = $request->full_desc;
         $event->category = $request->category;
+        $imageName = time().''.$request->image->getClientOriginalName();;
+        $request->image->move(public_path('event_images'), $imageName);
+        $event->profile_image = $imageName;
         $event->time = $request->time;
         $event->date = $request->date;
         $event->save();

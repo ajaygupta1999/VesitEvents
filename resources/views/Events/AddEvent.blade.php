@@ -38,7 +38,7 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
-					<form class="submit-forms" action="{{url('addevent/aboutevent/add')}}" method="post">
+					<form class="submit-forms" action="{{url('addevent/aboutevent/add')}}" method="post"  enctype="multipart/form-data">
                     @csrf
                         <center><h1 class="new-h1">Add New Event</h1></center>
 						<div class="form-group">
@@ -60,6 +60,10 @@
                               <option>Technical Event</option>
                               <option>Non-technical Event</option>
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="username"  class="label">Profile Image</label>
+                            <input type="file" class="form-control" aria-describedby="emailHelp" accept="image/*" name="image">
                         </div>
                         <div class="row">
                             <div class="form-group col-12 col-md-6">
