@@ -163,3 +163,23 @@ specific-society-page
     border: none;
 	box-shadow: 0 4px 10px 8px rgba(0, 0, 0, 0.05), 0 6px 20px 2px rgba(0, 0, 0, 0.04);
 }
+
+.All-Members-details .all-member-header{
+	margin-top : 20px;
+	margin-bottom : 20px;
+}
+
+#all-memeber-session{
+	margin-top : 30px;
+	margin-bottom : 15px;
+}
+
+.All-Members-details p{
+	font-weight : 600;
+	margin-bottom : 0px;
+}
+
+.society-nav-session .nav-item a{
+	border: none;
+    border-radius: 0;
+}

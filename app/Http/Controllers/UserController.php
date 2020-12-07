@@ -41,7 +41,7 @@ class UserController extends Controller
             ->whereDate('date', '>', date('Y-m-d'))
             ->get();
         $society_members = CouncilMember::where('society_name', $request->name)->get();
-        return view('Society/society', compact(['society', 'user', 'ongoing_events', 'upcoming_events','past_events']));
+        return view('Society/society', compact(['society', 'user', 'ongoing_events', 'upcoming_events','past_events','society_members']));
     }
 
     //Password Reset
