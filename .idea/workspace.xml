@@ -20,23 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e416d775-8180-45fa-9ac3-88aa236a2f24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/asserts/registrations.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/profile_images/1607252356jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/profile_images/1607252749jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/profile_images/1607252750jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/profile_images/1607252751jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/profile_images/1607253390jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/profile_images/1607318565jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/profile_images/1607320242jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/User/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/asserts/gihub.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/asserts/github.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/asserts/use-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/asserts/user-img1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/eachevent.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/eachevent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/event_images/1607321784Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/event_images/1607322855Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/event_images/1607322950Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/event_images/1607331232WhatsApp Image 2020-12-03 at 7.41.18 PM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/event_images/1607331796WhatsApp Image 2020-12-03 at 7.41.18 PM (2).jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/event_images/1607332062Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607252356jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607252749jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607252750jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607252751jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607253390jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607318565jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607320242jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607321168Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607321565Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607322820Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607331155WhatsApp Image 2020-12-03 at 7.42.34 PM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile_images/1607332024Capture.PNG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/User/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/User/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -264,7 +269,7 @@
       <workItem from="1607134052896" duration="7519000" />
       <workItem from="1607181092667" duration="3053000" />
       <workItem from="1607318325243" duration="5651000" />
-      <workItem from="1607324720806" duration="10182000" />
+      <workItem from="1607324720806" duration="16663000" />
     </task>
     <servers />
   </component>
