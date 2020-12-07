@@ -107,6 +107,7 @@ Route::post("user/profile/societydetails" , [UserController::class , 'userSociet
 // /user/{email}/profile/classdetails
 // /user/{email}/profile/societydetails
 
+Route::get("/addevent/addsponsor" , [UserController::class , 'addSponsor']);
 
 /*Ignore this route*/
 Route::get('/insertsociety',[\App\Http\Controllers\SocietyInserter::class,'insert']);
