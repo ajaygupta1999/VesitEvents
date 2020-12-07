@@ -20,10 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e416d775-8180-45fa-9ac3-88aa236a2f24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/asserts/registrations.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile_images/1607252356jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile_images/1607252749jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile_images/1607252750jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile_images/1607252751jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile_images/1607253390jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile_images/1607318565jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile_images/1607320242jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/User/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/asserts/gihub.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/asserts/github.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/asserts/use-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/asserts/user-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/eachevent.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/eachevent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Events/Eachevent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,16 +200,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\myevent\resources\images" />
-      <recent name="C:\xampp\htdocs\myevent\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\myevent\public\asserts\Society" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\MailTemplates" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\User" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\Society" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\LoginAndRegister" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\myevent\resources\images" />
+      <recent name="C:\xampp\htdocs\myevent\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -250,7 +264,7 @@
       <workItem from="1607134052896" duration="7519000" />
       <workItem from="1607181092667" duration="3053000" />
       <workItem from="1607318325243" duration="5651000" />
-      <workItem from="1607324720806" duration="3265000" />
+      <workItem from="1607324720806" duration="10182000" />
     </task>
     <servers />
   </component>

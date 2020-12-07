@@ -209,8 +209,7 @@ body{
 }
 
 .MY-on-going-evenets .each-event-container .content-session .register-button-div #each-event-register-button{ 
-	padding: 0px 22px !important;
-	font-size: 12px;
+	font-size: 14px;
 	width : 100px;
 	height : 34px;
     font-weight: 700;

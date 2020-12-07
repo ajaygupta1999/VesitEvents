@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //Route for main pages and user
-Route::get('', [UserController::class,'mainPage']);
+Route::get('/', [UserController::class,'mainPage']);
 
 Route::get('society/{name}',[UserController::class,'societyPage']);
 
@@ -85,7 +85,18 @@ Route::get('addevent/add',[EventController::class,'addEventComplete'])->middlewa
 Route::get('event/{id}',[EventController::class, 'eventPage'])->middleware('auth');
 
 
+Route::get('event/register/{id}',[EventController::class,'registerAdd'])->middleware('auth');
 
+
+// User profile route
+
+Route::get("user/profile" , [UserController::class , 'userProfilePage'])->middleware('auth');
+
+Route::get('user/personaldetails', [UserController::class , 'userPersonalPage'])->middleware('auth');
+
+Route::get("user/classdetails" , [UserController::class , 'userClassPage'])->middleware('auth');
+
+Route::get("user/societydetails" , [UserController::class , 'userSocietyPage'])->middleware('auth');
 
 
 

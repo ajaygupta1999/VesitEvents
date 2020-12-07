@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\CouncilMember;
 use App\Models\Event;
 use App\Models\Guest;
+use App\Models\Takenby;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -75,6 +77,15 @@ class EventController extends Controller
     }
 
     function eventPage($id){
-        return view('Events/Eachevent');
+        $user = User::where('email',session()->get('email'))->first();
+        $event = Event::find($id);
+        $guests = Takenby::where('event_id',$id)->get();
+        return view('Events/Eachevent' , compact(['user','event']));
+    }
+
+    function registerAdd($id){
+        $user = User::where('email',session()->get('email'))->first();
+        $user->event()->attach($id);
+        return redirect('/');
     }
 }

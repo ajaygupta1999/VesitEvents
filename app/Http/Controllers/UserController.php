@@ -16,7 +16,7 @@ class UserController extends Controller
 
     //Main page view
     function mainPage(){
-        $societies = \App\Models\Society::all();
+        $societies = Society::all();
         $user = User::where('email',session()->get('email'))->first();
         $ongoing_events = Event::whereDate('date','=',date('Y-m-d'))->get();
         $upcoming_events = Event::whereDate('date','>',date('Y-m-d'))->get();
@@ -26,7 +26,7 @@ class UserController extends Controller
 
     //Society Page view
     function societyPage(Request $request){
-        $society = \App\Models\Society::where('name', $request->name)->first();
+        $society = Society::where('name', $request->name)->first();
         $user = User::where('email',session()->get('email'))->first();
         $ongoing_events = Event::where('society',$society->name)
             ->whereDate('date','=',date('Y-m-d'))
@@ -131,10 +131,26 @@ class UserController extends Controller
         return redirect('/');
     }
 
-
     function userProfilePage(){
         $user = User::where('email',session()->get('email'))->first();
-        $user_id = $user->id;
-        $events = Register::where('user_id',$user_id)->get();
+        $events = Register::where('user_id',$user->id)->get();
+        return view('User/profile',compact(['user','events']));
     }
+
+
+    function userPersonalPage(){
+//        $user = User::where('email',session()->get('email'))->first();
+//        $events = Register::where('user_id',$user_id)->get();
+//        return view('User/profile',compact(['user']));
+    }
+
+
+
+
+//    public function profilePage($email){
+//        $user = User::where('email' , $email)->first();
+//        return view('User/profile' , compact(['user']));
+//    }
+
+
 }
