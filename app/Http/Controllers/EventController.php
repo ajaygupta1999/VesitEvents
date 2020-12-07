@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CouncilMember;
 use App\Models\Event;
 use App\Models\Guest;
 use Illuminate\Http\Request;
@@ -20,6 +21,8 @@ class EventController extends Controller
         $event->short_description = $request->short_desc;
         $event->long_description = $request->full_desc;
         $event->category = $request->category;
+        $society = CouncilMember::where('email',session()->get('email'))->first();
+        $event->society = $society->society_name;
         $imageName = time().''.$request->image->getClientOriginalName();;
         $request->image->move(public_path('event_images'), $imageName);
         $event->profile_image = $imageName;

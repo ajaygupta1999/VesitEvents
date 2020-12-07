@@ -27,7 +27,13 @@ class UserController extends Controller
     function societyPage(Request $request){
         $society = \App\Models\Society::where('name', $request->name)->first();
         $user = User::where('email',session()->get('email'))->first();
-        return view('Society/society', compact(['society','user']));
+        $ongoing_events = Event::where('society',$society->name)
+            ->whereDate('date','=',date('Y-m-d'))
+            ->get();
+        $upcoming_events = Event::where('society',$society->name)
+            ->whereDate('date','>',date('Y-m-d'))
+            ->get();
+        return view('Society/society', compact(['society','user','ongoing_events','upcoming_events']));
     }
 
     //Password Reset

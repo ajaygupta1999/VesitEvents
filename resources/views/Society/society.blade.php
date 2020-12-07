@@ -77,152 +77,234 @@
 	    </div>
 
         <div class="d-flex justify-content-center align-items-center">
-			<h4 class="my-ongoing-title-society">All On-going Events</h4>
-		</div>
+            <h4 class="my-ongoing-title">On Going Events</h4>
+        </div>
         <div class="MY-on-going-evenets">
-            <div class="row">
-            	<div class="col-12 col-md-4">
-					<div class="each-event-container">
-						<div class="img-session">
-							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
-						</div>
-						<div class="content-session">
-							<div class="upper-content d-flex flex-column">
-								<p class="main-title">Android Development</p>
-								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
-								<div class="date-time-div d-flex justify-content-start align-items-center">
-									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
-									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
-								</div>
-								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
-								<div class="register-button-div">
-									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
-								</div>
-							</div>
-						</div>
-					</div>
-            	</div>
-            	<div class="col-12 col-md-4">
-					<div class="each-event-container">
-						<div class="img-session">
-							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
-						</div>
-						<div class="content-session">
-							<div class="upper-content d-flex flex-column">
-								<p class="main-title">Android Development</p>
-								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
-								<div class="date-time-div d-flex justify-content-start align-items-center">
-									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
-									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
-								</div>
-								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
-								<div class="register-button-div">
-									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-md-4">
-					<div class="each-event-container">
-						<div class="img-session">
-							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
-						</div>
-						<div class="content-session">
-							<div class="upper-content d-flex flex-column">
-								<p class="main-title">Android Development</p>
-								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
-								<div class="date-time-div d-flex justify-content-start align-items-center">
-									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
-									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
-								</div>
-								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
-								<div class="register-button-div">
-									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
-								</div>
-							</div>
-						</div>
-					</div>
-            	</div>
-			</div>
-		</div>
+            @for($i=0;$i<sizeof($ongoing_events);$i = $i+3)
+                <div class="row">
+                    @if($i>=sizeof($ongoing_events))
+                        @break;
+                    @endif
+                    <div class="col-12 col-md-4">
+                        <div class="each-event-container">
+                            <div class="img-session">
+                                <img src="{{url('/event_images/'.$ongoing_events[$i]->profile_image)  }}" alt="event-img">
+                            </div>
+                            <div class="content-session">
+                                <div class="upper-content d-flex flex-column">
+                                    <p class="main-title">{{$ongoing_events[$i]->name}}</p>
+                                    <p class="short-desc">{{$ongoing_events[$i]->short_description}}</p>
+                                    @php
+                                        $guests_ids = \App\Models\Takenby::where('event_id',$ongoing_events[$i]->id)->get('guest_id');
+                                    @endphp
+                                    <p class="guest-text"><span>Guest:</span>
+                                        @foreach($guests_ids as $guest_id)
+                                            @php
+                                                $guest = \App\Models\Guest::find($guest_id)->first();
+                                            @endphp
+                                            {{$guest->name}},
+                                        @endforeach
+                                    </p>
+                                    <div class="date-time-div d-flex justify-content-start align-items-center">
+                                        <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$ongoing_events[$i]->date}}</p>
+                                        <p><span><i class="far fa-clock"></i></span> {{$ongoing_events[$i]->time}}</p>
+                                    </div>
+                                    <p class="event-countdown-p"><span>Event start in:<span> {{$ongoing_events[$i]->date}} </p>
+                                    <div class="register-button-div">
+                                        <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if($i+1>=sizeof($ongoing_events))
+                        @break;
+                    @endif
+                    <div class="col-12 col-md-4">
+                        <div class="each-event-container">
+                            <div class="img-session">
+                                <img src="{{ url('/event_images/'.$ongoing_events[$i+1]->profile_image) }}" alt="event-img">
+                            </div>
+                            <div class="content-session">
+                                <div class="upper-content d-flex flex-column">
+                                    <p class="main-title">{{$ongoing_events[$i+1]->name}}</p>
+                                    <p class="short-desc">{{$ongoing_events[$i+1]->short_description}}</p>
+                                    @php
+                                        $guests_ids = \App\Models\Takenby::where('event_id',$ongoing_events[$i+1]->id)->get('guest_id');
+                                    @endphp
+                                    <p class="guest-text"><span>Guest:</span>
+                                        @foreach($guests_ids as $guest_id)
+                                            @php
+                                                $guest = \App\Models\Guest::find($guest_id)->first();
+                                            @endphp
+                                            {{$guest->name}},
+                                        @endforeach
+                                    </p>
+                                    <div class="date-time-div d-flex justify-content-start align-items-center">
+                                        <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$ongoing_events[$i+1]->date}}</p>
+                                        <p><span><i class="far fa-clock"></i></span> {{$ongoing_events[$i+1]->time}}</p>
+                                    </div>
+                                    <p class="event-countdown-p"><span>Event start in:<span> {{$ongoing_events[$i+1]->date}} </p>
+                                    <div class="register-button-div">
+                                        <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if($i+2>=sizeof($ongoing_events))
+                        @break;
+                    @endif
+                    <div class="col-12 col-md-4">
+                        <div class="each-event-container">
+                            <div class="img-session">
+                                <img src="{{ url('/event_images/'.$ongoing_events[$i+2]->profile_image) }}" alt="event-img">
+                            </div>
+                            <div class="content-session">
+                                <div class="upper-content d-flex flex-column">
+                                    <p class="main-title">{{$ongoing_events[$i+2]->name}}</p>
+                                    <p class="short-desc">{{$ongoing_events[$i+2]->short_description}}</p>
+                                    @php
+                                        $guests_ids = \App\Models\Takenby::where('event_id',$ongoing_events[$i+2]->id)->get('guest_id');
+                                    @endphp
+                                    <p class="guest-text"><span>Guest:</span>
+                                        @foreach($guests_ids as $guest_id)
+                                            @php
+                                                $guest = \App\Models\Guest::find($guest_id)->first();
+                                            @endphp
+                                            {{$guest->name}},
+                                        @endforeach
+                                    </p>
+                                    <div class="date-time-div d-flex justify-content-start align-items-center">
+                                        <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$ongoing_events[$i+2]->date}}</p>
+                                        <p><span><i class="far fa-clock"></i></span> {{$ongoing_events[$i+2]->time}}</p>
+                                    </div>
+                                    <p class="event-countdown-p"><span>Event start in:<span> {{$ongoing_events[$i+2]->date}} </p>
+                                    <div class="register-button-div">
+                                        <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endfor
+                </div>
+        </div>
 
-		<div class="d-flex justify-content-center align-items-center">
-			<h4 class="my-ongoing-title-society">All Upcoming-going Events</h4>
-		</div>
+        <div class="d-flex justify-content-center align-items-center">
+            <h4 class="my-upcoming-title">Upcoming Events</h4>
+        </div>
         <div class="MY-on-going-evenets">
-            <div class="row">
-            	<div class="col-12 col-md-4">
-					<div class="each-event-container">
-						<div class="img-session">
-							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
-						</div>
-						<div class="content-session">
-							<div class="upper-content d-flex flex-column">
-								<p class="main-title">Android Development</p>
-								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
-								<div class="date-time-div d-flex justify-content-start align-items-center">
-									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
-									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
-								</div>
-								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
-								<div class="register-button-div">
-									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
-								</div>
-							</div>
-						</div>
-					</div>
-            	</div>
-            	<div class="col-12 col-md-4">
-					<div class="each-event-container">
-						<div class="img-session">
-							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
-						</div>
-						<div class="content-session">
-							<div class="upper-content d-flex flex-column">
-								<p class="main-title">Android Development</p>
-								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
-								<div class="date-time-div d-flex justify-content-start align-items-center">
-									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
-									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
-								</div>
-								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
-								<div class="register-button-div">
-									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-md-4">
-					<div class="each-event-container">
-						<div class="img-session">
-							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
-						</div>
-						<div class="content-session">
-							<div class="upper-content d-flex flex-column">
-								<p class="main-title">Android Development</p>
-								<p class="short-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-								<p class="guest-text"><span>Guest:</span> Ajay Gupta, Hritwik Ekade, Neel bhagat</p>
-								<div class="date-time-div d-flex justify-content-start align-items-center">
-									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span> 24 Oct 2020</p>
-									<p><span><i class="far fa-clock"></i></span> 05:04pm</p>
-								</div>
-								<p class="event-countdown-p"><span>Event start in:<span> 05:05:30</p>
-								<div class="register-button-div">
-									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
-								</div>
-							</div>
-						</div>
-					</div>
-            	</div>
-			</div>
-		</div>
+            @for($i=0;$i<sizeof($upcoming_events);$i = $i+3)
+                <div class="row">
+                    @if($i>=sizeof($upcoming_events))
+                        @break;
+                    @endif
+                    <div class="col-12 col-md-4">
+                        <div class="each-event-container">
+                            <div class="img-session">
+                                <img src="{{ url('/event_images/'.$upcoming_events[$i]->profile_image) }}" alt="event-img">
+                            </div>
+                            <div class="content-session">
+                                <div class="upper-content d-flex flex-column">
+                                    <p class="main-title">{{$upcoming_events[$i]->name}}</p>
+                                    <p class="short-desc">{{$upcoming_events[$i]->short_description}}</p>
+                                    @php
+                                        $guests_ids = \App\Models\Takenby::where('event_id',$upcoming_events[$i]->id)->get('guest_id');
+                                    @endphp
+                                    <p class="guest-text"><span>Guest:</span>
+                                        @foreach($guests_ids as $guest_id)
+                                            @php
+                                                $guest = \App\Models\Guest::find($guest_id)->first();
+                                            @endphp
+                                            {{$guest->name}},
+                                        @endforeach
+                                    </p>
+                                    <div class="date-time-div d-flex justify-content-start align-items-center">
+                                        <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$upcoming_events[$i]->date}}</p>
+                                        <p><span><i class="far fa-clock"></i></span> {{$upcoming_events[$i]->time}}</p>
+                                    </div>
+                                    <p class="event-countdown-p"><span>Event start in:<span> {{$upcoming_events[$i]->date}} </p>
+                                    <div class="register-button-div">
+                                        <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if($i+1>=sizeof($upcoming_events))
+                        @break;
+                    @endif
+                    <div class="col-12 col-md-4">
+                        <div class="each-event-container">
+                            <div class="img-session">
+                                <img src="{{ url('/event_images/'.$upcoming_events[$i+1]->profile_image) }}" alt="event-img">
+                            </div>
+                            <div class="content-session">
+                                <div class="upper-content d-flex flex-column">
+                                    <p class="main-title">{{$upcoming_events[$i+1]->name}}</p>
+                                    <p class="short-desc">{{$upcoming_events[$i+1]->short_description}}</p>
+                                    @php
+                                        $guests_ids = \App\Models\Takenby::where('event_id',$upcoming_events[$i+1]->id)->get('guest_id');
+                                    @endphp
+                                    <p class="guest-text"><span>Guest:</span>
+                                        @foreach($guests_ids as $guest_id)
+                                            @php
+                                                $guest = \App\Models\Guest::find($guest_id)->first();
+                                            @endphp
+                                            {{$guest->name}},
+                                        @endforeach
+                                    </p>
+                                    <div class="date-time-div d-flex justify-content-start align-items-center">
+                                        <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$upcoming_events[$i+1]->date}}</p>
+                                        <p><span><i class="far fa-clock"></i></span> {{$upcoming_events[$i+1]->time}}</p>
+                                    </div>
+                                    <p class="event-countdown-p"><span>Event start in:<span> {{$upcoming_events[$i+1]->date}} </p>
+                                    <div class="register-button-div">
+                                        <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if($i+2>=sizeof($upcoming_events))
+                        @break;
+                    @endif
+                    <div class="col-12 col-md-4">
+                        <div class="each-event-container">
+                            <div class="img-session">
+                                <img src="{{ url('/event_images/'.$upcoming_events[$i+2]->profile_image)  }}" alt="event-img">
+                            </div>
+                            <div class="content-session">
+                                <div class="upper-content d-flex flex-column">
+                                    <p class="main-title">{{$upcoming_events[$i+2]->name}}</p>
+                                    <p class="short-desc">{{$upcoming_events[$i+2]->short_description}}</p>
+                                    @php
+                                        $guests_ids = \App\Models\Takenby::where('event_id',$upcoming_events[$i+2]->id)->get('guest_id');
+                                    @endphp
+                                    <p class="guest-text"><span>Guest:</span>
+                                        @foreach($guests_ids as $guest_id)
+                                            @php
+                                                $guest = \App\Models\Guest::find($guest_id)->first();
+                                            @endphp
+                                            {{$guest->name}},
+                                        @endforeach
+                                    </p>
+                                    <div class="date-time-div d-flex justify-content-start align-items-center">
+                                        <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$upcoming_events[$i+2]->date}}</p>
+                                        <p><span><i class="far fa-clock"></i></span> {{$upcoming_events[$i+2]->time}}</p>
+                                    </div>
+                                    <p class="event-countdown-p"><span>Event start in:<span> {{$upcoming_events[$i+2]->date}} </p>
+                                    <div class="register-button-div">
+                                        <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endfor
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
