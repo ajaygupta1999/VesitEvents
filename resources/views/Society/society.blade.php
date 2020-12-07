@@ -29,7 +29,7 @@
         <div class="each-society-information d-flex justify-content-center">
             <div class="society-details-society-page d-flex flex-column">
                 <div class="society-img-session">
-                    <img src="{{ url('/asserts',$society->image) }}">
+                    <img src="{{ url('/asserts',$society->image) }}" style="width:130px; height:130px; object-fit:cover;">
                 </div>
                 <h4>{{$society->name}} Society</h4>
                 <p> {{$society->description}} </p>
@@ -48,9 +48,6 @@
             </li>
             <li class="nav-item" role="presentation">
               <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Society Members</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">About Society</a>
             </li>
           </ul>
           <div class="tab-content all-event-details-tab container-fluid" id="pills-tabContent">
@@ -280,12 +277,54 @@
                   </div>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <div class="">
+                <div class="All-Members-details">
+                    <center><h2 class="all-member-header">All Members Details</h2><center>
+                    <div class="council-heads">
+                        <h5>Council Heads</h5>
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ url('/asserts/userprofileimg.png') }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
+                            <div class="card-body">
+                              <p class="card-text">Ajay Gupta</p>
+                              <p class="card-text">2018.ajay.gupta@ves.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="council-members container">
+                        <center><h5 id="all-memeber-session">All Council Members</h5><center>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="{{ url('/asserts/userprofileimg.png') }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
+                                    <div class="card-body">
+                                      <p class="card-text">Ajay Gupta</p>
+                                      <p class="card-text">2018.ajay.gupta@ves.ac.in</p>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="col-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="{{ url('/asserts/userprofileimg.png') }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
+                                    <div class="card-body">
+                                      <p class="card-text">Ajay Gupta</p>
+                                      <p class="card-text">2018.ajay.gupta@ves.ac.in</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="{{ url('/asserts/userprofileimg.png') }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
+                                    <div class="card-body">
+                                      <p class="card-text">Ajay Gupta</p>
+                                      <p class="card-text">2018.ajay.gupta@ves.ac.in</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
           </div> 
          
          

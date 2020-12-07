@@ -1,48 +1,5 @@
-
-<<<<<<< HEAD
- 
-	@include('/partials/header')
+    @include('/partials/header')
 	@include('/partials/navbar')
-=======
-    <!-- External strylesheet -->
-    <link rel="stylesheet" type="text/css" href="{{ url('/css/society.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/eachevent.css') }}">
-	<link href="{{ url('/css/index.css') }}" type="text/css" rel="stylesheet">
-
-
-	{{-- Font-awesome --}}
-	<script src="https://kit.fontawesome.com/7fe6b58c32.js"></script>
-
-
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-</head>
-<body>
-
-        <div class="my-content">
-		    <nav id="my-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-				  <a class="navbar-brand d-flex align-items-center" href="{{ url('') }}">
-				  	<img id="VES_logo" src="{{ url('/asserts/VES_logo.png') }}">
-				  	<span id="vesit-logo">VESIT EVENTS</span>
-				  </a>
-				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				    <span class="navbar-toggler-icon"></span>
-				  </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li id="login-li" class="nav-item">
-                            {{$user->email}}
-                        </li>
-                        <li id="login-li" class="nav-item">
-                            <a class="nav-link btn btn-md btn-primary my-login-button" href="{{url('logout')}}">Logout</a>
-                        </li>
-                    </ul>
-                </div>
-		    </nav>
-        </div>
->>>>>>> 697c66d45da534aed49fa2ef6792e6cde2ac2a41
 
         <div class="each-event-main-div">
             <div class="row">
@@ -51,7 +8,7 @@
 						<div class="col-8">
 							<div class="each-event-content d-flex flex-column">
 								<p class="event-name">{{$event->name}}</p>
-								<p class="event-short-desc"> {{$event->short_description}}
+								<p class="event-short-desc"> {{substr($event->short_description , 0 , 100)}}..
 								</p>
                                 @php
                                     $guests_ids = \App\Models\Takenby::where('event_id',$event->id)->get('guest_id');
@@ -94,15 +51,17 @@
 								<div class="register-button-div">
                                     <a id="each-event-register-button" href="register/{{$event->id}}"><button  class="btn btn-md btn-primary">Register</button></a>
 								</div>
-                                @else
-                                    <p>Already Registered</p>
+								@else
+									<div class="register-button-div">
+										<button id="each-event-register-button" class="btn btn-md btn-success">Already Register</button>
+									</div>
                                 @endif
 							</div>
 
 						</div>
 						<div class="col-4 d-flex justify-content-center align-items-center">
 						   <div class="img-div">
-							   <img style="width : 300px;" src="{{ url('/event_images/'.$event->profile_image)  }}" alt="">
+							   <img style="width : 300px; height : 200px; object-fit : cover" src="{{ url('/event_images/'.$event->profile_image)  }}" alt="">
 {{--                               <img src="{{ url('/event_images/'.$event->profile_image) }}" alt="event-img">--}}
 						   </div>
 						</div>
@@ -115,7 +74,6 @@
 							<div class="d-flex flex-column">
 								<div>
 									<img style="width : 100px;" src="{{ url('/asserts/registrations.jpg') }}" alt="user-profile">
-                                    {{-- <img style="width : 100px;" src="{{ url('/profile_images/'.$user->profile_image) }}" alt="user-profile"> --}}
                                 </div>
                                 @php
                                 $registration = \App\Models\Register::where('event_id',$event->id)->get();
@@ -152,7 +110,7 @@
 				</div>
 				<div class="col-4">
 					<div class="full-detail-img-session">
-                        <img style="width : 300px;" src="{{ url('/event_images/'.$event->profile_image)  }}" alt="">
+                        <img style="width : 300px; height:200px ; object-fit:cover;" src="{{ url('/event_images/'.$event->profile_image)  }}" alt="">
 					</div>
 				</div>
 			</div>
@@ -161,24 +119,23 @@
             $guests_ids= \App\Models\Takenby::where('event_id',$event->id)->get();
         @endphp
 		<center><h2 class="main-title-event-guest">Event Guests</h2></center>
-        @foreach($guests_ids as $guest_id)
-            @php
-                $guest_detail= \App\Models\Guest::find($guest_id->guest_id);
-            @endphp
-		<div class="container guest-session d-flex justify-content-between">
-
-					<div class="guest-card d-flex flex-column">
-						<div class="guest-img">
-							<img src="{{ url('/asserts/user-img1.jpg') }}" alt="">
+		<div class="container guest-session d-flex justify-content-start">
+			@foreach($guests_ids as $guest_id)
+				@php
+					$guest_detail= \App\Models\Guest::find($guest_id->guest_id);
+				@endphp
+						<div class="guest-card d-flex flex-column">
+							<div class="guest-img">
+								<img src="{{ url('/asserts/user-img1.jpg') }}" alt="">
+							</div>
+							<div class="guest-detail">
+								<p class="guest-name">{{$guest_detail->name}}</p>
+	{{--							<p>{{$guest_detail->description}}</p>--}}
+								<p class="guest-division-seesion"><span>{{$guest_detail->organization_details}}</span>, <span>{{$guest_detail->position}}</span></p>
+							</div>
 						</div>
-						<div class="guest-detail">
-							<p class="guest-name">{{$guest_detail->name}}</p>
-{{--							<p>{{$guest_detail->description}}</p>--}}
-							<p class="guest-division-seesion"><span>{{$guest_detail->organization_details}}</span>, <span>{{$guest_detail->position}}</span></p>
-						</div>
-					</div>
-			</div>
-        @endforeach
+			@endforeach
+	    </div>
 
 		<center><h2 class="main-title-full-detail">Sponsored by</h2></center>
         <div class="full-detail-session container">
