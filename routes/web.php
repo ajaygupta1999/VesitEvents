@@ -41,6 +41,8 @@ Route::get('classdetails',[UserController::class,'classDetailPage']);
 
 Route::post('classdetails/add',[UserController::class,'classDetailAdd']);
 
+Route::get('user',[UserController::class,'userProfilePage']);
+
 
 //Register
 
@@ -79,30 +81,9 @@ Route::post('addevent/aboutguest/add',[EventController::class, 'aboutGuestAdd'])
 Route::get('addevent/aboutguest/addexisting',[EventController::class, 'aboutGuestAddExisting'])->middleware('auth','admin');
 
 Route::get('addevent/add',[EventController::class,'addEventComplete'])->middleware('auth','admin');
+
 Route::get('event/{id}',[EventController::class, 'eventPage'])->middleware('auth');
 
-
-//=======
-//Route::get("/" ,'App\Http\Controllers\Home@index');
-//
-//Route::get('/home', 'App\Http\Controllers\Home@index');
-//
-//Route::get("/login" , 'App\Http\Controllers\Login@index');
-//
-//Route::get("/signup" , 'App\Http\Controllers\Signup@index');
-//
-//Route::get("/society" , 'App\Http\Controllers\Society@index');
-//
-//Route::get('/register/personalDetails' , 'App\Http\Controllers\Register@personalDetails');
-//
-//Route::get('/register/classAndSocietyDetails' , 'App\Http\Controllers\Register@classAndSocietyDetails');
-//
-//Route::get('/addevent/aboutevent' , 'App\Http\Controllers\AddEvent@aboutEvent');
-//
-//Route::get('/addevent/aboutguest' , 'App\Http\Controllers\AddEvent@aboutGuest');
-//
-//Route::get('/event/{id}' , 'App\Http\Controllers\Eachevent@index');
-//>>>>>>> 31795848a82ab12746e6619f93b2d389747d8963
 
 
 

@@ -21,10 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e416d775-8180-45fa-9ac3-88aa236a2f24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_01_165114_create_events_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_165114_create_events_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Society/society.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Society/society.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,16 +186,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\myevent\resources\images" />
+      <recent name="C:\xampp\htdocs\myevent\resources\views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\myevent\public\asserts\Society" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\MailTemplates" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\User" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\Society" />
       <recent name="C:\xampp\htdocs\myevent\resources\views\LoginAndRegister" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\myevent\resources\images" />
-      <recent name="C:\xampp\htdocs\myevent\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -249,7 +249,8 @@
       <workItem from="1607059788077" duration="22357000" />
       <workItem from="1607134052896" duration="7519000" />
       <workItem from="1607181092667" duration="3053000" />
-      <workItem from="1607318325243" duration="4867000" />
+      <workItem from="1607318325243" duration="5651000" />
+      <workItem from="1607324720806" duration="3265000" />
     </task>
     <servers />
   </component>

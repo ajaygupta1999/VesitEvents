@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CouncilMember;
 use App\Models\Event;
+use App\Models\Register;
 use App\Models\Society;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -77,7 +78,7 @@ class UserController extends Controller
     }
 
     function personalDetailAdd(Request $request){
-        $new_user = User::where('email',session()->get('temp_email'))->first();;
+        $new_user = User::where('email',session()->get('temp_email'))->first();
         $new_user->email = session()->get('temp_email');
         $new_user->first_name = $request->firstname;
         $new_user->last_name = $request->lastname;
@@ -91,7 +92,6 @@ class UserController extends Controller
 
     function classDetailPage(){
         $user = User::where('email',session()->get('temp_email'))->first();
-
         return view('User/classAndSocietyDetailsForm', compact(['user']));
     }
 
@@ -129,5 +129,12 @@ class UserController extends Controller
         $new_user->save();
         session()->forget('new_user');
         return redirect('/');
+    }
+
+
+    function userProfilePage(){
+        $user = User::where('email',session()->get('email'))->first();
+        $user_id = $user->id;
+        $events = Register::where('user_id',$user_id)->get();
     }
 }
