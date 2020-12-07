@@ -70,16 +70,15 @@ Route::get('logout',[LoginController::class,'logout']);
 
 Route::get('addevent/aboutevent',[EventController::class,'aboutEvent'])->middleware('auth','admin');
 
-Route::post('addevent/aboutevent/add', [EventController::class,'aboutEventAdd'])->middleware('auth');
+Route::post('addevent/aboutevent/add', [EventController::class,'aboutEventAdd'])->middleware('auth','admin');
 
-Route::get('addevent/aboutguest',[EventController::class,'aboutGuest'])->middleware('auth');
+Route::get('addevent/aboutguest',[EventController::class,'aboutGuest'])->middleware('auth','admin');
 
-Route::post('addevent/aboutguest/add',[EventController::class, 'aboutGuestAdd'])->middleware('auth');
+Route::post('addevent/aboutguest/add',[EventController::class, 'aboutGuestAdd'])->middleware('auth','admin');
 
-Route::get('addevent/aboutguest/addexisting',[EventController::class, 'aboutGuestAddExisting'])->middleware('auth');
+Route::get('addevent/aboutguest/addexisting',[EventController::class, 'aboutGuestAddExisting'])->middleware('auth','admin');
 
-Route::get('addevent/add',[EventController::class,'addEventComplete'])->middleware('auth');
-
+Route::get('addevent/add',[EventController::class,'addEventComplete'])->middleware('auth','admin');
 Route::get('event/{id}',[EventController::class, 'eventPage'])->middleware('auth');
 
 

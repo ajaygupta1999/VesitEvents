@@ -25,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myevent.zip" beforeDir="false" afterPath="$PROJECT_DIR$/myevent.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +237,7 @@
       <workItem from="1607059788077" duration="22357000" />
       <workItem from="1607134052896" duration="7519000" />
       <workItem from="1607181092667" duration="3053000" />
-      <workItem from="1607318325243" duration="1448000" />
+      <workItem from="1607318325243" duration="1777000" />
     </task>
     <servers />
   </component>
