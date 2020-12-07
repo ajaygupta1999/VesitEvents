@@ -29,7 +29,7 @@
                           <div class="user-details-navbar">
                               <div class="d-flex justify-content-start align-items-center">
                                 <div class="user-profile-image">
-                                  <img width="50px" style="border-radius: 50%;" src="{{ url('/profile_images/'.$user->profile_image) }}" alt="" >
+                                  <img style="width:50px; height:50px; border-radius:25px; margin-right:5px" src="{{ url('/profile_images/'.$user->profile_image) }}" alt="" >
                                 </div>
                                 <p>{{ substr($user->first_name.' '.$user->last_name, 0 , 8) }}..</p>
                               </div>

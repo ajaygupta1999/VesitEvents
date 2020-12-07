@@ -14,10 +14,7 @@ return [
     */
 
     'failed' => 'These credentials do not match our records.',
-<<<<<<< HEAD
-=======
     'password' => 'The provided password is incorrect.',
->>>>>>> 31795848a82ab12746e6619f93b2d389747d8963
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];
