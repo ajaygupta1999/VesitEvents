@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 //Route for main pages and user
 Route::get('/', [UserController::class,'mainPage']);
 
-Route::get('society/{name}',[UserController::class,'societyPage'])->middleware('auth');
+Route::get('society/{name}',[UserController::class,'societyPage']);
 
 Route::get('reset', [UserController::class,'passwordResetPage']);
 
@@ -68,19 +68,19 @@ Route::get('logout',[LoginController::class,'logout']);
 
 //Events
 
-Route::get('addevent/aboutevent',[EventController::class,'aboutEvent'])->middleware('auth');
+Route::get('addevent/aboutevent',[EventController::class,'aboutEvent'])->middleware('auth','admin');
 
-Route::post('addevent/aboutevent/add', [EventController::class,'aboutEventAdd'])->middleware('auth');
+Route::post('addevent/aboutevent/add', [EventController::class,'aboutEventAdd'])->middleware('auth','admin');
 
-Route::get('addevent/aboutguest',[EventController::class,'aboutGuest'])->middleware('auth');
+Route::get('addevent/aboutguest',[EventController::class,'aboutGuest'])->middleware('auth','admin');
 
-Route::post('addevent/aboutguest/add',[EventController::class, 'aboutGuestAdd'])->middleware('auth');
+Route::post('addevent/aboutguest/add',[EventController::class, 'aboutGuestAdd'])->middleware('auth','admin');
 
-Route::get('addevent/aboutguest/addexisting',[EventController::class, 'aboutGuestAddExisting'])->middleware('auth');
+Route::get('addevent/aboutguest/addexisting',[EventController::class, 'aboutGuestAddExisting'])->middleware('auth','admin');
 
-Route::get('addevent/add',[EventController::class,'addEventComplete'])->middleware('auth');
+Route::get('addevent/add',[EventController::class,'addEventComplete'])->middleware('auth','admin');
 
-Route::get('event/{id}', [EventController::class, 'eventPage']);
+Route::get('event/{id}',[EventController::class, 'eventPage'])->middleware('auth');
 
 
 //=======
