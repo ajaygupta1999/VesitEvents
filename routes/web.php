@@ -113,7 +113,10 @@ Route::get("/user/{email}/profile" , [UserController::class , 'profilePage'])->m
 
 
 
-
+// Update profile
+// /user/{email}/profile/personalDetails
+// /user/{email}/profile/classdetails
+// /user/{email}/profile/societydetails
 
 
 /*Ignore this route*/

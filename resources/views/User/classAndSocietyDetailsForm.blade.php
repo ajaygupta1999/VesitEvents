@@ -87,10 +87,10 @@
                             <label for="exampleFormControlSelect1" class="label">Society Name(From Which you belong)</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="society">
                                 <option>None</option>
-                              <option>Isa</option>
-                              <option>Ieee</option>
-                              <option>Csi</option>
-                              <option>Isa</option>
+                              <option>ISA</option>
+                              <option>IEEE</option>
+                              <option>CSI</option>
+                              <option>ISTE</option>
 {{--                              <option>CODECELL</option>--}}
                             </select>
                         </div>
