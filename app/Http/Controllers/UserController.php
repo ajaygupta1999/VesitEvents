@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CouncilMember;
 use App\Models\Event;
+use App\Models\Register;
 use App\Models\Society;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -91,7 +92,6 @@ class UserController extends Controller
 
     function classDetailPage(){
         $user = User::where('email',session()->get('temp_email'))->first();
-
         return view('User/classAndSocietyDetailsForm', compact(['user']));
     }
 
@@ -130,11 +130,27 @@ class UserController extends Controller
         session()->forget('new_user');
         return redirect('/');
     }
-    
-    public function profilePage($email){
-        $user = User::where('email' , $email)->first();
-        return view('User/profile' , compact(['user']));
+
+    function userProfilePage(){
+        $user = User::where('email',session()->get('email'))->first();
+        $events = Register::where('user_id',$user->id)->get();
+        return view('User/profile',compact(['user','events']));
     }
+
+
+    function userPersonalPage(){
+//        $user = User::where('email',session()->get('email'))->first();
+//        $events = Register::where('user_id',$user_id)->get();
+//        return view('User/profile',compact(['user']));
+    }
+
+
+
+
+//    public function profilePage($email){
+//        $user = User::where('email' , $email)->first();
+//        return view('User/profile' , compact(['user']));
+//    }
 
 
 }
