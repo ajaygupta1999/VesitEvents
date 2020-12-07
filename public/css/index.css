@@ -6,6 +6,19 @@ body{
 	padding: 6px 3.5%;
 }
 
+.navbar-nav .user-details-navbar .user-profile-image img{
+	width  : 50px;
+	margin-right : 2px;
+}
+
+.navbar-nav .user-details-navbar p{
+	margin-bottom: 0;
+    margin-right: 12px;
+    font-weight: 600;
+    color: blue;
+    font-size: 17px;
+}
+
 
 .my-login-button {
 	padding: 7px 26px !important;
@@ -109,7 +122,7 @@ body{
 }
 
 
-.my-ongoing-title{
+.my-ongoing-title-index-page{
 	margin-top : 5%;
 	font-size: 24px;
 	font-weight: 600;
@@ -123,21 +136,21 @@ body{
 	margin-bottom: -20px;
 }
 
-.MY-on-going-evenets{
+.MY-on-going-evenets-session{
 	padding :15px 13%;
 }
 
-.MY-on-going-evenets .row .col-12{
+.MY-on-going-evenets-session .row .col-12{
    padding: 28px;
 }
 
-.MY-on-going-evenets .each-event-container{
+.MY-on-going-evenets-session .each-event-container{
 	border : 1px solid black;
 	border-radius : 15px;
 	padding : 0px;
 }
 
-.MY-on-going-evenets .each-event-container .img-session img{
+.MY-on-going-evenets-session .each-event-container .img-session img{
 	width : 100%;
 	height : 210px;
 	object-fit: cover;
@@ -145,72 +158,72 @@ body{
     border-top-right-radius: 15px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .upper-content{
+.MY-on-going-evenets-session .each-event-container .content-session .upper-content{
 	margin : 10px 15px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .upper-content .main-title{
+.MY-on-going-evenets-session .each-event-container .content-session .upper-content .main-title{
 	font-weight : 700;
 	margin-bottom : 5px;
 	color : black;
 	font-size : 18px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .upper-content .short-desc{
+.MY-on-going-evenets-session .each-event-container .content-session .upper-content .short-desc{
 	margin-bottom : 3px;
 	color : black;
 	font-size : 14px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .upper-content .guest-text{
+.MY-on-going-evenets-session .each-event-container .content-session .upper-content .guest-text{
 	font-weight : 600;
 	font-size: 14px;
 	margin-bottom : 5px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .upper-content .guest-text span{
+.MY-on-going-evenets-session .each-event-container .content-session .upper-content .guest-text span{
 	font-weight : 700;
 	font-size: 14px;
 	color :blue;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .upper-content .date-time-div p{
+.MY-on-going-evenets-session .each-event-container .content-session .upper-content .date-time-div p{
 	font-weight : 600;
 	font-size : 14px;
 	margin-top : 8px;
 	margin-bottom : 0px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .upper-content .date-time-div .date-session{
+.MY-on-going-evenets-session .each-event-container .content-session .upper-content .date-time-div .date-session{
 	margin-right : 15px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .upper-content .date-time-div span{
+.MY-on-going-evenets-session .each-event-container .content-session .upper-content .date-time-div span{
 	margin-right : 2px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .upper-content .date-time-div i{
+.MY-on-going-evenets-session .each-event-container .content-session .upper-content .date-time-div i{
 	color : blue;
 	font-weight : 500;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .upper-content .event-countdown-p{
+.MY-on-going-evenets-session .each-event-container .content-session .upper-content .event-countdown-p{
 	font-weight: 600;
     font-size: 14px;
     margin-top: 3px;
     margin-bottom: 5px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .lower-content{
+.MY-on-going-evenets-session .each-event-container .content-session .lower-content{
     margin: 10px 15px 16px 15px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .register-button-div{
+.MY-on-going-evenets-session .each-event-container .content-session .register-button-div{
 	margin-top : 10px;
 	margin-bottom : 5px;
 }
 
-.MY-on-going-evenets .each-event-container .content-session .register-button-div #each-event-register-button{ 
+.MY-on-going-evenets-session .each-event-container .content-session .register-button-div #each-event-register-button{ 
 	font-size: 14px;
 	width : 100px;
 	height : 34px;
@@ -221,7 +234,7 @@ body{
     box-shadow: 0 4px 10px 8px rgba(0, 0, 0, 0.05), 0 6px 20px 2px rgba(0, 0, 0, 0.04);
 }
 
-.MY-on-going-evenets .each-event-container .content-session .lower-content p{
+.MY-on-going-evenets-session .each-event-container .content-session .lower-content p{
 	font-weight : 600;
 	margin : 0px;
 	margin-right : 10px;
