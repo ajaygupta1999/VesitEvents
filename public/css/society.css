@@ -183,3 +183,19 @@ specific-society-page
 	border: none;
     border-radius: 0;
 }
+
+.doeshavesponsor{
+	margin-bottom : 20px;
+}
+
+.doeshavesponsor p{
+	font-weight : 600;
+	font-size :16px;
+	margin-bottom :0px;
+}
+
+.doeshavesponsor label , .our-add-sponsor-form label {
+	font-weight : 500;
+	color: blue;
+	margin-bottom : 4px;
+}

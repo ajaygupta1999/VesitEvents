@@ -227,5 +227,9 @@ class UserController extends Controller
         $user = User::where('email',session()->get('email'))->first();
     }
 
+    public function addSponsor(){
+        return view("Events/addsponsor");
+    }
+
 
 }
