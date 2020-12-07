@@ -75,7 +75,7 @@ class UserController extends Controller
         $new_user->email = session()->get('temp_email');
         $new_user->first_name = $request->firstname;
         $new_user->last_name = $request->lastname;
-        $imageName = time().''.$request->image;
+        $imageName = time().''.$request->image->getClientOriginalName();;
         $request->image->move(public_path('profile_images'), $imageName);
         $new_user->profile_image = $imageName;
         $new_user->phone_number = $request->phonenumber;

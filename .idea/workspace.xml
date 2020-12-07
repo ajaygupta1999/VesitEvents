@@ -22,9 +22,6 @@
     <list default="true" id="e416d775-8180-45fa-9ac3-88aa236a2f24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myevent.zip" beforeDir="false" afterPath="$PROJECT_DIR$/myevent.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +34,19 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -237,7 +247,7 @@
       <workItem from="1607059788077" duration="22357000" />
       <workItem from="1607134052896" duration="7519000" />
       <workItem from="1607181092667" duration="3053000" />
-      <workItem from="1607318325243" duration="1777000" />
+      <workItem from="1607318325243" duration="2764000" />
     </task>
     <servers />
   </component>
@@ -257,18 +267,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="386" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607108483906">
+    <state x="386" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607320924192">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="386" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1607108483906" />
+    <state x="386" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1607320924192" />
     <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605644315456">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605644315456" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1605385612999">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1607320012172">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605385612999" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607320012172" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1606866340527">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
