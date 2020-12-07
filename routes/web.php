@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //Route for main pages and user
-Route::get('', [UserController::class,'mainPage']);
+Route::get('/', [UserController::class,'mainPage']);
 
 Route::get('society/{name}',[UserController::class,'societyPage'])->middleware('auth');
 
@@ -80,7 +80,7 @@ Route::get('addevent/aboutguest/addexisting',[EventController::class, 'aboutGues
 
 Route::get('addevent/add',[EventController::class,'addEventComplete'])->middleware('auth');
 
-Route::get('event/{id}',[EventController::class, 'eventPage'])->middleware('auth');
+Route::get('event/{id}', [EventController::class, 'eventPage']);
 
 
 //=======
@@ -105,7 +105,9 @@ Route::get('event/{id}',[EventController::class, 'eventPage'])->middleware('auth
 //Route::get('/event/{id}' , 'App\Http\Controllers\Eachevent@index');
 //>>>>>>> 31795848a82ab12746e6619f93b2d389747d8963
 
+// USer profile route
 
+Route::get("/user/{email}/profile" , [UserController::class , 'profilePage'])->middleware('auth');
 
 
 

@@ -69,6 +69,6 @@ class EventController extends Controller
     }
 
     function eventPage($id){
-        return view('Events/Eachevent');
+        return view('Events/Eachevent' , ['eventId'=>$id]);
     }
 }

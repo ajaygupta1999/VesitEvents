@@ -15,7 +15,7 @@ class UserController extends Controller
 
     //Main page view
     function mainPage(){
-        $societies = \App\Models\Society::all();
+        $societies = Society::all();
         $user = User::where('email',session()->get('email'))->first();
         $ongoing_events = Event::whereDate('date','=',date('Y-m-d'))->get();
         $upcoming_events = Event::whereDate('date','>',date('Y-m-d'))->get();
@@ -25,7 +25,7 @@ class UserController extends Controller
 
     //Society Page view
     function societyPage(Request $request){
-        $society = \App\Models\Society::where('name', $request->name)->first();
+        $society = Society::where('name', $request->name)->first();
         $user = User::where('email',session()->get('email'))->first();
         return view('Society/society', compact(['society','user']));
     }
@@ -71,7 +71,7 @@ class UserController extends Controller
     }
 
     function personalDetailAdd(Request $request){
-        $new_user = User::where('email',session()->get('temp_email'))->first();;
+        $new_user = User::where('email',session()->get('temp_email'))->first();
         $new_user->email = session()->get('temp_email');
         $new_user->first_name = $request->firstname;
         $new_user->last_name = $request->lastname;
@@ -123,6 +123,12 @@ class UserController extends Controller
         $new_user->save();
         session()->forget('new_user');
         return redirect('/');
-
     }
+    
+    public function profilePage($email){
+        $user = User::where('email' , $email)->first();
+        return view('User/profile' , compact(['user']));
+    }
+
+
 }

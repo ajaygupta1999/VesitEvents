@@ -104,11 +104,8 @@
 			<h4 class="my-ongoing-title">On Going Events</h4>
 		</div>
         <div class="MY-on-going-evenets">
-            @for($i=0;$i<sizeof($ongoing_events);$i = $i+3)
             <div class="row">
-                @if($i>=sizeof($ongoing_events))
-                       @break;
-                @endif
+                @for($i=0; $i < sizeof($ongoing_events); $i++)
             	<div class="col-12 col-md-4">
 					<div class="each-event-container">
 						<div class="img-session">
@@ -122,96 +119,44 @@
                                     $guests_ids = \App\Models\Takenby::where('event_id',$ongoing_events[$i]->id)->get('guest_id');
                                 @endphp
 								<p class="guest-text"><span>Guest:</span>
-                                    @foreach($guests_ids as $guest_id)
-                                        @php
-                                        $guest = \App\Models\Guest::find($guest_id)->first();
-                                        @endphp
-                                        {{$guest->name}},
-                                    @endforeach
+                                        @for($j=0 ; $j < sizeof($guests_ids) ; $j++)
+                                            @php 
+                                               $guest = \App\Models\Guest::find($guests_ids[$j])->first();
+                                               if(sizeof($guests_ids) == 1){
+                                                   $guest_data = $guest->name.".";
+                                                   break;
+                                               }
+                                               if($j == 0){
+                                                   $guest_data = $guest->name;
+                                                   continue;
+                                               }
+                                            @endphp
+                                    
+                                            @if($j < sizeof($guests_ids) - 1)
+                                                @php
+                                                    $guest_data = $guest_data.", ".$guest->name;
+                                                @endphp
+                                            @endif
+                                            @if($j == sizeof($guests_ids) - 1)
+                                                @php
+                                                    $guest_data = $guest_data.", ".$guest->name.".";
+                                                @endphp
+                                            @endif
+                                        @endfor
+                                        {{$guest_data}}
                                 </p>
 								<div class="date-time-div d-flex justify-content-start align-items-center">
 									<p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$ongoing_events[$i]->date}}</p>
 									<p><span><i class="far fa-clock"></i></span> {{$ongoing_events[$i]->time}}</p>
 								</div>
-								<p class="event-countdown-p"><span>Event start in:<span> {{$ongoing_events[$i]->date}} </p>
 								<div class="register-button-div">
-									<button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+									<a id="each-event-register-button" class="btn btn-md btn-primary" href="/event/{{ $ongoing_events[$i]->id }}">Register</a>
 								</div>
 							</div>
 						</div>
 					</div>
             	</div>
-                    @if($i+1>=sizeof($ongoing_events))
-                        @break;
-                    @endif
-            	<div class="col-12 col-md-4">
-					<div class="each-event-container">
-						<div class="img-session">
-							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
-						</div>
-                        <div class="content-session">
-                            <div class="upper-content d-flex flex-column">
-                                <p class="main-title">{{$ongoing_events[$i+1]->name}}</p>
-                                <p class="short-desc">{{$ongoing_events[$i+1]->short_description}}</p>
-                                @php
-                                    $guests_ids = \App\Models\Takenby::where('event_id',$ongoing_events[$i+1]->id)->get('guest_id');
-                                @endphp
-                                <p class="guest-text"><span>Guest:</span>
-                                    @foreach($guests_ids as $guest_id)
-                                        @php
-                                            $guest = \App\Models\Guest::find($guest_id)->first();
-                                        @endphp
-                                        {{$guest->name}},
-                                    @endforeach
-                                </p>
-                                <div class="date-time-div d-flex justify-content-start align-items-center">
-                                    <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$ongoing_events[$i+1]->date}}</p>
-                                    <p><span><i class="far fa-clock"></i></span> {{$ongoing_events[$i+1]->time}}</p>
-                                </div>
-                                <p class="event-countdown-p"><span>Event start in:<span> {{$ongoing_events[$i+1]->date}} </p>
-                                <div class="register-button-div">
-                                    <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
-                                </div>
-							</div>
-						</div>
-					</div>
-				</div>
-                    @if($i+2>=sizeof($ongoing_events))
-                        @break;
-                    @endif
-				<div class="col-12 col-md-4">
-					<div class="each-event-container">
-						<div class="img-session">
-							<img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
-						</div>
-                        <div class="content-session">
-                            <div class="upper-content d-flex flex-column">
-                                <p class="main-title">{{$ongoing_events[$i+2]->name}}</p>
-                                <p class="short-desc">{{$ongoing_events[$i+2]->short_description}}</p>
-                                @php
-                                    $guests_ids = \App\Models\Takenby::where('event_id',$ongoing_events[$i+2]->id)->get('guest_id');
-                                @endphp
-                                <p class="guest-text"><span>Guest:</span>
-                                    @foreach($guests_ids as $guest_id)
-                                        @php
-                                            $guest = \App\Models\Guest::find($guest_id)->first();
-                                        @endphp
-                                        {{$guest->name}},
-                                    @endforeach
-                                </p>
-                                <div class="date-time-div d-flex justify-content-start align-items-center">
-                                    <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$ongoing_events[$i+2]->date}}</p>
-                                    <p><span><i class="far fa-clock"></i></span> {{$ongoing_events[$i+2]->time}}</p>
-                                </div>
-                                <p class="event-countdown-p"><span>Event start in:<span> {{$ongoing_events[$i+2]->date}} </p>
-                                <div class="register-button-div">
-                                    <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
-                                </div>
-							</div>
-						</div>
-					</div>
-            	</div>
-                    @endfor
+              @endfor
 			</div>
 		</div>
 
@@ -219,11 +164,8 @@
 			<h4 class="my-upcoming-title">Upcoming Events</h4>
 		</div>
         <div class="MY-on-going-evenets">
-            @for($i=0;$i<sizeof($upcoming_events);$i = $i+3)
                 <div class="row">
-                    @if($i>=sizeof($upcoming_events))
-                        @break;
-                    @endif
+                    @for($i = 0; $i<sizeof($upcoming_events); $i++)
                     <div class="col-12 col-md-4">
                         <div class="each-event-container">
                             <div class="img-session">
@@ -237,97 +179,44 @@
                                         $guests_ids = \App\Models\Takenby::where('event_id',$upcoming_events[$i]->id)->get('guest_id');
                                     @endphp
                                     <p class="guest-text"><span>Guest:</span>
-                                        @foreach($guests_ids as $guest_id)
-                                            @php
-                                                $guest = \App\Models\Guest::find($guest_id)->first();
+                                        @for($j=0 ; $j < sizeof($guests_ids) ; $j++)
+                                            @php 
+                                               $guest = \App\Models\Guest::find($guests_ids[$j])->first();
+                                               if(sizeof($guests_ids) == 1){
+                                                   $guest_data = $guest->name.".";
+                                                   break;
+                                               }
+                                               if($j == 0){
+                                                   $guest_data = $guest->name;
+                                                   continue;
+                                               }
                                             @endphp
-                                            {{$guest->name}},
-                                        @endforeach
+                                    
+                                            @if($j < sizeof($guests_ids) - 1)
+                                                @php
+                                                    $guest_data = $guest_data.", ".$guest->name;
+                                                @endphp
+                                            @endif
+                                            @if($j == sizeof($guests_ids) - 1)
+                                                @php
+                                                    $guest_data = $guest_data.", ".$guest->name.".";
+                                                @endphp
+                                            @endif
+                                        @endfor
+                                        {{$guest_data}}
                                     </p>
                                     <div class="date-time-div d-flex justify-content-start align-items-center">
                                         <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$upcoming_events[$i]->date}}</p>
                                         <p><span><i class="far fa-clock"></i></span> {{$upcoming_events[$i]->time}}</p>
                                     </div>
-                                    <p class="event-countdown-p"><span>Event start in:<span> {{$upcoming_events[$i]->date}} </p>
                                     <div class="register-button-div">
-                                        <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
+                                        <a id="each-event-register-button" class="btn btn-md btn-primary" href="/event/{{ $upcoming_events[$i]->id }}">Register</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    @if($i+1>=sizeof($upcoming_events))
-                        @break;
-                    @endif
-                    <div class="col-12 col-md-4">
-                        <div class="each-event-container">
-                            <div class="img-session">
-                                <img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
-                            </div>
-                            <div class="content-session">
-                                <div class="upper-content d-flex flex-column">
-                                    <p class="main-title">{{$upcoming_events[$i+1]->name}}</p>
-                                    <p class="short-desc">{{$upcoming_events[$i+1]->short_description}}</p>
-                                    @php
-                                        $guests_ids = \App\Models\Takenby::where('event_id',$upcoming_events[$i+1]->id)->get('guest_id');
-                                    @endphp
-                                    <p class="guest-text"><span>Guest:</span>
-                                        @foreach($guests_ids as $guest_id)
-                                            @php
-                                                $guest = \App\Models\Guest::find($guest_id)->first();
-                                            @endphp
-                                            {{$guest->name}},
-                                        @endforeach
-                                    </p>
-                                    <div class="date-time-div d-flex justify-content-start align-items-center">
-                                        <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$upcoming_events[$i+1]->date}}</p>
-                                        <p><span><i class="far fa-clock"></i></span> {{$upcoming_events[$i+1]->time}}</p>
-                                    </div>
-                                    <p class="event-countdown-p"><span>Event start in:<span> {{$upcoming_events[$i+1]->date}} </p>
-                                    <div class="register-button-div">
-                                        <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @if($i+2>=sizeof($upcoming_events))
-                        @break;
-                    @endif
-                    <div class="col-12 col-md-4">
-                        <div class="each-event-container">
-                            <div class="img-session">
-                                <img src="{{ url('/asserts/event_img.jpg') }}" alt="event-img">
-                            </div>
-                            <div class="content-session">
-                                <div class="upper-content d-flex flex-column">
-                                    <p class="main-title">{{$upcoming_events[$i+2]->name}}</p>
-                                    <p class="short-desc">{{$upcoming_events[$i+2]->short_description}}</p>
-                                    @php
-                                        $guests_ids = \App\Models\Takenby::where('event_id',$upcoming_events[$i+2]->id)->get('guest_id');
-                                    @endphp
-                                    <p class="guest-text"><span>Guest:</span>
-                                        @foreach($guests_ids as $guest_id)
-                                            @php
-                                                $guest = \App\Models\Guest::find($guest_id)->first();
-                                            @endphp
-                                            {{$guest->name}},
-                                        @endforeach
-                                    </p>
-                                    <div class="date-time-div d-flex justify-content-start align-items-center">
-                                        <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$upcoming_events[$i+2]->date}}</p>
-                                        <p><span><i class="far fa-clock"></i></span> {{$upcoming_events[$i+2]->time}}</p>
-                                    </div>
-                                    <p class="event-countdown-p"><span>Event start in:<span> {{$upcoming_events[$i+2]->date}} </p>
-                                    <div class="register-button-div">
-                                        <button id="each-event-register-button" class="btn btn-md btn-primary">Register</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-			</div>
-            @endfor
+                @endfor
 		</div>
 
 
