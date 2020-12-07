@@ -1,48 +1,6 @@
 
-<<<<<<< HEAD
- 
 	@include('/partials/header')
 	@include('/partials/navbar')
-=======
-    <!-- External strylesheet -->
-    <link rel="stylesheet" type="text/css" href="{{ url('/css/society.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/eachevent.css') }}">
-	<link href="{{ url('/css/index.css') }}" type="text/css" rel="stylesheet">
-
-
-	{{-- Font-awesome --}}
-	<script src="https://kit.fontawesome.com/7fe6b58c32.js"></script>
-
-
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-</head>
-<body>
-
-        <div class="my-content">
-		    <nav id="my-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-				  <a class="navbar-brand d-flex align-items-center" href="{{ url('') }}">
-				  	<img id="VES_logo" src="{{ url('/asserts/VES_logo.png') }}">
-				  	<span id="vesit-logo">VESIT EVENTS</span>
-				  </a>
-				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				    <span class="navbar-toggler-icon"></span>
-				  </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li id="login-li" class="nav-item">
-                            {{$user->email}}
-                        </li>
-                        <li id="login-li" class="nav-item">
-                            <a class="nav-link btn btn-md btn-primary my-login-button" href="{{url('logout')}}">Logout</a>
-                        </li>
-                    </ul>
-                </div>
-		    </nav>
-        </div>
->>>>>>> 697c66d45da534aed49fa2ef6792e6cde2ac2a41
 
         <div class="each-event-main-div">
             <div class="row">

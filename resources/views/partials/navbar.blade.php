@@ -29,9 +29,9 @@
                           <div class="user-details-navbar">
                               <div class="d-flex justify-content-start align-items-center">
                                 <div class="user-profile-image">
-                                  <img src="{{ url('/asserts/userprofileimg.png') }}" alt="" >
+                                  <img width="50px" style="border-radius: 50%;" src="{{ url('/profile_images/'.$user->profile_image) }}" alt="" >
                                 </div>
-                                <p>{{ substr("Ajay Gupta" , 0 , 8) }}..</p>
+                                <p>{{ substr($user->first_name.' '.$user->last_name, 0 , 8) }}..</p>
                               </div>
                           </div>
                       </a>

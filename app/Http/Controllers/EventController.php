@@ -14,7 +14,8 @@ class EventController extends Controller
 {
     function aboutEvent(){
         DB::beginTransaction();
-        return view('Events/AddEvent');
+        $user = User::where('email',session()->get('email'))->first();
+        return view('Events/AddEvent',compact(['user']));
     }
 
     function aboutEventAdd(Request $request){
@@ -36,8 +37,9 @@ class EventController extends Controller
     }
 
     function aboutGuest(Request $request){
+        $user = User::where('email',session()->get('email'))->first();
         $guests = Guest::all();
-        return view('Events/Aboutguest', compact(['guests']));
+        return view('Events/Aboutguest', compact(['guests','user']));
     }
 
     function aboutGuestAdd(Request $request){
