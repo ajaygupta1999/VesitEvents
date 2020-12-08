@@ -4,7 +4,7 @@
         <div class="each-society-information d-flex justify-content-center">
             <div class="society-details-society-page d-flex flex-column">
                 <div class="society-img-session">
-                    <img src="{{ url('/asserts',$society->image) }}" style="width:130px; height:130px; object-fit:cover;">
+                    <img src="/asserts/{{ $society->image }}" style="width:130px; height:130px; object-fit:cover;">
                 </div>
                 <h4>{{$society->name}} Society</h4>
                 <p> {{$society->description}} </p>
@@ -47,7 +47,7 @@
                                         <div class="col-3">
                                             <div class="each-event-card d-flex flex-column">
                                                 <div class="today-event-img-session">
-                                                    <img width="150px" src="{{ url('/event_images/'.$ongoing_event->profile_image) }}" alt="">
+                                                    <img width="150px" src="/event_images/{{ $ongoing_event->profile_image }}" alt="">
                                                 </div>
                                                 <div class="event-text-details">
                                                     <p class="event-title">{{$ongoing_event->name}}</p>
@@ -74,7 +74,7 @@
                                         <div class="col-3">
                                             <div class="each-event-card d-flex flex-column">
                                                 <div class="today-event-img-session">
-                                                    <img  width="150px" src="{{ url('/event_images/'.$upcoming_event->profile_image) }}" alt="">
+                                                    <img  width="150px" src="/event_images/{{ $upcoming_event->profile_image }}" alt="">
                                                 </div>
                                                 <div class="event-text-details">
                                                     <p class="event-title">{{$upcoming_event->name}}</p>
@@ -101,7 +101,7 @@
                                             @foreach($past_events as $past_event)
                                             <div class="each-event-card d-flex flex-column">
                                                 <div class="today-event-img-session">
-                                                    <img width="150px" src="{{ url('/event_images/'.$past_event->profile_image) }}" alt="">
+                                                    <img width="150px" src="/event_images/{{ .$past_event->profile_image }}" alt="">
                                                 </div>
                                                 <div class="event-text-details">
                                                     <p class="event-title">{{$past_event->name}}</p>
@@ -128,7 +128,7 @@
                     <div class="council-heads">
                         <h5>Council Heads</h5>
                         <div class="card" style="width: 18rem;">
-                            <img src="{{ url('/asserts/userprofileimg.png') }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
+                            <img src="/asserts/userprofileimg.png" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
                             <div class="card-body">
                                 @php
                                 $head = $society_members->where('role','head')->first();
@@ -149,7 +149,7 @@
                                 @endphp
                             <div class="col-4">
                                 <div class="card" style="width: 18rem;">
-                                    <img src="{{ url('/profile_images/'.$member->profile_image) }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
+                                    <img src="/profile_images/{{ $member->profile_image }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
                                     <div class="card-body">
                                       <p class="card-text">{{$member->name}}</p>
                                       <p class="card-text">{{$member->email}}</p>

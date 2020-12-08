@@ -13,13 +13,13 @@
             <div class="col-md-6">
                 <div class="home-img-session d-flex justify-content-center align-items-center">
                     <div class="home-ad-event-pic">
-                        <img src="{{ url('/asserts/eventpic3.png') }}" alt="Event-pic">
+                        <img src="/asserts/eventpic3.png" alt="Event-pic">
                     </div>
                     <div class="home-ad-left-right-arrow">
-                        <img src="{{ url('/asserts/left-right-arrow.jpg') }}" alt="Left-right-arrow">
+                        <img src="/asserts/left-right-arrow.jpg" alt="Left-right-arrow">
                     </div>
                     <div class="home-ad-ves_logo">
-                        <img src="{{ url('/asserts/VES_logo.png') }}" alt="VES-logo">
+                        <img src="/asserts/VES_logo.png" alt="VES-logo">
                     </div>
                 </div>
             </div>
@@ -27,8 +27,8 @@
 
     </div>
 
-{{-- 
-    <div class="home-page-all-society d-flex justify-content-center">
+
+    {{-- <div class="home-page-all-society d-flex justify-content-center">
         <h4>All Societies</h4>
     </div>
     <div class="my-all-socierty-div d-flex justify-content-center">
@@ -37,7 +37,7 @@
             <div class="col-6 col-md-3 d-flex justify-content-center">
                 <a href="{{url('society',$society->name)}}">
                     <div class="CSI-society d-flex flex-column">
-                        <img src="{{ url('/asserts', $society->image)}}">
+                        <img src="/asserts/{{ $society->image }}">
                         <h4>{{$society->name}}</h4>
                     </div>
                 </a>
@@ -61,7 +61,7 @@
             <div class="col-12 col-md-4">
                 <div class="each-event-container">
                     <div class="img-session">
-                        <img src="{{url('/event_images/'.$ongoing_events[$i]->profile_image)  }}" alt="event-img">
+                        <img src="/event_images/{{ $ongoing_events[$i]->profile_image  }}" alt="event-img">
                     </div>
                     <div class="content-session">
                         <div class="upper-content d-flex flex-column">
@@ -127,7 +127,7 @@
                     <div class="col-12 col-md-4">
                         <div class="each-event-container">
                             <div class="img-session">
-                                <img src="{{ url('/event_images/'.$upcoming_events[$i]->profile_image) }}" alt="event-img">
+                                <img src="/event_images/{{ $upcoming_events[$i]->profile_image }}" alt="event-img">
                             </div>
                             <div class="content-session">
                                 <div class="upper-content d-flex flex-column">

@@ -4,7 +4,7 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
-					<form class="submit-forms" action="{{url('/addevent/addsponsor/add')}}" method="POST" enctype="multipart/form-data">
+					<form class="submit-forms" action="/addevent/addsponsor/add" method="POST" enctype="multipart/form-data">
                         @csrf
                         <center><h1 class="new-h1">Sponsors Details</h1></center>
                         <div class="doeshavesponsor">

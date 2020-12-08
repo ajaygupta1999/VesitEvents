@@ -6,13 +6,13 @@
 
     <!-- External strylesheet -->
     <link type="text/css" rel="stylesheet"  href="/css/index.css">
-    <link rel="stylesheet" type="text/css" href="{{ url('/css/society.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/login.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/main-page.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/signup.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/userprofile.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/addevent.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/eachevent.css') }}">
+    <link rel="stylesheet" type="text/css" href="/css/society.css">
+	<link rel="stylesheet" type="text/css" href="/css/login.css">
+	<link rel="stylesheet" type="text/css" href="/css/main-page.css">
+	<link rel="stylesheet" type="text/css" href="/css/signup.css">
+	<link rel="stylesheet" type="text/css" href="/css/userprofile.css">
+	<link rel="stylesheet" type="text/css" href="/css/addevent.css">
+	<link rel="stylesheet" type="text/css" href="/css/eachevent.css">
 
 
 	<!-- <link rel="stylesheet" type="text/css" href="../css/main-page.css"> -->
