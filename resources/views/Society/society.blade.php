@@ -107,7 +107,7 @@
                                                         <span><i class="far fa-calendar-alt"></i> {{$upcoming_event->date}}</span>
                                                         <span><i class="far fa-clock"></i> {{$upcoming_event->time}}</span>
                                                     </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$ongoing_event->id)}}">View Details</a>
+                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$upcoming_event->id)}}">View Details</a>
                                                 </div>
                                             </div>
                                         </div>
