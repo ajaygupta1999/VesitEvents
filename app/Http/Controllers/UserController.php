@@ -20,7 +20,10 @@ class UserController extends Controller
     {
         $societies = Society::all();
         $user = User::where('email', session()->get('email'))->first();
-        $registered_events = Register::where("user_id" , $user->id)->get();
+        $registered_events = Register::all();
+        if ($user) {
+            $registered_events = Register::where("user_id", $user->id)->get();
+        }
         $ongoing_events = Event::whereDate('date', '=', date('Y-m-d'))->get();
         $upcoming_events = Event::whereDate('date', '>', date('Y-m-d'))->get();
         return view('index', compact(['societies', 'user', 'upcoming_events', 'ongoing_events' , 'registered_events']));
@@ -42,6 +45,9 @@ class UserController extends Controller
             ->whereDate('date', '>', date('Y-m-d'))
             ->get();
         $society_members = CouncilMember::where('society_name', $request->name)->get();
+        $count = CouncilMember::where('society_name', $request->name)->count();
+        $society->total_members = $count;
+        $society->save();
         return view('Society/society', compact(['society', 'user', 'ongoing_events', 'upcoming_events','past_events','society_members']));
     }
 
@@ -138,6 +144,10 @@ class UserController extends Controller
                 $council_member->society_name = $society->name;
                 $council_member->role = $request->role;
                 $council_member->save();
+                $temp_society = Society::where('name',$society->name)->get();
+                $count = CouncilMember::where('society_name',$society->name)->count();
+                $temp_society->	total_members = $count;
+                $temp_society->save();
             }
         }
         $new_user->save();
@@ -220,6 +230,10 @@ class UserController extends Controller
             $council_member->society_name = $society->name;
             $council_member->role = $request->role;
             $council_member->save();
+            $temp_society = Society::where('name',$society->name)->get();
+            $count = CouncilMember::where('society_name',$society->name)->count();
+            $temp_society->	total_members = $count;
+            $temp_society->save();
         }
         return redirect('user/profile');
     }

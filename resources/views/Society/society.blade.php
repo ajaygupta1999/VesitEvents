@@ -128,11 +128,16 @@
                     <div class="council-heads">
                         <h5>Council Heads</h5>
                         <div class="card" style="width: 18rem;">
-                            <img src="{{ url('/asserts/userprofileimg.png') }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
-                            <div class="card-body">
-                                @php
-                                $head = $society_members->where('role','head')->first();
-                                @endphp
+                            @php
+                                $head = $society_members->where('role','council-head')->first();
+if($head){
+                                $member = \App\Models\User::where('email',$head->email)->first();
+                         }
+                            @endphp
+                            @if($head)
+                            <img src="{{ url('/profile_images/'.$member->profile_image) }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
+                            @endif
+                                <div class="card-body">
                                 @if($head)
                               <p class="card-text">{{$head->name}}</p>
                               <p class="card-text">{{$head->email}}</p>
@@ -144,6 +149,9 @@
                         <center><h5 id="all-memeber-session">All Council Members</h5><center>
                         <div class="row">
                             @foreach($society_members as $society_member)
+                                @if($society_member->role == 'council-head')
+                                    @continue
+                                @endif
                                 @php
                                 $member = \App\Models\User::where('email',$society_member->email)->first()
                                 @endphp
