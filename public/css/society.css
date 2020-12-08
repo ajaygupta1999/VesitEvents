@@ -1,6 +1,22 @@
 /*********************
 specific-society-page
 **********************/
+.dropdown-item:hover{
+	background : #62626287;
+	
+}
+
+.navlink-header-text{
+	font-weight : 600;
+}
+
+.dropdown-item{
+	color : #6b6b6b;
+	font-size: 19px;
+    font-weight: 600;
+    padding: 7px 26px;
+}
+
 
 .socirty-intro-div{
 	padding : 25px 4%;

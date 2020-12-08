@@ -92,7 +92,6 @@
                               </form>
                         </div>
                     </div>
-
                     {{-- Society Details --}}
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                         <div class="society-details">
@@ -104,10 +103,16 @@
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1" class="label">Society Name(From Which you belong)</label>
                                             <select class="form-control" id="exampleFormControlSelect1" name="society">
-                                              <option>Isa</option>
-                                              <option>Ieee</option>
-                                              <option>Csi</option>
-                                              <option>Iste</option>
+                                                @php
+                                                   $society_name = array('None', 'Isa' , 'Ieee', 'Csi' , 'Iste');
+                                                @endphp
+                                                @foreach($society_name as $society)
+                                                   @if($society == $council_member->society_name)
+                                                      <option selected>{{ strtoupper($council_member->society_name) }}</option>
+                                                    @else
+                                                       <option> {{ strtoupper($society) }} </option>
+                                                    @endif
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>
@@ -117,9 +122,16 @@
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1" class="label">Role(What is your role in that society)</label>
                                             <select class="form-control" id="exampleFormControlSelect1" name="role">
-                                              <option>Normal Member</option>
-                                              <option>Council Member</option>
-                                              <option>Council Head</option>
+                                             @php
+                                                $roles = array('None', 'Normal-member' , 'council-member', 'council-head');
+                                             @endphp
+                                             @foreach($roles as $role)
+                                                @if($role == $council_member->role)
+                                                   <option selected>{{ strtoupper($role) }}</option>
+                                                 @else
+                                                    <option> {{ strtoupper($role) }} </option>
+                                                 @endif
+                                             @endforeach
                                             </select>
                                         </div>
                                     </div>
@@ -135,18 +147,29 @@
                             <h2 class="event-detail-title">Registered Event Details</h2>
                             <div class="all-event-cards">
                                 <div class="row">
-                                    @foreach($events as $event)
-                                    <div class="col-4">
-                                        <div class="each-event-card d-flex flex-column">
-                                            <p class="event-title">{{$event->name}}</p>
-                                            <p class="date-and-time">
-                                                <span><i class="far fa-calendar-alt"></i>{{$event->date}}</span>
-                                                <span><i class="far fa-clock"></i>{{$event->time}}</span>
-                                            </p>
-                                            <a id="each-event-register-button"  class="btn btn-md btn-warning" href="{{route('event_page',$event->id)}}">View Details</a>
+                                    @if(count($events) == 0 )
+                                        <div class="nothing-is-their d-flex justify-content-center align-items-center">
+                                            <div>
+                                                <p class="no-event-text">No Events</p>
+                                                <p class="no-event-box-icon"><i class="fas fa-box-open"></i></p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    @endforeach
+                                    @else
+                                        @foreach($events as $event)
+                                        <div class="col-4">
+                                            <div class="each-event-card d-flex flex-column">
+                                                <div class="event-text-details">
+                                                    <p class="event-title">{{$event->name}}</p>
+                                                    <p class="date-and-time">
+                                                        <span><i class="far fa-calendar-alt"></i>{{$event->date}}</span>
+                                                        <span><i class="far fa-clock"></i>{{$event->time}}</span>
+                                                    </p>
+                                                    <a id="each-event-register-button"  class="btn btn-md btn-warning" href="{{route('event_page',$event->id)}}">View Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -155,7 +178,6 @@
                 </div>
               </div>
         </div>
-
 
 @include('/partials/footer')
 		

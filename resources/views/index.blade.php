@@ -47,8 +47,14 @@
     </div>
 
     <div class="d-flex justify-content-center align-items-center">
-        <h4 class="my-ongoing-title-index-page">On Going Events</h4>
+        <h4 class="my-ongoing-title-index-page">Today's Events</h4>
     </div>
+    @php
+        $req_arr = []; 
+        foreach($registered_events as $reg){
+           array_push($req_arr , $reg->event_id);                         
+        }
+    @endphp
     <div class="MY-on-going-evenets-session">
         <div class="row">
             @for($i=0; $i < sizeof($ongoing_events); $i++)
@@ -63,8 +69,10 @@
                             <p class="short-desc">{{$ongoing_events[$i]->short_description}}</p>
                             @php
                                 $guests_ids = \App\Models\Takenby::where('event_id',$ongoing_events[$i]->id)->get('guest_id');
+                                $guest_data = "";
                             @endphp
                             <p class="guest-text"><span>Guest:</span>
+                                     
                                     @for($j=0 ; $j < sizeof($guests_ids) ; $j++)
                                         @php
                                            $guest = \App\Models\Guest::find($guests_ids[$j])->first();
@@ -96,7 +104,11 @@
                                 <p><span><i class="far fa-clock"></i></span> {{$ongoing_events[$i]->time}}</p>
                             </div>
                             <div class="register-button-div">
-                                <a id="each-event-register-button" class="btn btn-md btn-primary" href="/event/{{ $ongoing_events[$i]->id }}">Register</a>
+                                @if(in_array($ongoing_events[$i]->id  , $req_arr))
+                                     <a id="each-event-register-button" class="btn btn-md btn-success" href="/event/{{ $ongoing_events[$i]->id }}">Register</a>
+                                @else
+                                    <a id="each-event-register-button" class="btn btn-md btn-primary" href="/event/{{ $ongoing_events[$i]->id }}">Register</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -123,6 +135,7 @@
                                     <p class="short-desc">{{$upcoming_events[$i]->short_description}}</p>
                                     @php
                                         $guests_ids = \App\Models\Takenby::where('event_id',$upcoming_events[$i]->id)->get('guest_id');
+                                        $guest_data = "";
                                     @endphp
                                     <p class="guest-text"><span>Guest:</span>
                                         @for($j=0 ; $j < sizeof($guests_ids) ; $j++)
@@ -156,7 +169,12 @@
                                         <p><span><i class="far fa-clock"></i></span> {{$upcoming_events[$i]->time}}</p>
                                     </div>
                                     <div class="register-button-div">
-                                        <a id="each-event-register-button" class="btn btn-md btn-primary" href="event/{{ $upcoming_events[$i]->id }}">Register</a>
+                                        @if(in_array($upcoming_events[$i]->id  , $req_arr))
+                                           <a id="each-event-register-button" class="btn btn-md btn-success" href="event/{{ $upcoming_events[$i]->id }}">Register</a>
+                                        @else
+                                            <a id="each-event-register-button" class="btn btn-md btn-primary" href="event/{{ $upcoming_events[$i]->id }}">Register</a>
+                                        @endif
+                                           
                                     </div>
                                 </div>
                             </div>
