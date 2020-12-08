@@ -123,7 +123,7 @@ body{
 
 
 .my-ongoing-title-index-page{
-	margin-top : 5%;
+	margin-top : 1%;
 	font-size: 24px;
 	font-weight: 600;
 	margin-bottom: -20px;
@@ -240,6 +240,30 @@ body{
 	margin-right : 10px;
 }
 
+.nothing-is-their{
+	width : 100%;
+}
+
+.nothing-is-their .no-event-text{
+	margin: 0;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 17px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: -18px;
+}
+
+.nothing-is-their .no-event-box-icon{
+	color: #b6b6b8;
+	font-size: 84px;
+	font-weight: 500;
+}
+
+.nothing-is-their .no-event-box-icon i{
+
+}
+
 
 @media (max-width: 991.98px) { 
    .my-society-content{
@@ -247,5 +271,3 @@ body{
 		margin-right : 10% !important; 
    }
  }
-
-

@@ -20,9 +20,10 @@ class UserController extends Controller
     {
         $societies = Society::all();
         $user = User::where('email', session()->get('email'))->first();
+        $registered_events = Register::where("user_id" , $user->id)->get();
         $ongoing_events = Event::whereDate('date', '=', date('Y-m-d'))->get();
         $upcoming_events = Event::whereDate('date', '>', date('Y-m-d'))->get();
-        return view('index', compact(['societies', 'user', 'upcoming_events', 'ongoing_events']));
+        return view('index', compact(['societies', 'user', 'upcoming_events', 'ongoing_events' , 'registered_events']));
     }
 
 
@@ -155,7 +156,7 @@ class UserController extends Controller
         $events = Event::join('registers','registers.event_id','=','events.id')
             ->where('registers.user_id',$user->id)
             ->get();
-        return view('User/profile', compact(['user', 'events']));
+        return view('User/profile', compact(['user', 'events' , 'council_member']));
     }
 
 

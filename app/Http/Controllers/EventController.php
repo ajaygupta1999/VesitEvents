@@ -6,6 +6,7 @@ use App\Models\Company;
 use App\Models\CouncilMember;
 use App\Models\Event;
 use App\Models\Guest;
+use App\Models\Register;
 use App\Models\SponserBy;
 use App\Models\Takenby;
 use App\Models\User;

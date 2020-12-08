@@ -20,9 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e416d775-8180-45fa-9ac3-88aa236a2f24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/company_images/1607365647WhatsApp Image 2020-12-03 at 7.41.18 PM (2).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/company_images/1607366383WhatsApp Image 2020-12-04 at 4.09.38 PM (3).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/company_images/1607366739WhatsApp Image 2020-12-03 at 7.42.34 PM (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/company_images/1607366747WhatsApp Image 2020-12-03 at 7.42.34 PM (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/company_images/1607366810WhatsApp Image 2020-12-03 at 7.42.34 PM (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/event_images/1607365607WhatsApp Image 2020-12-03 at 7.42.34 PM (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/event_images/1607366340WhatsApp Image 2020-12-04 at 4.09.38 PM (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/event_images/1607366349WhatsApp Image 2020-12-04 at 4.09.38 PM (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/event_images/1607366356WhatsApp Image 2020-12-04 at 4.09.38 PM (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/event_images/1607366675WhatsApp Image 2020-12-03 at 7.41.18 PM (2).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/event_images/1607366681WhatsApp Image 2020-12-03 at 7.41.18 PM (2).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/event_images/1607366790WhatsApp Image 2020-12-03 at 7.41.18 PM.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/event_images/1607406330WhatsApp Image 2020-12-03 at 7.42.34 PM (3).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile_images/1607365237WhatsApp Image 2020-12-03 at 7.42.34 PM (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile_images/1607407728free-profile-photo-whatsapp-4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/addevent.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/addevent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/eachevent.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/eachevent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/society.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/society.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/userprofile.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/userprofile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Society/society.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Society/society.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/User/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/User/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +277,7 @@
       <workItem from="1607324720806" duration="16757000" />
       <workItem from="1607349703783" duration="1578000" />
       <workItem from="1607352903817" duration="9476000" />
-      <workItem from="1607415898173" duration="1736000" />
+      <workItem from="1607415898173" duration="2610000" />
     </task>
     <servers />
   </component>
