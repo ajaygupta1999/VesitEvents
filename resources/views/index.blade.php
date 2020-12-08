@@ -1,5 +1,5 @@
 @include('/partials/header')
-@include('/partials/navbar')
+{{-- @include('/partials/navbar') --}}
 
     <div class="container home-main-header">
         <div class="row">
@@ -27,7 +27,7 @@
 
     </div>
 
-
+{{-- 
     <div class="home-page-all-society d-flex justify-content-center">
         <h4>All Societies</h4>
     </div>
@@ -182,6 +182,6 @@
                     </div>
                 @endfor
             </div>
-    </div>
+    </div> --}}
   
 @include('/partials/footer')
