@@ -230,10 +230,10 @@ class UserController extends Controller
             $council_member->society_name = $society->name;
             $council_member->role = $request->role;
             $council_member->save();
-            $temp_society = Society::where('name',$society->name)->get();
-            $count = CouncilMember::where('society_name',$society->name)->count();
-            $temp_society->	total_members = $count;
-            $temp_society->save();
+            // $temp_society = Society::where('name',$society->name)->get();
+            // $count = CouncilMember::where('society_name',$society->name)->count();
+            // $temp_society->	total_members = $count;
+            // $temp_society->save();
         }
         return redirect('user/profile');
     }
