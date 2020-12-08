@@ -102,18 +102,18 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1" class="label">Society Name(From Which you belong)</label>
-                                            <select class="form-control" id="exampleFormControlSelect1" name="society">
-                                                @php
-                                                   $society_name = array('None', 'Isa' , 'Ieee', 'Csi' , 'Iste');
-                                                @endphp
-                                                @foreach($society_name as $society)
-                                                   @if($society == $council_member->society_name)
-                                                      <option selected>{{ strtoupper($council_member->society_name) }}</option>
-                                                    @else
-                                                       <option> {{ strtoupper($society) }} </option>
-                                                    @endif
-                                                @endforeach
-                                            </select>
+{{--                                            <select class="form-control" id="exampleFormControlSelect1" name="society">--}}
+{{--                                                @php--}}
+{{--                                                   $society_name = array('None', 'Isa' , 'Ieee', 'Csi' , 'Iste');--}}
+{{--                                                @endphp--}}
+{{--                                                @foreach($society_name as $society)--}}
+{{--                                                   @if($society == $council_member->society_name)--}}
+{{--                                                      <option selected>{{ strtoupper($council_member->society_name) }}</option>--}}
+{{--                                                    @else--}}
+{{--                                                       <option> {{ strtoupper($society) }} </option>--}}
+{{--                                                    @endif--}}
+{{--                                                @endforeach--}}
+{{--                                            </select>--}}
                                         </div>
                                     </div>
                                 </div>
@@ -180,4 +180,4 @@
         </div>
 
 @include('/partials/footer')
-		
+
