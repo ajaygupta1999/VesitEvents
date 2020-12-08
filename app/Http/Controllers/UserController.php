@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Mail;
 class UserController extends Controller
 {
 
-    public function homemainPage(){
-        return view('index');
-    }
     //Main page view
     function mainPage()
     {

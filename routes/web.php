@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //Route for main pages and user
-Route::get('/', [UserController::class,'homemainPage']);
+Route::get('/', [UserController::class,'mainPage']);
 
 Route::get('society/{name}',[UserController::class,'societyPage']);
 

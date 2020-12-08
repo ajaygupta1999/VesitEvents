@@ -28,7 +28,7 @@
     </div>
 
 
-    {{-- <div class="home-page-all-society d-flex justify-content-center">
+    <div class="home-page-all-society d-flex justify-content-center">
         <h4>All Societies</h4>
     </div>
     <div class="my-all-socierty-div d-flex justify-content-center">
@@ -182,6 +182,6 @@
                     </div>
                 @endfor
             </div>
-    </div> --}}
+    </div>
   
 @include('/partials/footer')
