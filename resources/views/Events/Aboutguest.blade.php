@@ -7,7 +7,7 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
-					<form class="submit-forms" action="addevent/aboutguest/add" method="post" enctype="multipart/form-data">
+					<form class="submit-forms" action="{{ url('addevent/aboutguest/add') }}" method="post" enctype="multipart/form-data">
                         @csrf
 						<center><h1 class="new-h1">About Guest & Sponsors</h1></center>
 						<div class="Add-guest-session">
@@ -116,7 +116,6 @@
 		  </div>
 
 <meta name="csrf-token" content="{{ csrf_token() }}">
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
