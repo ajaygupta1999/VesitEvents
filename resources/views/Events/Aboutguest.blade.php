@@ -7,14 +7,14 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
-					<form class="submit-forms" action="{{url('addevent/aboutguest/add')}}" method="post" enctype="multipart/form-data">
+					<form class="submit-forms" action="addevent/aboutguest/add" method="post" enctype="multipart/form-data">
                         @csrf
 						<center><h1 class="new-h1">About Guest & Sponsors</h1></center>
 						<div class="Add-guest-session">
 							<p>Add Guests</p>
 							<div class="guest-img-div">
 								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#guest-select-modal">
-									<img src="{{ url('/asserts/useradd2.png') }}" alt="user-image">
+									<img src="/asserts/useradd2.png" alt="user-image">
 								</button>
 							</div>
 						</div>
@@ -56,7 +56,7 @@
                         <input type="hidden" name="event_id" value="{{$event->id}}">
                         <div class="d-flex justify-content-between" id="forgotpassword">
 							<div>
-								<a id="our-back-button" class="btn btn-md btn-light" href="{{ url('addevent/aboutevent') }}">Back</a>
+								<a id="our-back-button" class="btn btn-md btn-light" href="addevent/aboutevent">Back</a>
 							</div>
 							<div>
                                 <button type="submit" class="btn btn-primary btn-md btn-block">Add</button>
@@ -64,7 +64,7 @@
 							</div>
 							<div>
 {{--								<a id="our-next-button" class="btn btn-md btn-primary" href="{{ url('/') }}">Next</a>--}}
-                                <a id="our-next-button" class="btn btn-md btn-primary" href="{{ url('/addevent/aboutsponsor') }}">Next</a>
+                                <a id="our-next-button" class="btn btn-md btn-primary" href="/addevent/aboutsponsor">Next</a>
 
                             </div>
 						</div>
@@ -97,7 +97,7 @@
 
                                  <div class="each-guest d-flex justify-content-between align-items-center">
 								<div class="name-and-img-session d-flex justify-content-start align-items-center">
-									<img src="{{ url('/asserts/useradd2.png') }}" alt="user-image">
+									<img src="/asserts/useradd2.png" alt="user-image">
 									<div class="user-name-and-details">
 										<p>{{$guest->name}}</p>
 									</div>

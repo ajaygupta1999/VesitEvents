@@ -5,14 +5,14 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- External strylesheet -->
-    <link type="text/css" rel="stylesheet"  href="{{ url('/css/index.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('/css/society.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/login.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/main-page.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/signup.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/userprofile.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/addevent.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/css/eachevent.css') }}">
+    <link type="text/css" rel="stylesheet"  href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/society.css">
+	<link rel="stylesheet" type="text/css" href="/css/login.css">
+	<link rel="stylesheet" type="text/css" href="/css/main-page.css">
+	<link rel="stylesheet" type="text/css" href="/css/signup.css">
+	<link rel="stylesheet" type="text/css" href="/css/userprofile.css">
+	<link rel="stylesheet" type="text/css" href="/css/addevent.css">
+	<link rel="stylesheet" type="text/css" href="/css/eachevent.css">
 
 
 	<!-- <link rel="stylesheet" type="text/css" href="../css/main-page.css"> -->
