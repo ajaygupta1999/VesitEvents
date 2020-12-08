@@ -1,5 +1,5 @@
 @include('/partials/header')
-{{-- @include('/partials/navbar') --}}
+@include('/partials/navbar')
 
     <div class="container home-main-header">
         <div class="row">
@@ -50,9 +50,9 @@
         <h4 class="my-ongoing-title-index-page">Today's Events</h4>
     </div>
     @php
-        $req_arr = []; 
+        $req_arr = [];
         foreach($registered_events as $reg){
-           array_push($req_arr , $reg->event_id);                         
+           array_push($req_arr , $reg->event_id);
         }
     @endphp
     <div class="MY-on-going-evenets-session">
@@ -72,7 +72,7 @@
                                 $guest_data = "";
                             @endphp
                             <p class="guest-text"><span>Guest:</span>
-                                     
+
                                     @for($j=0 ; $j < sizeof($guests_ids) ; $j++)
                                         @php
                                            $guest = \App\Models\Guest::find($guests_ids[$j])->first();
@@ -174,7 +174,7 @@
                                         @else
                                             <a id="each-event-register-button" class="btn btn-md btn-primary" href="event/{{ $upcoming_events[$i]->id }}">Register</a>
                                         @endif
-                                           
+
                                     </div>
                                 </div>
                             </div>
@@ -183,5 +183,5 @@
                 @endfor
             </div>
     </div>
-  
+
 @include('/partials/footer')

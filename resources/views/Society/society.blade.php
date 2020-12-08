@@ -11,7 +11,6 @@
                 <div class="button-session">
                     <button class="btn btn-sm btn-light"><i class="fas fa-users"></i> {{$society->total_members}} Employees </button>
                 </div>
-
             </div>
         </div>
 
@@ -101,7 +100,7 @@
                                             @foreach($past_events as $past_event)
                                             <div class="each-event-card d-flex flex-column">
                                                 <div class="today-event-img-session">
-                                                    <img width="150px" src="/event_images/{{ .$past_event->profile_image }}" alt="">
+                                                    <img width="150px" src="/event_images/{{ $past_event->profile_image }}" alt="">
                                                 </div>
                                                 <div class="event-text-details">
                                                     <p class="event-title">{{$past_event->name}}</p>
@@ -128,14 +127,19 @@
                     <div class="council-heads">
                         <h5>Council Heads</h5>
                         <div class="card" style="width: 18rem;">
-                            <img src="/asserts/userprofileimg.png" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
-                            <div class="card-body">
-                                @php
-                                $head = $society_members->where('role','head')->first();
-                                @endphp
+                            @php
+                                    $head = $society_members->where('role','council-head')->first();
+                                if($head){
+                                    $member = \App\Models\User::where('email',$head->email)->first();
+                                 }
+                            @endphp
+                            @if($head)
+                            <img src="/profile_images/{{ $member->profile_image }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
+                            @endif
+                                <div class="card-body">
                                 @if($head)
-                              <p class="card-text">{{$head->name}}</p>
-                              <p class="card-text">{{$head->email}}</p>
+                                    <p class="card-text">{{$head->name}}</p>
+                                    <p class="card-text">{{$head->email}}</p>
                                 @endif
                             </div>
                         </div>
@@ -144,6 +148,9 @@
                         <center><h5 id="all-memeber-session">All Council Members</h5><center>
                         <div class="row">
                             @foreach($society_members as $society_member)
+                                @if($society_member->role == 'council-head')
+                                    @continue
+                                @endif
                                 @php
                                 $member = \App\Models\User::where('email',$society_member->email)->first()
                                 @endphp
@@ -163,5 +170,4 @@
             </div>
           </div>
 
-
-        @include('/partials/footer')
+ @include('/partials/footer')
