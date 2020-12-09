@@ -1,9 +1,20 @@
 @include('/partials/header')
 @include('/partials/navbar')
+  
 
+   
+     
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
+					@if(session('status'))
+						<div class="alert alert-warning alert-dismissible fade show" role="alert">
+							{{ session('status') }}
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+					@endif
 					<form class="submit-forms" action={{route('login_check')}} method="POST">
                         @csrf
 						<center><h1 class="new-h1">Log in</h1></center>
@@ -29,10 +40,8 @@
 								<a id="forgotbuttonlink" href="{{url('reset')}}">Forgot Password</a>
 							</div>
 						</div>
-
 					</form>
 				</div>
-                <p style="text-align: center; color: red">{{session('status')}}</p>
 			</div>
         </div>
 

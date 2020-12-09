@@ -250,8 +250,8 @@ body{
     font-size: 17px;
     margin-top: 17px;
     font-weight: 600;
-    color: #000;
-    margin-bottom: -18px;
+	color: #000;
+	margin-bottom : 5px;
 }
 
 .nothing-is-their .no-event-box-icon{

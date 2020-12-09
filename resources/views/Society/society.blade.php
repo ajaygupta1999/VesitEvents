@@ -42,23 +42,32 @@
                                 <hr/>
                                 <div class="all-event-cards">
                                     <div class="row">
-                                        @foreach($ongoing_events as $ongoing_event)
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img width="150px" src="/event_images/{{ $ongoing_event->profile_image }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">{{$ongoing_event->name}}</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i>{{$ongoing_event->date}}</span>
-                                                        <span><i class="far fa-clock"></i> {{$ongoing_event->time}}</span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$ongoing_event->id)}}">View Details</a>
+                                        @if(count($ongoing_events) == 0 )
+                                            <div class="nothing-is-their d-flex justify-content-center align-items-center">
+                                            <div>
+                                                    <p class="no-event-text">No Ongoing Events</p>
+                                                    <p class="no-event-box-icon d-flex justify-content-center"><i class="fas fa-box-open"></i></p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        @endforeach
+                                        @else
+                                            @foreach($ongoing_events as $ongoing_event)
+                                            <div class="col-3">
+                                                <div class="each-event-card d-flex flex-column">
+                                                    <div class="today-event-img-session">
+                                                        <img width="150px" src="/event_images/{{ $ongoing_event->profile_image }}" alt="">
+                                                    </div>
+                                                    <div class="event-text-details">
+                                                        <p class="event-title">{{$ongoing_event->name}}</p>
+                                                        <p class="date-and-time">
+                                                            <span><i class="far fa-calendar-alt"></i>{{$ongoing_event->date}}</span>
+                                                            <span><i class="far fa-clock"></i> {{$ongoing_event->time}}</span>
+                                                        </p>
+                                                        <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$ongoing_event->id)}}">View Details</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endforeach
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -69,23 +78,32 @@
                                 <hr/>
                                 <div class="all-event-cards">
                                     <div class="row">
-                                        @foreach($upcoming_events as $upcoming_event)
-                                        <div class="col-3">
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img  width="150px" src="/event_images/{{ $upcoming_event->profile_image }}" alt="">
-                                                </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">{{$upcoming_event->name}}</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> {{$upcoming_event->date}}</span>
-                                                        <span><i class="far fa-clock"></i> {{$upcoming_event->time}}</span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$upcoming_event->id)}}">View Details</a>
+                                        @if(count($upcoming_events) == 0 )
+                                            <div class="nothing-is-their d-flex justify-content-center align-items-center">
+                                            <div>
+                                                    <p class="no-event-text">No Upcoming Events</p>
+                                                    <p class="no-event-box-icon d-flex justify-content-center"><i class="fas fa-box-open"></i></p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        @endforeach
+                                        @else
+                                            @foreach($upcoming_events as $upcoming_event)
+                                                <div class="col-3">
+                                                    <div class="each-event-card d-flex flex-column">
+                                                        <div class="today-event-img-session">
+                                                            <img  width="150px" src="/event_images/{{ $upcoming_event->profile_image }}" alt="">
+                                                        </div>
+                                                        <div class="event-text-details">
+                                                            <p class="event-title">{{$upcoming_event->name}}</p>
+                                                            <p class="date-and-time">
+                                                                <span><i class="far fa-calendar-alt"></i> {{$upcoming_event->date}}</span>
+                                                                <span><i class="far fa-clock"></i> {{$upcoming_event->time}}</span>
+                                                            </p>
+                                                            <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$upcoming_event->id)}}">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -96,23 +114,34 @@
                                 <hr/>
                                 <div class="all-event-cards">
                                     <div class="row">
-                                        <div class="col-3">
-                                            @foreach($past_events as $past_event)
-                                            <div class="each-event-card d-flex flex-column">
-                                                <div class="today-event-img-session">
-                                                    <img width="150px" src="/event_images/{{ $past_event->profile_image }}" alt="">
+                                            @if(count($past_events) == 0 )
+                                                <div class="nothing-is-their d-flex justify-content-center align-items-center">
+                                                <div>
+                                                        <p class="no-event-text">No Past Events</p>
+                                                        <p class="no-event-box-icon d-flex justify-content-center"><i class="fas fa-box-open"></i></p>
+                                                    </div>
                                                 </div>
-                                                <div class="event-text-details">
-                                                    <p class="event-title">{{$past_event->name}}</p>
-                                                    <p class="date-and-time">
-                                                        <span><i class="far fa-calendar-alt"></i> {{$past_event->date}}</span>
-                                                        <span><i class="far fa-clock"></i> {{$past_event->time}}</span>
-                                                    </p>
-                                                    <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$past_event->id)}}">View Details</a>
-                                                </div>
-                                            </div>
-                                            @endforeach
-                                        </div>
+                                            @else
+                                                @foreach($past_events as $past_event)
+                                                    <div class="col-3">
+                                                        <div class="each-event-card d-flex flex-column">
+                                                                    <div class="today-event-img-session">
+                                                                        <img width="150px" src="/event_images/{{ $past_event->profile_image }}" alt="">
+                                                                    </div>
+                                                                    <div class="event-text-details">
+                                                                        <p class="event-title">{{$past_event->name}}</p>
+                                                                        <p class="date-and-time">
+                                                                            <span><i class="far fa-calendar-alt"></i> {{$past_event->date}}</span>
+                                                                            <span><i class="far fa-clock"></i> {{$past_event->time}}</span>
+                                                                        </p>
+                                                                        <a id="each-event-register-button"  class="btn btn-md btn-success" href="{{url('event/'.$past_event->id)}}">View Details</a>
+                                                                    </div>
+                                                                </div>
+                                                        
+                                                    
+                                                    </div>
+                                                @endforeach
+                                            @endif
                                     </div>
                                 </div>
                             </div>
@@ -124,46 +153,76 @@
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div class="All-Members-details">
                     <center><h2 class="all-member-header">All Members Details</h2><center>
-                    <div class="council-heads">
-                        <h5>Council Heads</h5>
-                        <div class="card" style="width: 18rem;">
-                            @php
+                    <div class="council-heads container">
+                        <h5>Council Heads <hr></h5>
+                        @php
                                     $head = $society_members->where('role','council-head')->first();
                                 if($head){
                                     $member = \App\Models\User::where('email',$head->email)->first();
                                  }
-                            @endphp
-                            @if($head)
-                            <img src="/profile_images/{{ $member->profile_image }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
-                            @endif
-                                <div class="card-body">
-                                @if($head)
-                                    <p class="card-text">{{$head->name}}</p>
-                                    <p class="card-text">{{$head->email}}</p>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                    <div class="council-members container">
-                        <center><h5 id="all-memeber-session">All Council Members</h5><center>
-                        <div class="row">
-                            @foreach($society_members as $society_member)
-                                @if($society_member->role == 'council-head')
-                                    @continue
-                                @endif
-                                @php
-                                $member = \App\Models\User::where('email',$society_member->email)->first()
-                                @endphp
-                            <div class="col-4">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="/profile_images/{{ $member->profile_image }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
-                                    <div class="card-body">
-                                      <p class="card-text">{{$member->name}}</p>
-                                      <p class="card-text">{{$member->email}}</p>
-                                    </div>
+                        @endphp
+                        @if(!$head)
+                            <div class="nothing-is-their d-flex justify-content-center align-items-center">
+                                <div>
+                                    <p class="no-event-text">No Council Head</p>
+                                    <p class="no-event-box-icon d-flex justify-content-center"><i class="fas fa-box-open"></i></p>
                                 </div>
                             </div>
+                        @else
+                            <div class="card" style="width: 18rem;">
+                                @if($head)
+                                    <img src="/profile_images/{{ $member->profile_image }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
+                                @endif
+                                    <div class="card-body">
+                                    @if($head)
+                                        <p class="card-text" style="font-weight : 600; color:blue; font-size : 20px">{{  $head->first_name." ".$head->last_name }}</p>
+                                        <p class="card-text">{{$head->email}}</p>
+                                    @endif
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="council-members container">
+                        <center><h5 id="all-memeber-session">All Council Members <hr></h5><center>
+                        <div class="row">
+                            @php 
+                                $council_members_arr = [];
+                            @endphp
+                            @foreach($society_members as $society_member)
+                                    @if($society_member->role == 'council-head')
+                                        @continue
+                                    @else
+                                        @php
+                                           array_push($council_members_arr , $society_member) 
+                                        @endphp
+                                    @endif
                             @endforeach
+                            @if(count($council_members_arr) == 0)
+                                <div class="nothing-is-their d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <p class="no-event-text">No Council Members</p>
+                                        <p class="no-event-box-icon d-flex justify-content-center"><i class="fas fa-box-open"></i></p>
+                                    </div>
+                                </div>
+                            @else
+                                @foreach($society_members as $society_member)
+                                    @if($society_member->role == 'council-head')
+                                        @continue
+                                    @endif
+                                    @php
+                                       $member = \App\Models\User::where('email',$society_member->email)->first()
+                                    @endphp
+                                    <div class="col-4">
+                                        <div class="card" style="width: 18rem;">
+                                            <img src="/profile_images/{{ $member->profile_image }}" class="card-img-top" alt="..." style="width : 100%; height : 250px; object-fit:cover">
+                                            <div class="card-body">
+                                            <p class="card-text" style="font-weight : 600; color:blue; font-size : 20px">{{$member->first_name." ".$member->last_name}}</h1>
+                                            <p class="card-text">{{$member->email}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>

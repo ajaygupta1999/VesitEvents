@@ -129,7 +129,7 @@
 				@endphp
 						<div class="guest-card d-flex flex-column">
 							<div class="guest-img">
-								<img src="{{ url('/asserts/user-img1.jpg') }}" alt="">
+								<img src="{{ url('/asserts/userprofileimg.png') }}" alt="">
 							</div>
 							<div class="guest-detail">
 								<p class="guest-name">{{$guest_detail->name}}</p>
