@@ -1494,7 +1494,6 @@
                 "psr-17",
                 "psr-7"
             ],
-<<<<<<< HEAD
             "support": {
                 "chat": "https://laminas.dev/chat",
                 "docs": "https://docs.laminas.dev/laminas-diactoros/",
@@ -1503,8 +1502,6 @@
                 "rss": "https://github.com/laminas/laminas-diactoros/releases.atom",
                 "source": "https://github.com/laminas/laminas-diactoros"
             },
-=======
->>>>>>> 57fea190e99c1748f482d31137398986e4ed7e4d
             "funding": [
                 {
                     "url": "https://funding.communitybridge.org/projects/laminas-project",
@@ -1559,15 +1556,12 @@
                 "laminas",
                 "zf"
             ],
-<<<<<<< HEAD
             "support": {
                 "forum": "https://discourse.laminas.dev/",
                 "issues": "https://github.com/laminas/laminas-zendframework-bridge/issues",
                 "rss": "https://github.com/laminas/laminas-zendframework-bridge/releases.atom",
                 "source": "https://github.com/laminas/laminas-zendframework-bridge"
             },
-=======
->>>>>>> 57fea190e99c1748f482d31137398986e4ed7e4d
             "funding": [
                 {
                     "url": "https://funding.communitybridge.org/projects/laminas-project",
@@ -1929,13 +1923,10 @@
                 "JWS",
                 "jwt"
             ],
-<<<<<<< HEAD
             "support": {
                 "issues": "https://github.com/lcobucci/jwt/issues",
                 "source": "https://github.com/lcobucci/jwt/tree/3.4.2"
             },
-=======
->>>>>>> 57fea190e99c1748f482d31137398986e4ed7e4d
             "funding": [
                 {
                     "url": "https://github.com/lcobucci",
@@ -2438,11 +2429,7 @@
         },
         {
             "name": "nexmo/client",
-<<<<<<< HEAD
             "version": "2.4.0",
-=======
-            "version": "dev-master",
->>>>>>> 57fea190e99c1748f482d31137398986e4ed7e4d
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nexmo/nexmo-php-complete.git",
@@ -2488,13 +2475,10 @@
                 }
             ],
             "description": "PHP Client for using Nexmo's API.",
-<<<<<<< HEAD
             "support": {
                 "email": "devrel@nexmo.com",
                 "source": "https://github.com/Nexmo/nexmo-php-complete/tree/2.4.0"
             },
-=======
->>>>>>> 57fea190e99c1748f482d31137398986e4ed7e4d
             "time": "2020-09-10T18:41:31+00:00"
         },
         {
@@ -2557,7 +2541,6 @@
             ],
             "description": "Deprecated PHP Client for using Vonage's API - please use vonage/client-core",
             "homepage": "https://developer.nexmo.com",
-<<<<<<< HEAD
             "support": {
                 "docs": "https://developer.nexmo.com",
                 "email": "devrel@vonage.com",
@@ -2567,77 +2550,6 @@
             "time": "2020-11-18T19:40:45+00:00"
         },
         {
-=======
-            "time": "2020-11-18T19:40:45+00:00"
-        },
-        {
-            "name": "nexmo/laravel",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Nexmo/nexmo-laravel.git",
-                "reference": "029bdc19fc58cd6ef0aa75c7041d82b9d9dc61bd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Nexmo/nexmo-laravel/zipball/029bdc19fc58cd6ef0aa75c7041d82b9d9dc61bd",
-                "reference": "029bdc19fc58cd6ef0aa75c7041d82b9d9dc61bd",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^5.2|^6.0|^7.0|^8.0",
-                "php": "^5.6|^7.1|^8.0",
-                "vonage/client": "^2.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.0|^4.0|^5.0|^6.0",
-                "phpunit/phpunit": "^5.3|~6.0|~8.0|~9.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Nexmo\\Laravel\\NexmoServiceProvider"
-                    ],
-                    "aliases": {
-                        "Nexmo": "Nexmo\\Laravel\\Facade\\Nexmo"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Nexmo\\Laravel\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Lytle",
-                    "email": "tim@nexmo.com",
-                    "homepage": "http://twitter.com/tjlytle",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Michael Heap",
-                    "email": "michael.heap@nexmo.com",
-                    "homepage": "http://twitter.com/mheap",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Chris Tankersley",
-                    "email": "chris.tankersley@nexmo.com",
-                    "homepage": "http://twitter.com/dragonmantank",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Laravel Package for Nexmo's PHP Client",
-            "time": "2020-12-04T13:11:05+00:00"
-        },
-        {
->>>>>>> 57fea190e99c1748f482d31137398986e4ed7e4d
             "name": "nikic/php-parser",
             "version": "v4.10.3",
             "source": {
@@ -5936,120 +5848,6 @@
             "time": "2020-11-12T00:07:28+00:00"
         },
         {
-<<<<<<< HEAD
-=======
-            "name": "vonage/client",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Vonage/vonage-php-sdk.git",
-                "reference": "29f23e317d658ec1c3e55cf778992353492741d7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Vonage/vonage-php-sdk/zipball/29f23e317d658ec1c3e55cf778992353492741d7",
-                "reference": "29f23e317d658ec1c3e55cf778992353492741d7",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^7.0",
-                "php": ">=7.2",
-                "vonage/client-core": "^2.0"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Lytle",
-                    "email": "tim@nexmo.com",
-                    "homepage": "http://twitter.com/tjlytle",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Michael Heap",
-                    "email": "michael.heap@vonage.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Lorna Mitchell",
-                    "email": "lorna.mitchell@vonage.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Chris Tankersley",
-                    "email": "chris.tankersley@vonage.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP Client for using Vonage's API.",
-            "time": "2020-09-10T18:29:08+00:00"
-        },
-        {
-            "name": "vonage/client-core",
-            "version": "2.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Vonage/vonage-php-sdk-core.git",
-                "reference": "c9bd01868339fc1c74e631d73d7333250b8eccbd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Vonage/vonage-php-sdk-core/zipball/c9bd01868339fc1c74e631d73d7333250b8eccbd",
-                "reference": "c9bd01868339fc1c74e631d73d7333250b8eccbd",
-                "shasum": ""
-            },
-            "require": {
-                "composer/package-versions-deprecated": "^1.11",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "laminas/laminas-diactoros": "^2.4",
-                "lcobucci/jwt": "^3.4|^4.0",
-                "php": ">=7.2",
-                "psr/container": "^1.0",
-                "psr/http-client-implementation": "^1.0",
-                "vonage/nexmo-bridge": "^0.1.0"
-            },
-            "require-dev": {
-                "guzzlehttp/guzzle": ">=6",
-                "helmich/phpunit-json-assert": "^3.3",
-                "php-http/mock-client": "^1.4",
-                "phpstan/phpstan": "^0.12",
-                "phpunit/phpunit": "^8.5|^9.4",
-                "roave/security-advisories": "dev-latest",
-                "softcreatr/jsonpath": "^0.6.4",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Vonage\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Tankersley",
-                    "email": "chris.tankersley@vonage.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Lorna Mitchell",
-                    "email": "lorna.mitchell@vonage.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP Client for using Vonage's API.",
-            "homepage": "https://developer.nexmo.com",
-            "time": "2020-12-08T12:13:16+00:00"
-        },
-        {
->>>>>>> 57fea190e99c1748f482d31137398986e4ed7e4d
             "name": "vonage/nexmo-bridge",
             "version": "0.1.0",
             "source": {
@@ -6091,13 +5889,10 @@
                 }
             ],
             "description": "Provides a bridge for using the Vonage PHP SDK with the older Nexmo namespace",
-<<<<<<< HEAD
             "support": {
                 "issues": "https://github.com/Nexmo/vonage-php-nexmo-bridge/issues",
                 "source": "https://github.com/Nexmo/vonage-php-nexmo-bridge/tree/master"
             },
-=======
->>>>>>> 57fea190e99c1748f482d31137398986e4ed7e4d
             "time": "2020-08-25T02:50:42+00:00"
         },
         {
