@@ -56,8 +56,6 @@ class sendReminders extends Command
                 $client = new Client($account_sid, $auth_token);
                 $user_phn = "+91".$user->phone_number;
                 $bodytext = $event->name.' is scheduled on '. $event->date. ' at '. $event->time;
-                return redirect("/");
-                
                 try{
                     $client->messages->create(
                         $user_phn, 
@@ -66,6 +64,7 @@ class sendReminders extends Command
                 catch (\Exception $e){
                     continue;
                 }
+                return redirect("/");
 
             }
         }
