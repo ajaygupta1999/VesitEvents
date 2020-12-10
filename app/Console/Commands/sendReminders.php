@@ -46,7 +46,7 @@ class sendReminders extends Command
             $users_registers = Register::where('event_id',$event->id)
                ->where('send_remainder',0)
                 ->get();
-            foreach ($users_registers as $users_register){
+            foreach($users_registers as $users_register){
                 $user = User::find($users_register->user_id);
                 $users_register->send_remainder = 1;
                 $users_register->save();
@@ -59,7 +59,8 @@ class sendReminders extends Command
                 try{
                     $client->messages->create(
                         $user_phn, 
-                        ['from' => $twilio_number, 'body' => $bodytext] );
+                        ['from' => $twilio_number, 'body' => $bodytext]);
+                        
                 }
                 catch (\Exception $e){
                     continue;
