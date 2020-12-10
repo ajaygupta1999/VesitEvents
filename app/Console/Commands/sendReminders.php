@@ -51,11 +51,17 @@ class sendReminders extends Command
 //              $users_register->save();
                 $basic  = new \Nexmo\Client\Credentials\Basic('208c20c2', 'dOEtRew2SEbYZwzS');
                 $client = new \Nexmo\Client($basic);
-                $message = $client->message()->send([
-                    'to' => $user->phone_number,
-                    'from' => 'Vesit Events',
-                    'text' => $event->name.' is scheduled on '. $event->date. ' at '. $event->time
-                ]);
+                try{
+                    $message = $client->message()->send([
+                        'to' => $user->phone_number,
+                        'from' => 'Vesit Events',
+                        'text' => $event->name.' is scheduled on '. $event->date. ' at '. $event->time
+                    ]);
+                }
+                catch (\Exception $e){
+                    continue;
+                }
+
             }
         }
         $this->info('Successfully sent remainder');
