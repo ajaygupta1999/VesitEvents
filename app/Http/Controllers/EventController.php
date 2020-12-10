@@ -89,15 +89,15 @@ class EventController extends Controller
         return redirect("/");
     }
 
-    public function smsSend(){
-        // $basic  = new \Nexmo\Client\Credentials\Basic('208c20c2', 'dOEtRew2SEbYZwzS');
-        // $client = new \Nexmo\Client($basic);
+    // public function smsSend(){
+    //     // $basic  = new \Nexmo\Client\Credentials\Basic('208c20c2', 'dOEtRew2SEbYZwzS');
+    //     // $client = new \Nexmo\Client($basic);
 
-        // $message = $client->message()->send([
-        //     'to' => '9136276661',
-        //     'from' => 'Nexmo',
-        //     'text' => 'A text message sent using the Nexmo SMS API'
-        // ]);
+    //     // $message = $client->message()->send([
+    //     //     'to' => '9136276661',
+    //     //     'from' => 'Nexmo',
+    //     //     'text' => 'A text message sent using the Nexmo SMS API'
+    //     // ]);
 
         $account_sid = getenv("TWILIO_SID");
         $auth_token = getenv("TWILIO_AUTH_TOKEN");
@@ -108,7 +108,7 @@ class EventController extends Controller
             ['from' => $twilio_number, 'body' => "Simple verification message"] );
         
         return redirect("/");
-    }
+    // }
 
     function removeEvent(){
         DB::rollBack();

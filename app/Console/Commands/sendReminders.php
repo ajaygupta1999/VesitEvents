@@ -6,6 +6,7 @@ use App\Models\Event;
 use App\Models\Register;
 use App\Models\User;
 use Illuminate\Console\Command;
+use Twilio\Rest\Client;
 
 class sendReminders extends Command
 {
@@ -43,20 +44,24 @@ class sendReminders extends Command
         $events = Event::where('date',date('Y-m-d'))->get();
         foreach ($events as $event){
             $users_registers = Register::where('event_id',$event->id)
-//                ->where('send_remainder',0)
+               ->where('send_remainder',0)
                 ->get();
             foreach ($users_registers as $users_register){
                 $user = User::find($users_register->user_id);
-//              $users_register->send_remainder = 1;
-//              $users_register->save();
-                $basic  = new \Nexmo\Client\Credentials\Basic('208c20c2', 'dOEtRew2SEbYZwzS');
-                $client = new \Nexmo\Client($basic);
+                // $users_register->send_remainder = 1;
+                // $users_register->save();
+                $account_sid = getenv("TWILIO_SID");
+                $auth_token = getenv("TWILIO_AUTH_TOKEN");
+                $twilio_number = getenv("TWILIO_NUMBER");
+                $client = new Client($account_sid, $auth_token);
+                $user_phn = "+91".$user->phone_number;
+                $bodytext = $event->name.' is scheduled on '. $event->date. ' at '. $event->time;
+                return redirect("/");
+                
                 try{
-                    $message = $client->message()->send([
-                        'to' => $user->phone_number,
-                        'from' => 'Vesit Events',
-                        'text' => $event->name.' is scheduled on '. $event->date. ' at '. $event->time
-                    ]);
+                    $client->messages->create(
+                        $user_phn, 
+                        ['from' => $twilio_number, 'body' => $bodytext] );
                 }
                 catch (\Exception $e){
                     continue;
