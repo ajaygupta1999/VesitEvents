@@ -133,43 +133,43 @@ class EventController extends Controller
 
     function registerAdd($id){
         $user = User::where('email',session()->get('email'))->first();
-        // $user->event()->attach($id);
-        // $account_sid = getenv("TWILIO_SID");
-        // $auth_token = getenv("TWILIO_AUTH_TOKEN");
-        // $twilio_number = getenv("TWILIO_NUMBER");
-        // $client = new Client($account_sid, $auth_token);
-        // $phone_number = "+91".$user->phone_number;
-        // $bodydata = "This is message from VESITEVENT. Your registration was successful. You will get message 1 hour priror from the actual event.";
-        // $client->messages->create(
-        //     $phone_number, 
-        //     ['from' => $twilio_number, 'body' => $bodydata] );
-        $events = Event::where('date',date('Y-m-d'))->get();
-        foreach ($events as $event){
-            $users_registers = Register::where('event_id',$event->id)
-               ->where('send_remainder',0)
-                ->get();
-            foreach($users_registers as $users_register){
-                $user = User::find($users_register->user_id);
-                // $users_register->send_remainder = 1;
-                // $users_register->save();
-                $account_sid = getenv("TWILIO_SID");
-                $auth_token = getenv("TWILIO_AUTH_TOKEN");
-                $twilio_number = getenv("TWILIO_NUMBER");
-                $client = new Client($account_sid, $auth_token);
-                $user_phn = "+91".$user->phone_number;
-                $bodytext = $event->name.' is scheduled on '. $event->date. ' at '. $event->time;
-                echo $user_phn." ->> ".$bodytext;
-                try{
-                    $client->messages->create(
-                        $user_phn, 
-                        ['from' => $twilio_number, 'body' => $bodytext]);
+        $user->event()->attach($id);
+        $account_sid = getenv("TWILIO_SID");
+        $auth_token = getenv("TWILIO_AUTH_TOKEN");
+        $twilio_number = getenv("TWILIO_NUMBER");
+        $client = new Client($account_sid, $auth_token);
+        $phone_number = "+91".$user->phone_number;
+        $bodydata = "This is message from VESITEVENT. Your registration was successful. You will get message 1 hour priror from the actual event.";
+        $client->messages->create(
+            $phone_number, 
+            ['from' => $twilio_number, 'body' => $bodydata] );
+        // $events = Event::where('date',date('Y-m-d'))->get();
+        // foreach ($events as $event){
+        //     $users_registers = Register::where('event_id',$event->id)
+        //        ->where('send_remainder',0)
+        //         ->get();
+        //     foreach($users_registers as $users_register){
+        //         $user = User::find($users_register->user_id);
+        //         // $users_register->send_remainder = 1;
+        //         // $users_register->save();
+        //         $account_sid = getenv("TWILIO_SID");
+        //         $auth_token = getenv("TWILIO_AUTH_TOKEN");
+        //         $twilio_number = getenv("TWILIO_NUMBER");
+        //         $client = new Client($account_sid, $auth_token);
+        //         $user_phn = "+91".$user->phone_number;
+        //         $bodytext = $event->name.' is scheduled on '. $event->date. ' at '. $event->time;
+        //         echo $user_phn." ->> ".$bodytext;
+        //         try{
+        //             $client->messages->create(
+        //                 $user_phn, 
+        //                 ['from' => $twilio_number, 'body' => $bodytext]);
                         
-                }
-                catch (\Exception $e){
-                    continue;
-                }
-            }
-        }
+        //         }
+        //         catch (\Exception $e){
+        //             continue;
+        //         }
+        //     }
+        // }
         return redirect('/');
     }
 }
