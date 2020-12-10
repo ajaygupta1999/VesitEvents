@@ -48,8 +48,8 @@ class sendReminders extends Command
                 ->get();
             foreach ($users_registers as $users_register){
                 $user = User::find($users_register->user_id);
-                // $users_register->send_remainder = 1;
-                // $users_register->save();
+                $users_register->send_remainder = 1;
+                $users_register->save();
                 $account_sid = getenv("TWILIO_SID");
                 $auth_token = getenv("TWILIO_AUTH_TOKEN");
                 $twilio_number = getenv("TWILIO_NUMBER");
