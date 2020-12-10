@@ -179,6 +179,7 @@ return [
         //Socialite
         Laravel\Socialite\SocialiteServiceProvider::class,
 
+
     ],
 
     /*

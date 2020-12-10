@@ -24,7 +24,7 @@
                         <a class="dropdown-item" href="/society/csi">CSI</a>
                       </div>
                   </li>
-                </ul>   
+                </ul>
                 <ul class="navbar-nav ml-auto">
                   <li id="login-li" class="nav-item d-flex align-items-center">
                         <a class="nav-link btn btn-md btn-primary my-login-button" href="{{url('login')}}">Login</a>
@@ -48,7 +48,7 @@
                       <a class="dropdown-item" href="/society/csi">CSI</a>
                     </div>
                 </li>
-              </ul>  
+              </ul>
                 <ul class="navbar-nav ml-auto">
                     <li id="login-li" class="nav-item" >
                       <a href="{{url('/user/profile')}}">

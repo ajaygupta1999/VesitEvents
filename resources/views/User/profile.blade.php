@@ -195,4 +195,4 @@
         </div>
 
 @include('/partials/footer')
-		
+

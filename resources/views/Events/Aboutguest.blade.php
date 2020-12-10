@@ -64,7 +64,7 @@
 							</div>
 							<div>
 {{--								<a id="our-next-button" class="btn btn-md btn-primary" href="{{ url('/') }}">Next</a>--}}
-                                <a id="our-next-button" class="btn btn-md btn-primary" href="/addevent/aboutsponsor">Next</a>
+                                <a id="our-next-button" class="btn btn-md btn-primary" href="{{url('addevent/aboutsponsor')}}">Next</a>
 
                             </div>
 						</div>
