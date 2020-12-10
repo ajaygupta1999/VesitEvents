@@ -163,13 +163,10 @@
                 }
             ],
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
-<<<<<<< HEAD
             "support": {
                 "issues": "https://github.com/composer/package-versions-deprecated/issues",
                 "source": "https://github.com/composer/package-versions-deprecated/tree/1.11.99.1"
             },
-=======
->>>>>>> 57fea190e99c1748f482d31137398986e4ed7e4d
             "funding": [
                 {
                     "url": "https://packagist.com",
