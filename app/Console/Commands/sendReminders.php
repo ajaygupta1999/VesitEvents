@@ -41,21 +41,21 @@ class sendReminders extends Command
      */
     public function handle()
     {
-        $events = Event::where('date',date('Y-m-d'))->get();
-        foreach ($events as $event){
-            $users_registers = Register::where('event_id',$event->id)
-               ->where('send_remainder',0)
-                ->get();
-            foreach($users_registers as $users_register){
-                $user = User::find($users_register->user_id);
-                $users_register->send_remainder = 1;
-                $users_register->save();
+        // $events = Event::where('date',date('Y-m-d'))->get();
+        // foreach ($events as $event){
+        //     $users_registers = Register::where('event_id',$event->id)
+        //        ->where('send_remainder',0)
+        //         ->get();
+        //     foreach($users_registers as $users_register){
+                // $user = User::find($users_register->user_id);
+                // $users_register->send_remainder = 1;
+                // $users_register->save();
                 $account_sid = getenv("TWILIO_SID");
                 $auth_token = getenv("TWILIO_AUTH_TOKEN");
                 $twilio_number = getenv("TWILIO_NUMBER");
                 $client = new Client($account_sid, $auth_token);
-                $user_phn = "+91".$user->phone_number;
-                $bodytext = $event->name.' is scheduled on '. $event->date. ' at '. $event->time;
+                $user_phn = "+918291597204";
+                $bodytext = "Simple text message from VESITEVENT";
                 try{
                     $client->messages->create(
                         $user_phn, 
@@ -66,8 +66,8 @@ class sendReminders extends Command
                 catch (\Exception $e){
                     echo $e;
                 }
-            }
-        }
+        //     }
+        // }
         $this->info('Successfully sent remainder');
     }
 }
