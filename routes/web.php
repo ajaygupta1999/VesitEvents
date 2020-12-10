@@ -111,6 +111,7 @@ Route::post("user/profile/societydetails" , [UserController::class , 'userSociet
 // /user/{email}/profile/classdetails
 // /user/{email}/profile/societydetails
 
+Route::get('/smssend' , [EventController::class , 'smsSend']);
 
 
 /*Ignore this route*/

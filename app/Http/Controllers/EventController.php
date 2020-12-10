@@ -12,6 +12,7 @@ use App\Models\Takenby;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Twilio\Rest\Client;
 
 class EventController extends Controller
 {
@@ -85,7 +86,28 @@ class EventController extends Controller
         $event->company()->attach($company->id);
         session()->forget('event');
         DB::commit();
-        return redirect('/');
+        return redirect("/");
+    }
+
+    public function smsSend(){
+        // $basic  = new \Nexmo\Client\Credentials\Basic('208c20c2', 'dOEtRew2SEbYZwzS');
+        // $client = new \Nexmo\Client($basic);
+
+        // $message = $client->message()->send([
+        //     'to' => '9136276661',
+        //     'from' => 'Nexmo',
+        //     'text' => 'A text message sent using the Nexmo SMS API'
+        // ]);
+
+        $account_sid = getenv("TWILIO_SID");
+        $auth_token = getenv("TWILIO_AUTH_TOKEN");
+        $twilio_number = getenv("TWILIO_NUMBER");
+        $client = new Client($account_sid, $auth_token);
+        $client->messages->create(
+            "+918097913880", 
+            ['from' => $twilio_number, 'body' => "Simple verification message"] );
+        
+        return redirect("/");
     }
 
     function removeEvent(){
@@ -111,7 +133,16 @@ class EventController extends Controller
 
     function registerAdd($id){
         $user = User::where('email',session()->get('email'))->first();
-        $user->event()->attach($id);
+        // $user->event()->attach($id);
+        $account_sid = getenv("TWILIO_SID");
+        $auth_token = getenv("TWILIO_AUTH_TOKEN");
+        $twilio_number = getenv("TWILIO_NUMBER");
+        $client = new Client($account_sid, $auth_token);
+        $phone_number = "+91".$user->phone_number;
+        $bodydata = "This is message from VESITEVENT. Your registration was successful. You will get message 1 hour priror from the actual event.";
+        $client->messages->create(
+            $phone_number, 
+            ['from' => $twilio_number, 'body' => $bodydata] );
         return redirect('/');
     }
 }
