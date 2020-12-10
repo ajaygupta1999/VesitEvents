@@ -17,12 +17,7 @@
         "laravel/framework": "^8.0",
         "laravel/socialite": "^5.0",
         "laravel/tinker": "^2.0",
-<<<<<<< HEAD
         "nexmo/client": "^2.4",
-=======
-        "nexmo/client": "dev-master as 1.0",
-        "nexmo/laravel": "dev-master as 1.0",
->>>>>>> 3ea60ed58a3b0e85c6140516f22f26ec43660fc2
         "twilio/sdk": "^6.15"
     },
     "require-dev": {

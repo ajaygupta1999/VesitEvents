@@ -17,7 +17,7 @@ class CreateRegistersTable extends Migration
             $table->id();
             $table->string('user_id');
             $table->string('event_id');
-            $table->string('send_remainder')->nullable()->default(0);
+            $table->string('send_remainder')->default(0);
             $table->timestamps();
         });
     }
