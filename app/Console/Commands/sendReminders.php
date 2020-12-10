@@ -2,6 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Event;
+use App\Models\Register;
+use App\Models\User;
 use Illuminate\Console\Command;
 
 class sendReminders extends Command
@@ -37,14 +40,27 @@ class sendReminders extends Command
      */
     public function handle()
     {
-        $basic  = new \Nexmo\Client\Credentials\Basic('208c20c2', 'dOEtRew2SEbYZwzS');
-        $client = new \Nexmo\Client($basic);
+        $events = Event::where('date',date('Y-m-d'))->get();
+        foreach ($events as $event){
+            $users_registers = Register::where('event_id',$event->id)
+//                ->where('send_remainder',0)
+                ->get();
+            foreach ($users_registers as $users_register){
+                $user = User::find($users_register->user_id);
+//                $users_register->send_remainder = 1;
+//                $users_register->save();
+                if($user){
+                    $basic  = new \Nexmo\Client\Credentials\Basic('208c20c2', 'dOEtRew2SEbYZwzS');
+                    $client = new \Nexmo\Client($basic);
+                    $message = $client->message()->send([
+                        'to' => $user->phone_number,
+                        'from' => 'Vesit Events',
+                        'text' => $event->name.' is scheduled on '. $event->date. ' at '. $event->time
+                    ]);
+                }
 
-        $message = $client->message()->send([
-            'to' => '918291597204',
-            'from' => 'Vonage APIs',
-            'text' => 'test message from abc'
-        ]);
+            }
+        }
         $this->info('Successfully sent remainder');
     }
 }
