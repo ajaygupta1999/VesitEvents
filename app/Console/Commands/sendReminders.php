@@ -47,15 +47,15 @@ class sendReminders extends Command
                 ->get();
             foreach ($users_registers as $users_register){
                 $user = User::find($users_register->user_id);
-//                $users_register->send_remainder = 1;
-//                $users_register->save();
-                    $basic  = new \Nexmo\Client\Credentials\Basic('208c20c2', 'dOEtRew2SEbYZwzS');
-                    $client = new \Nexmo\Client($basic);
-                    $message = $client->message()->send([
-                        'to' => '918291597204',
-                        'from' => 'Vesit Events',
-                        'text' => 'jj'
-                    ]);
+//              $users_register->send_remainder = 1;
+//              $users_register->save();
+                $basic  = new \Nexmo\Client\Credentials\Basic('208c20c2', 'dOEtRew2SEbYZwzS');
+                $client = new \Nexmo\Client($basic);
+                $message = $client->message()->send([
+                    'to' => $user->phone_number,
+                    'from' => 'Vesit Events',
+                    'text' => $event->name.' is scheduled on '. $event->date. ' at '. $event->time
+                ]);
             }
         }
         $this->info('Successfully sent remainder');
