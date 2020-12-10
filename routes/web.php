@@ -115,6 +115,6 @@ Route::post("user/profile/societydetails" , [UserController::class , 'userSociet
 
 
 /*Ignore this route*/
-Route::get('/insertsociety',[\App\Http\Controllers\SocietyInserter::class,'insert']);
+Route::get('/insertsociety', [\App\Http\Controllers\SocietyInserter::class,'insert']);
 
 Route::get('msg',[EventController::class,'aboutGuestAddExisting']);

@@ -62,8 +62,9 @@ class sendReminders extends Command
                         ['from' => $twilio_number, 'body' => $bodytext]);
                         
                 }
+                
                 catch (\Exception $e){
-                    continue;
+                    echo $e;
                 }
             }
         }
