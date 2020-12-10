@@ -4,7 +4,7 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
-					<form class="submit-forms" action="addevent/aboutevent/add" method="post"  enctype="multipart/form-data">
+					<form class="submit-forms" action="{{url('addevent/aboutevent/add')}}" method="post"  enctype="multipart/form-data">
                     @csrf
                         <center><h1 class="new-h1">Add New Event</h1></center>
 						<div class="form-group">

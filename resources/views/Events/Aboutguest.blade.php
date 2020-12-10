@@ -7,7 +7,7 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
-					<form class="submit-forms" action="addevent/aboutguest/add" method="post" enctype="multipart/form-data">
+					<form class="submit-forms" action="{{url('addevent/aboutguest/add')}}" method="post" enctype="multipart/form-data">
                         @csrf
 						<center><h1 class="new-h1">About Guest & Sponsors</h1></center>
 						<div class="Add-guest-session">
@@ -64,7 +64,7 @@
 							</div>
 							<div>
 {{--								<a id="our-next-button" class="btn btn-md btn-primary" href="{{ url('/') }}">Next</a>--}}
-                                <a id="our-next-button" class="btn btn-md btn-primary" href="/addevent/aboutsponsor">Next</a>
+                                <a id="our-next-button" class="btn btn-md btn-primary" href="{{url('addevent/aboutsponsor')}}">Next</a>
 
                             </div>
 						</div>
