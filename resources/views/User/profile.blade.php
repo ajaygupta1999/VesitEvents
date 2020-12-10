@@ -106,13 +106,21 @@
                                                 @php
                                                    $society_name = array('None', 'Isa' , 'Ieee', 'Csi' , 'Iste');
                                                 @endphp
-                                                @foreach($society_name as $society)
-                                                   @if($society == $council_member->society_name)
-                                                      <option selected>{{ strtoupper($council_member->society_name) }}</option>
-                                                    @else
-                                                       <option> {{ strtoupper($society) }} </option>
-                                                    @endif
-                                                @endforeach
+                                                @if(!$council_member)
+                                                    <option selected>NONE</option>
+                                                    <option>ISA</option>
+                                                    <option>IEEE</option>
+                                                    <option>CSI</option>
+                                                    <option>ISTE</option>
+                                                @else
+                                                    @foreach($society_name as $society)
+                                                    @if($society == $council_member->society_name)
+                                                        <option selected>{{ strtoupper($council_member->society_name) }}</option>
+                                                        @else
+                                                        <option> {{ strtoupper($society) }} </option>
+                                                        @endif
+                                                    @endforeach
+                                                @endif
                                             </select>
                                         </div>
                                     </div>
@@ -125,13 +133,20 @@
                                              @php
                                                 $roles = array('None', 'Normal-member' , 'council-member', 'council-head');
                                              @endphp
-                                             @foreach($roles as $role)
-                                                @if($role == $council_member->role)
-                                                   <option selected>{{ strtoupper($role) }}</option>
-                                                 @else
-                                                    <option> {{ strtoupper($role) }} </option>
-                                                 @endif
-                                             @endforeach
+                                             @if(!$council_member)
+                                                    <option selected>NONE</option>
+                                                    <option>NORMAL-MEMBER</option>
+                                                    <option>COUNCIL-MEMBER</option>
+                                                    <option>COUNCIL-HEAD</option>
+                                             @else
+                                                @foreach($roles as $role)
+                                                    @if($role == $council_member->role)
+                                                    <option selected>{{ strtoupper($role) }}</option>
+                                                    @else
+                                                        <option> {{ strtoupper($role) }} </option>
+                                                    @endif
+                                                @endforeach
+                                            @endif
                                             </select>
                                         </div>
                                     </div>

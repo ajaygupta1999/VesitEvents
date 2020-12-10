@@ -57,98 +57,41 @@
     @endphp
     <div class="MY-on-going-evenets-session">
         <div class="row">
-            @for($i=0; $i < sizeof($ongoing_events); $i++)
-            <div class="col-12 col-md-4">
-                <div class="each-event-container">
-                    <div class="img-session">
-                        <img src="/event_images/{{ $ongoing_events[$i]->profile_image  }}" alt="event-img">
-                    </div>
-                    <div class="content-session">
-                        <div class="upper-content d-flex flex-column">
-                            <p class="main-title">{{$ongoing_events[$i]->name}}</p>
-                            <p class="short-desc">{{$ongoing_events[$i]->short_description}}</p>
-                            @php
-                                $guests_ids = \App\Models\Takenby::where('event_id',$ongoing_events[$i]->id)->get('guest_id');
-                                $guest_data = "";
-                            @endphp
-                            <p class="guest-text"><span>Guest:</span>
-
-                                    @for($j=0 ; $j < sizeof($guests_ids) ; $j++)
-                                        @php
-                                           $guest = \App\Models\Guest::find($guests_ids[$j])->first();
-                                           if(sizeof($guests_ids) == 1){
-                                               $guest_data = $guest->name.".";
-                                               break;
-                                           }
-                                           if($j == 0){
-                                               $guest_data = $guest->name;
-                                               continue;
-                                           }
-                                        @endphp
-
-                                        @if($j < sizeof($guests_ids) - 1)
-                                            @php
-                                                $guest_data = $guest_data.", ".$guest->name;
-                                            @endphp
-                                        @endif
-                                        @if($j == sizeof($guests_ids) - 1)
-                                            @php
-                                                $guest_data = $guest_data.", ".$guest->name.".";
-                                            @endphp
-                                        @endif
-                                    @endfor
-                                    {{$guest_data}}
-                            </p>
-                            <div class="date-time-div d-flex justify-content-start align-items-center">
-                                <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$ongoing_events[$i]->date}}</p>
-                                <p><span><i class="far fa-clock"></i></span> {{$ongoing_events[$i]->time}}</p>
-                            </div>
-                            <div class="register-button-div">
-                                @if(in_array($ongoing_events[$i]->id  , $req_arr))
-                                     <a id="each-event-register-button" class="btn btn-md btn-success" href="/event/{{ $ongoing_events[$i]->id }}">Register</a>
-                                @else
-                                    <a id="each-event-register-button" class="btn btn-md btn-primary" href="/event/{{ $ongoing_events[$i]->id }}">Register</a>
-                                @endif
-                            </div>
-                        </div>
+            @if(count($ongoing_events) == 0 )
+                <div class="nothing-is-their d-flex justify-content-center align-items-center">
+                    <div>
+                        <p class="no-event-text">No Todays Events</p>
+                        <p class="no-event-box-icon d-flex justify-content-center"><i class="fas fa-box-open"></i></p>
                     </div>
                 </div>
-            </div>
-          @endfor
-        </div>
-    </div>
+            @else
+                @for($i=0; $i < sizeof($ongoing_events); $i++)
+                <div class="col-12 col-md-4">
+                    <div class="each-event-container">
+                        <div class="img-session">
+                            <img src="/event_images/{{ $ongoing_events[$i]->profile_image  }}" alt="event-img">
+                        </div>
+                        <div class="content-session">
+                            <div class="upper-content d-flex flex-column">
+                                <p class="main-title">{{$ongoing_events[$i]->name}}</p>
+                                <p class="short-desc">{{$ongoing_events[$i]->short_description}}</p>
+                                @php
+                                    $guests_ids = \App\Models\Takenby::where('event_id',$ongoing_events[$i]->id)->get('guest_id');
+                                    $guest_data = "";
+                                @endphp
+                                <p class="guest-text"><span>Guest:</span>
 
-    <div class="d-flex justify-content-center align-items-center">
-        <h4 class="my-upcoming-title">Upcoming Events</h4>
-    </div>
-    <div class="MY-on-going-evenets-session">
-            <div class="row">
-                @for($i = 0; $i<sizeof($upcoming_events); $i++)
-                    <div class="col-12 col-md-4">
-                        <div class="each-event-container">
-                            <div class="img-session">
-                                <img src="/event_images/{{ $upcoming_events[$i]->profile_image }}" alt="event-img">
-                            </div>
-                            <div class="content-session">
-                                <div class="upper-content d-flex flex-column">
-                                    <p class="main-title">{{$upcoming_events[$i]->name}}</p>
-                                    <p class="short-desc">{{$upcoming_events[$i]->short_description}}</p>
-                                    @php
-                                        $guests_ids = \App\Models\Takenby::where('event_id',$upcoming_events[$i]->id)->get('guest_id');
-                                        $guest_data = "";
-                                    @endphp
-                                    <p class="guest-text"><span>Guest:</span>
                                         @for($j=0 ; $j < sizeof($guests_ids) ; $j++)
                                             @php
-                                                $guest = \App\Models\Guest::find($guests_ids[$j])->first();
-                                                if(sizeof($guests_ids) == 1){
-                                                    $guest_data = $guest->name.".";
-                                                    break;
-                                                }
-                                                if($j == 0){
-                                                    $guest_data = $guest->name;
-                                                    continue;
-                                                }
+                                            $guest = \App\Models\Guest::find($guests_ids[$j])->first();
+                                            if(sizeof($guests_ids) == 1){
+                                                $guest_data = $guest->name.".";
+                                                break;
+                                            }
+                                            if($j == 0){
+                                                $guest_data = $guest->name;
+                                                continue;
+                                            }
                                             @endphp
 
                                             @if($j < sizeof($guests_ids) - 1)
@@ -163,24 +106,99 @@
                                             @endif
                                         @endfor
                                         {{$guest_data}}
-                                    </p>
-                                    <div class="date-time-div d-flex justify-content-start align-items-center">
-                                        <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$upcoming_events[$i]->date}}</p>
-                                        <p><span><i class="far fa-clock"></i></span> {{$upcoming_events[$i]->time}}</p>
-                                    </div>
-                                    <div class="register-button-div">
-                                        @if(in_array($upcoming_events[$i]->id  , $req_arr))
-                                           <a id="each-event-register-button" class="btn btn-md btn-success" href="event/{{ $upcoming_events[$i]->id }}">Register</a>
-                                        @else
-                                            <a id="each-event-register-button" class="btn btn-md btn-primary" href="event/{{ $upcoming_events[$i]->id }}">Register</a>
-                                        @endif
-
-                                    </div>
+                                </p>
+                                <div class="date-time-div d-flex justify-content-start align-items-center">
+                                    <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$ongoing_events[$i]->date}}</p>
+                                    <p><span><i class="far fa-clock"></i></span> {{$ongoing_events[$i]->time}}</p>
+                                </div>
+                                <div class="register-button-div">
+                                    @if(in_array($ongoing_events[$i]->id  , $req_arr))
+                                        <a id="each-event-register-button" class="btn btn-md btn-success" href="/event/{{ $ongoing_events[$i]->id }}">Register</a>
+                                    @else
+                                        <a id="each-event-register-button" class="btn btn-md btn-primary" href="/event/{{ $ongoing_events[$i]->id }}">Register</a>
+                                    @endif
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 @endfor
+            @endif
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <h4 class="my-upcoming-title">Upcoming Events</h4>
+    </div>
+    <div class="MY-on-going-evenets-session">
+            <div class="row">
+                @if(count($upcoming_events) == 0 )
+                    <div class="nothing-is-their d-flex justify-content-center align-items-center">
+                        <div>
+                            <p class="no-event-text">No Upcoming Events</p>
+                            <p class="no-event-box-icon d-flex justify-content-center"><i class="fas fa-box-open"></i></p>
+                        </div>
+                    </div>
+                @else
+                    @for($i = 0; $i<sizeof($upcoming_events); $i++)
+                        <div class="col-12 col-md-4">
+                            <div class="each-event-container">
+                                <div class="img-session">
+                                    <img src="/event_images/{{ $upcoming_events[$i]->profile_image }}" alt="event-img">
+                                </div>
+                                <div class="content-session">
+                                    <div class="upper-content d-flex flex-column">
+                                        <p class="main-title">{{$upcoming_events[$i]->name}}</p>
+                                        <p class="short-desc">{{$upcoming_events[$i]->short_description}}</p>
+                                        @php
+                                            $guests_ids = \App\Models\Takenby::where('event_id',$upcoming_events[$i]->id)->get('guest_id');
+                                            $guest_data = "";
+                                        @endphp
+                                        <p class="guest-text"><span>Guest:</span>
+                                            @for($j=0 ; $j < sizeof($guests_ids) ; $j++)
+                                                @php
+                                                    $guest = \App\Models\Guest::find($guests_ids[$j])->first();
+                                                    if(sizeof($guests_ids) == 1){
+                                                        $guest_data = $guest->name.".";
+                                                        break;
+                                                    }
+                                                    if($j == 0){
+                                                        $guest_data = $guest->name;
+                                                        continue;
+                                                    }
+                                                @endphp
+
+                                                @if($j < sizeof($guests_ids) - 1)
+                                                    @php
+                                                        $guest_data = $guest_data.", ".$guest->name;
+                                                    @endphp
+                                                @endif
+                                                @if($j == sizeof($guests_ids) - 1)
+                                                    @php
+                                                        $guest_data = $guest_data.", ".$guest->name.".";
+                                                    @endphp
+                                                @endif
+                                            @endfor
+                                            {{$guest_data}}
+                                        </p>
+                                        <div class="date-time-div d-flex justify-content-start align-items-center">
+                                            <p class="date-session"><span><i class="far fa-calendar-alt"></i></span>{{$upcoming_events[$i]->date}}</p>
+                                            <p><span><i class="far fa-clock"></i></span> {{$upcoming_events[$i]->time}}</p>
+                                        </div>
+                                        <div class="register-button-div">
+                                            @if(in_array($upcoming_events[$i]->id  , $req_arr))
+                                            <a id="each-event-register-button" class="btn btn-md btn-success" href="event/{{ $upcoming_events[$i]->id }}">Register</a>
+                                            @else
+                                                <a id="each-event-register-button" class="btn btn-md btn-primary" href="event/{{ $upcoming_events[$i]->id }}">Register</a>
+                                            @endif
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endfor
+                @endif
             </div>
     </div>
 

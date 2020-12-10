@@ -4,6 +4,14 @@
 <div class="our-login-page-content">
     <div id="login-container">
         <div class="login-page-contant">
+            @if(session('status'))
+						<div class="alert alert-warning alert-dismissible fade show" role="alert">
+							{{ session('status') }}
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+			@endif
             <form class="submit-forms" action="{{url('reset/check')}}" method="POST">
                 @csrf
                 <center><h1 class="new-h1">Password Reset</h1></center>
@@ -13,7 +21,6 @@
                            name="email" required>
                 </div>
                 <button type="submit" class="btn btn-primary btn-md btn-block">Send Password Rest Link</button>
-                <p style="text-align: center; color: red">{{session('status')}}</p>
             </form>
         </div>
     </div>

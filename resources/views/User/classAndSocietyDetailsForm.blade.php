@@ -53,7 +53,7 @@
                          <div class="form-group">
                             <label for="exampleFormControlSelect1" class="label">Society Name(From Which you belong)</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="society">
-                                <option>None</option>
+                              <option>None</option>
                               <option>ISA</option>
                               <option>IEEE</option>
                               <option>CSI</option>
@@ -64,6 +64,7 @@
                         <div class="form-group">
                             <label for="exampleFormControlSelect1" class="label">Role(What is your role in that society)</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="role">
+                              <option>None</option>
                               <option>Normal-member</option>
                               <option>council-member</option>
                               <option>council-head</option>

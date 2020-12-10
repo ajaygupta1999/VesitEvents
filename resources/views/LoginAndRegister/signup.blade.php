@@ -4,6 +4,14 @@
 		<div class="our-login-page-content">
 			<div id="login-container">
 				<div class="login-page-contant">
+					@if(session('status'))
+						<div class="alert alert-danger alert-dismissible fade show" role="alert">
+							{{ session('status') }}
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+					@endif
 					<form class="submit-forms" action={{route('register_check')}} method="POST">
                         @csrf
 						<center><h1 class="new-h1">Sign Up</h1></center>
@@ -35,7 +43,6 @@
 								<a id="forgotbuttonlink" href="{{url('login')}}">Already have an account? Login</a>
 							</div>
 						</div>
-                <p style="text-align: center; color: red">{{session('status')}}</p>
 					</form>
 				</div>
 			</div>

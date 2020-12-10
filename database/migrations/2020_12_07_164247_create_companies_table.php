@@ -17,7 +17,7 @@ class CreateCompaniesTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('profile_image')->nullable();
-            $table->string('details')->nullable();
+            $table->text('details')->nullable();
             $table->timestamps();
         });
     }
