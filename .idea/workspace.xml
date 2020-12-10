@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e416d775-8180-45fa-9ac3-88aa236a2f24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/sendReminders.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/sendReminders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_07_070954_create_registers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_07_070954_create_registers_table.php" afterDir="false" />
-    </list>
+    <list default="true" id="e416d775-8180-45fa-9ac3-88aa236a2f24" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -267,6 +263,7 @@
       <workItem from="1607415898173" duration="4304000" />
       <workItem from="1607572474489" duration="6317000" />
       <workItem from="1607593317587" duration="3148000" />
+      <workItem from="1607598395553" duration="308000" />
     </task>
     <servers />
   </component>
