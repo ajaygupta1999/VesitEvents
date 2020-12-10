@@ -2,7 +2,7 @@
     <nav id="my-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand d-flex align-items-center" href="{{ url('') }}">
               <img id="VES_logo" src="{{ url('/asserts/VES_logo.png') }}">
-              <span id="vesit-logo">VESIT EVENTSd</span>
+              <span id="vesit-logo">VESIT EVENTS</span>
           </a>
           <a id="addevent-button-home-page" class="navbar-item d-flex align-items-center" href="{{ url('addevent/aboutevent') }}">
             <span class="add-event-button">Add Event</span>
