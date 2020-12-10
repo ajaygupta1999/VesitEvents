@@ -64,8 +64,6 @@ class sendReminders extends Command
                 catch (\Exception $e){
                     continue;
                 }
-                return redirect("/");
-
             }
         }
         $this->info('Successfully sent remainder');
