@@ -53,7 +53,7 @@ class sendReminders extends Command
                 $client = new \Nexmo\Client($basic);
                 try{
                     $message = $client->message()->send([
-                        'to' => $user->phone_number,
+                        'to' => '918291597204',
                         'from' => 'Vesit Events',
                         'text' => $event->name.' is scheduled on '. $event->date. ' at '. $event->time
                     ]);
