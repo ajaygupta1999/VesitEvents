@@ -12,6 +12,7 @@ use App\Models\Takenby;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Twilio\Rest\Client;
 
 class EventController extends Controller
 {
@@ -111,7 +112,32 @@ class EventController extends Controller
 
     function registerAdd($id){
         $user = User::where('email',session()->get('email'))->first();
-        $user->event()->attach($id);
+        // $user->event()->attach($id);
+        // $events = Event::where('date',date('Y-m-d'))->get();
+        // foreach ($events as $event){
+        //     $users_registers = Register::where('event_id',$event->id)
+        //        ->where('send_remainder', 0)
+        //         ->get();
+        //     foreach($users_registers as $users_register){
+        //         $user = User::find($users_register->user_id);
+                // $users_register->send_remainder = 1;
+                // $users_register->save();
+                $account_sid = getenv("TWILIO_SID");
+                $auth_token = getenv("TWILIO_AUTH_TOKEN");
+                $twilio_number = getenv("TWILIO_NUMBER");
+                $client = new Client($account_sid, $auth_token);
+                $user_phn = "+918291597204";
+                $bodytext = "Sms Send from VESITEVENT";
+                echo $user_phn." ->> ".$bodytext;
+                try{
+                    $client->messages->create(
+                        $user_phn, 
+                        ['from' => $twilio_number, 'body' => $bodytext]);
+                        
+                }catch (\Exception $e){
+                    echo $e;
+                }
+                
         return redirect('/');
     }
 }
